@@ -1,11 +1,127 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Entregable 1</title>
-	</head>
-	<body>
-        <script src="js/ejercicio_1.js"></script>
-	</body>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ejemplo 1</title>
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+
+		
+		<!-- JavaScript Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+		crossorigin="anonymous"></script>
+
+</head>
+
+<body >
+	
+	<div class="container mt-3">
+		<div class="row align-items-center" >
+			<div class="col-xl-8 text-center">
+				<canvas id="pizarra" width="700" height="900"></canvas>
+			</div>
+			<div class="col-xl-4">
+				<div>
+					<button id="lapiz" type="button" class="btn btn-outline-secondary m-1" title="Dibujar"><img src="images/lapiz13.png"/></button>
+
+					<button id="goma" type="button" class="btn btn-outline-secondary m-1" title="Borrar"><img src="images/goma2.png"/></button>
+				</div>
+				<div class="mt-1">
+					<label for="grosor">Color</label>
+					<input type="color" id="seleccionarColor">
+					
+					<label for="grosor">Grosor</label>
+					<input type="range" id="grosor" min="1" max="30">
+				
+					
+				</div>
+				<div>
+					<input type="file" class="form-control m-2" id="seleccionarImg" name="seleccionarImg">
+				</div>
+				<div>
+					<a id="download" download="canvas.png">
+						<button type="button" id="descargar" class="btn btn-outline-secondary m-1" title="Descargar"><img src="images/d1.png"/> </button>
+					</a>
+					<button id="guardar" type="button" class="btn btn-outline-secondary m-1" title="Guardar"><img src="images/d3.png" /></button>
+					<button id="restaurar" type="button" class="btn btn-outline-secondary m-1" title="Restaurar"><img src="images/d2.png"/></button>
+				</div>
+				<div>
+					
+					<button type="button" id="limpiar" class="btn btn-secondary m-1">Limpiar lienzo</button>
+				</div>
+			
+					<div  class="row">
+					  <div class="col">
+						<img id="grayFilter" src="images/gris.png" class="imgFiltros" name="grayFilter">
+						<label for="grayFilter">Gris</label>
+						<img id="sepia" src="images/sepia.png" class="imgFiltros" name="sepia">
+						<label for="sepia">Sepia</label>
+						<img id="blancoNegro" src="images/blancoYnegro.png" class="imgFiltros" name="blancoNegro">
+						<label for="blancoNegro">Blanco y Negro</label>
+					  </div>
+					  <div class="col">
+						<img id="blur" src="images/blur.png" class="imgFiltros" name="blur">
+						<label for="blur">Blur</label>
+						<img id="invertirFilter" src="images/negativo.png" class="imgFiltros" name="invertirFilter">
+						<label for="invertirFilter">Negativo</label>
+					  </div>
+					</div>
+				
+					
+						<div class="row mt-2 ">
+							<div class="col">
+								<label for="brillo m-1">Brillo</label>
+							</div>
+							<div class="col">
+								<input type="range" id="brilloFilter" min="10" max="100" step="5">
+							</div>
+						</div>
+					
+						<div class="row mt-2">
+							<div class="col">
+								<label for="saturacion m-1">Saturacion</label>
+							</div>
+							<div class="col">
+								<input type="range" id="saturacionFilter" min="10" max="100" step="5">
+							</div>
+						</div>
+					
+						<div class="row mt-2">
+							<div class="col">
+								<label for="tono m-1">Tono</label>
+							</div>
+							<div class="col">
+								<input type="range" id="tonoFilter" min="10" max="100" step="5">
+							</div>
+						</div>
+					
+			
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+	<script src="js/ejercicio_1.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
 
 </html>
