@@ -3,15 +3,14 @@
 ////                           VARIABLES                            ////
 ////////////////////////////////////////////////////////////////////////
 
-
-let miCanvas = document.querySelector('#pizarra');
-
-let ctx = miCanvas.getContext("2d");
-miCanvas.width = 700;
-miCanvas.height = 600;
-
+let canvas = document.querySelector('#canvas');
+let ctx = canvas.getContext("2d");
+let widthCanvas = 700;
+let heightCanvas = 600
+canvas.width = widthCanvas;
+canvas.height = heightCanvas;
 ctx.fillStyle = "#FFFFFF";
-ctx.fillRect(0, 0, miCanvas.width, miCanvas.height);
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 let copia = [];
 
@@ -23,6 +22,9 @@ let pintarLinea = false;
 let nuevaPosicionX = 0;
 let nuevaPosicionY = 0;
 
+let pos = { x: 0, y: 0};
+let rect=canvas.getBoundingClientRect();
+
 
 ////////////////////////////////////////////////////////////////////////
 ////                           FUNCIONES                            ////
@@ -30,22 +32,17 @@ let nuevaPosicionY = 0;
 
 
 function getColor(){
-    return document.getElementById('seleccionarColor').value;
+    return document.getElementById('seleccionarColor').value;//Devuelve el color seleccionado en el selector de colores.
 }
 
 function getGrosor(){
-    return document.getElementById('grosor').value;
+    return document.getElementById('seleccionarGrosor').value;//Devuelve el grosor seleccionado en el selector de grosor.
 }
-
-
-var pos = { x: 0, y: 0};
-var rect=miCanvas.getBoundingClientRect();
 
 function dibujarLapiz(){
     lapiz=true;
     goma=false;
 }
-
 
 function dibujargoma(){
     lapiz=false;
@@ -54,38 +51,38 @@ function dibujargoma(){
 
 // LIMPIAR EL LIENZO
 function limpiarLienzo(){
-    miCanvas.width = 700;
-    miCanvas.height = 500; 
-  ctx.clearRect(0,0,miCanvas.width,miCanvas.height);
+    canvas.width = widthCanvas; //Reinicia el ancho original del canvas.
+    canvas.height = heightCanvas; //Reinicia el alto original del canvas.
+    ctx.clearRect(0,0,canvas.width,canvas.height); //Elimina el contenido actual.
     ctx.fillStyle = "rgba(255,255,255,255)";//Se vuelve a pintar de blanco el lienzo
-    ctx.fillRect(0, 0, miCanvas.width, miCanvas.height);//rellena el lienzo de blanco
-   /* miCanvas.width = 700;
-    miCanvas.height = 500; //Se vuelve al tamaño original del lienzo
-    ctx.fill();
-    ctx.stroke();  */
+    ctx.fillRect(0, 0, canvas.width, canvas.height);//rellena el lienzo de blanco
+    seleccionarImg.value = null; //El input para subir imagen se vuelve null para eliminar el nombre de la ultima imagen seleccionada
+                                // y poder volver a subir la misma ya que funciona con el evento 'change'.
+
 }
-limpiar.addEventListener('click', limpiarLienzo);
+
 
 // CARGAR IMAGEN DESDE EL DISCO
 function subirImagen(e){
    
-    miCanvas.width=700;
-    miCanvas.height=500;
-    let reader = new FileReader();
+    canvas.width=widthCanvas; //Inicia la funcion a partir de las medidas originales del canvas
+    canvas.height=heightCanvas;
+    let reader = new FileReader(); // Permite que las aplicaciones web lean ficheros (o información en buffer) almacenados en el cliente de forma asíncrona.
     reader.onload = function(event){
-        let img = new Image();
+        let img = new Image(); //Se crea una nueva instancia de imagen.
         img.onload = function(){
-            if(img.height <= miCanvas.height && img.width <= miCanvas.width) {
-                miCanvas.height = img.height;
-                miCanvas.width=img.width;
+
+            if(img.height <= canvas.height && img.width <= canvas.width) {
+                canvas.height = img.height;
+                canvas.width=img.width;
                 ctx.drawImage(img,0,0,canvas.width,canvas.height);
             }
             else {
                 if(img.height > img.width) {
-                    miCanvas.width = Math.floor(miCanvas.height * (img.width / img.height));
+                    canvas.width = Math.floor(canvas.height * (img.width / img.height));
                 }
                 else {
-                    miCanvas.height = Math.floor(miCanvas.width * (img.height / img.width));
+                    canvas.height = Math.floor(canvas.width * (img.height / img.width));
                    
                 }
                 ctx.drawImage(img,0,0,canvas.width,canvas.height);
@@ -103,7 +100,7 @@ function subirImagen(e){
 }
 let seleccionarImg = document.getElementById('seleccionarImg');
 seleccionarImg.addEventListener('change', subirImagen, false);
-let canvas = document.getElementById('pizarra');
+
 
 // FUNCION DESCARGAR IMAGEN DEL CANVAS
 function descargar(){
@@ -240,10 +237,10 @@ function hsbtArgb(h, s, b)  {
 // FUNCION PARA GUARDAR UN ESTADO DEL CANVAS
 function guardar(){
     
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     
-    for(let x=0; x<miCanvas.width;x++){
-        for(let y=0; y<miCanvas.height;y++){ 
+    for(let x=0; x<canvas.width;x++){
+        for(let y=0; y<canvas.height;y++){ 
             
         let r = getRed(imageData,x,y);
         let g = getGreen(imageData,x,y);
@@ -258,7 +255,7 @@ function guardar(){
 
 // FUNCION PARA RESTAURAR AL ULTIMO ESTADO GUARDADO DEL CANVAS
 function restaurar(){
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     for(let i=0; i<copia.length;i++){
         let pos = copia[i];
         let x = pos[1];
@@ -284,11 +281,11 @@ function restaurar(){
 
 let a = 255;
 function invertirColores(){
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
-    for(let x=0; x<miCanvas.width;x++){
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    for(let x=0; x<canvas.width;x++){
 
 
-        for(let y=0; y<miCanvas.height;y++){ 
+        for(let y=0; y<canvas.height;y++){ 
             
         let r = 255 - getRed(imageData,x,y);
         let g = 255 - getGreen(imageData,x,y);
@@ -299,7 +296,7 @@ function invertirColores(){
     }
     ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
 }
-document.getElementById('invertirFilter').addEventListener("click", invertirColores);
+
 
 //======================================================================
 
@@ -307,10 +304,10 @@ document.getElementById('invertirFilter').addEventListener("click", invertirColo
 
 function drawGrayImg(){
 
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-        for(let x=0; x<miCanvas.width;x++){
-            for(let y=0; y<miCanvas.height;y++){ 
+        for(let x=0; x<canvas.width;x++){
+            for(let y=0; y<canvas.height;y++){ 
                 let i = (y * 4) * imageData.width + x * 4;
                 let avg = (imageData.data[i] + imageData.data[i+1] + imageData.data[i+2]) /3;
                 imageData.data[i] = avg;
@@ -327,9 +324,9 @@ document.getElementById('grayFilter').addEventListener("click", drawGrayImg);
 
 // FILTRO SEPIA
 function sepia(){
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
-    for(let x=0; x<miCanvas.width;x++){
-        for(let y=0; y<miCanvas.height;y++){ 
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    for(let x=0; x<canvas.width;x++){
+        for(let y=0; y<canvas.height;y++){ 
             let r = getRed(imageData,x,y);
             let g = getGreen(imageData,x,y);
             let b =  getBlue(imageData,x,y);
@@ -340,14 +337,14 @@ function sepia(){
     ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
 }
 
-document.getElementById('sepia').addEventListener("click", sepia);
+
 
 //======================================================================
 
 // FILTRO BRILLO
 function brillo(){
 
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let nuevoRango = document.getElementById('brilloFilter').value;
 
     for (let i = 0; i < copia.length; i++) {
@@ -374,7 +371,7 @@ function brillo(){
     } ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
     
 }
-document.getElementById('brilloFilter').addEventListener("change", brillo);
+
 
 //======================================================================
 
@@ -382,7 +379,7 @@ document.getElementById('brilloFilter').addEventListener("change", brillo);
 
 function saturacion(){
 
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let nuevoRango = document.getElementById('saturacionFilter').value;
 
     for (let i = 0; i < copia.length; i++) {
@@ -411,14 +408,14 @@ function saturacion(){
     ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
 }
 
-document.getElementById('saturacionFilter').addEventListener("change", saturacion);
+
 //======================================================================
 
 // TONO
 
 function tono(){
   
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let nuevoRango = document.getElementById('tonoFilter').value;
 
     for (let i = 0; i < copia.length; i++) {
@@ -445,22 +442,22 @@ function tono(){
     } ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
     
 }
-document.getElementById('tonoFilter').addEventListener("change", tono);
+
 
 //======================================================================
 
 // FILTRO BLUR
 function blur() {
    
-    let imageData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
     let r;
     let g;
     let b;
   
-    for(let x=0; x<miCanvas.width;x++){
+    for(let x=0; x<canvas.width;x++){
 
 
-        for(let y=0; y<miCanvas.height;y++){ 
+        for(let y=0; y<canvas.height;y++){ 
         
         let r1 = getRed(imageData,x,y);
         let r2 = getRed(imageData,x-1,y-1);
@@ -506,13 +503,13 @@ function blur() {
 
 }
  
-   document.getElementById('blur').addEventListener("click", blur);
+
 
 //======================================================================
 //FILTRO BLANCO Y NEGRO
 //======================================================================
 function blackAndWhite(){
-    let imgData = ctx.getImageData(0, 0, miCanvas.width, miCanvas.height);
+    let imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
    for (i = 0; i < imgData.data.length; i += 4) {
         let count = imgData.data[i] + imgData.data[i + 1] + imgData.data[i + 2];
         let colour = 0;
@@ -528,7 +525,7 @@ function blackAndWhite(){
     ctx.putImageData(imgData, 0, 0, 0, 0, imgData.width, imgData.height);
 }
 
-document.getElementById('blancoNegro').addEventListener("click", blackAndWhite);
+
 
 ////////////////////////////////////////////////////////////////////////
 ////                           EVENTOS                              ////
@@ -543,3 +540,14 @@ document.getElementById('goma').addEventListener("click", dibujargoma);
 
 document.getElementById('guardar').addEventListener("click", guardar);
 document.getElementById('restaurar').addEventListener("click", restaurar);
+
+limpiar.addEventListener('click', limpiarLienzo);
+
+document.getElementById('blancoNegro').addEventListener("click", blackAndWhite);
+document.getElementById('blur').addEventListener("click", blur);
+document.getElementById('tonoFilter').addEventListener("change", tono);
+document.getElementById('brilloFilter').addEventListener("change", brillo);
+document.getElementById('invertirFilter').addEventListener("click", invertirColores);
+document.getElementById('saturacionFilter').addEventListener("change", saturacion);
+document.getElementById('sepia').addEventListener("click", sepia);
+document.getElementById('grayFilter').addEventListener("click", drawGrayImg);
