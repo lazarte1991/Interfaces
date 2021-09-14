@@ -530,99 +530,38 @@ function blur() {
 
 //FILTRO SOBEL
 function sobel() {
-
-    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-    let r;
-    let g;
-    let b;
-
-    for (let x = 0; x < canvas.width; x++) {
-
-        for (let y = 0; y < canvas.height; y++) {
-
-            //por cada posición, se pide el color rojo de las ocho posiciones mas cercanas
-            //(arriba, abajo, izquierda, derecha y esquinas,y según la posición se multiplica 
-            //por numeros entre -2 y 2) Y luego, de la suma de los 8 resultados, se obtiene el rojo en X. 
-            let r1 = getRed(imageData, x - 1, y + 1) * 1;
-            let r2 = getRed(imageData, x, y + 1) * 2;
-            let r3 = getRed(imageData, x + 1, y + 1) * 1;
-            let r4 = getRed(imageData, x + 1, y) * 0;
-            let r5 = getRed(imageData, x + 1, y - 1) * -1;
-            let r6 = getRed(imageData, x, y - 1) * -2;
-            let r7 = getRed(imageData, x - 1, y - 1) * -1;
-            let r8 = getRed(imageData, x - 1, y) * 0;
-
-            //Al igual que el rojo en X, se calcula el valor en Y
-            let r9 = getRed(imageData, x - 1, y + 1) * -1;
-            let r10 = getRed(imageData, x, y + 1) * 0;
-            let r11 = getRed(imageData, x + 1, y + 1) * 1;
-            let r12 = getRed(imageData, x + 1, y) * 2;
-            let r13 = getRed(imageData, x + 1, y - 1) * 1;
-            let r14 = getRed(imageData, x, y - 1) * 0;
-            let r15 = getRed(imageData, x - 1, y - 1) * -1;
-            let r16 = getRed(imageData, x - 1, y) * -2;
-
-            let rx = r1 + r2 + r3 + r4 + r5 + r6 + r7 + r8;
-            let ry = r9 + r10 + r11 + r12 + r13 + r14 + r15 + r16;
-
-            //Para determinar el valor final del color en la posicion, se calcula la raiz 
-            //cuadrada de la suma entre las variables en X y en Y, ambas elevadas al cuadrado
-            //Se invierte el color para que predomine el negro y ver mas claro los bordes.
-            r = 255 - Math.sqrt(rx * rx + ry * ry);
-
-            //Se repite la misma formula del color rojo para calcular el verde y el azul.
-
-            let g1 = getGreen(imageData, x - 1, y + 1) * 1;
-            let g2 = getGreen(imageData, x, y + 1) * 2;
-            let g3 = getGreen(imageData, x + 1, y + 1) * 1;
-            let g4 = getGreen(imageData, x + 1, y) * 0;
-            let g5 = getGreen(imageData, x + 1, y - 1) * -1;
-            let g6 = getGreen(imageData, x, y - 1) * -2;
-            let g7 = getGreen(imageData, x - 1, y - 1) * -1;
-            let g8 = getGreen(imageData, x - 1, y) * 0;
-
-            let g9 = getGreen(imageData, x - 1, y + 1) * -1;
-            let g10 = getGreen(imageData, x, y + 1) * 0;
-            let g11 = getGreen(imageData, x + 1, y + 1) * 1;
-            let g12 = getGreen(imageData, x + 1, y) * 2;
-            let g13 = getGreen(imageData, x + 1, y - 1) * 1;
-            let g14 = getGreen(imageData, x, y - 1) * 0;
-            let g15 = getGreen(imageData, x - 1, y - 1) * -1;
-            let g16 = getGreen(imageData, x - 1, y) * -2;
-
-            let gx = g1 + g2 + g3 + g4 + g5 + g6 + g7 + g8;
-            let gy = g9 + g10 + g11 + g12 + g13 + g14 + g15 + g16;
-
-            g = 255 - Math.sqrt(gx * gx + gy * gy);
-
-            let b1 = getBlue(imageData, x - 1, y + 1) * 1;
-            let b2 = getBlue(imageData, x, y + 1) * 2;
-            let b3 = getBlue(imageData, x + 1, y + 1) * 1;
-            let b4 = getBlue(imageData, x + 1, y) * 0;
-            let b5 = getBlue(imageData, x + 1, y - 1) * -1;
-            let b6 = getBlue(imageData, x, y - 1) * -2;
-            let b7 = getBlue(imageData, x - 1, y - 1) * -1;
-            let b8 = getBlue(imageData, x - 1, y) * 0;
-
-            let b9 = getBlue(imageData, x - 1, y + 1) * -1;
-            let b10 = getBlue(imageData, x, y + 1) * 0;
-            let b11 = getBlue(imageData, x + 1, y + 1) * 1;
-            let b12 = getBlue(imageData, x + 1, y) * 2;
-            let b13 = getBlue(imageData, x + 1, y - 1) * 1;
-            let b14 = getBlue(imageData, x, y - 1) * 0;
-            let b15 = getBlue(imageData, x - 1, y - 1) * -1;
-            let b16 = getBlue(imageData, x - 1, y) * -2;
-
-            let bx = b1 + b2 + b3 + b4 + b5 + b6 + b7 + b8;
-            let by = b9 + b10 + b11 + b12 + b13 + b14 + b15 + b16;
-
-            b = 255 - Math.sqrt(bx * bx + by * by);
-
-            setPixel(imageData, x, y, r, g, b, a);
+    /*Para aplicar el operador de convolucion, para cada pixel en la imagen centramos la matriz de 3x3 alrededor del pixel, multiplicamos 
+    cada elemento de la matriz por su correspondiente valor de pixel (rojo, verde o azul) y luego sumamos.*/
+    let input = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    let Ky = [-1, -2, -1, 0, 0, 0, +1, +2, +1]; //Se declaran los arreglos para calcular el color en X y en Y
+    let Kx= [-1, 0, +1, -2, 0, +2, -1, 0, +1];
+    const output = ctx.createImageData(canvas.width, canvas.height);
+    for (let y = 1, i = (canvas.width + 1) * 4; y < canvas.height - 1; ++y, i += 8) {
+      for (let x = 1; x < canvas.width - 1; ++x, i += 4) {
+        let rx = 0, ry = 0;
+        let gx = 0, gy = 0;
+        let bx = 0, by = 0;
+        for (let yk = y - 1, j = 0; yk <= y + 1; ++yk) {
+          for (let xk = x - 1; xk <= x + 1; ++xk, ++j) {
+            let i = (yk * canvas.width + xk) << 2;
+            
+            rx += input.data[i + 0] * Kx[j];
+            ry += input.data[i + 0] * Ky[j];
+            gx += input.data[i + 1] * Kx[j];
+            gy += input.data[i + 1] * Ky[j];
+            bx += input.data[i + 2] * Kx[j];
+            by += input.data[i + 2] * Ky[j];
+          }
         }
+        //Con Math.hypot() se obtiene la raiz cuadrada de la suma de cuadrados de sus argumentos para rgb.
+        output.data[i + 0] = Math.hypot(rx, ry);
+        output.data[i + 1] = Math.hypot(gx, gy);
+        output.data[i + 2] = Math.hypot(bx, by);
+        output.data[i + 3] = 255;
+      }
+      ctx.putImageData(output, 0, 0, 0, y, canvas.width, 1);
+     
     }
-    ctx.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
-
 
 }
 
