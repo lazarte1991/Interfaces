@@ -17,16 +17,16 @@
 </head>
 
 <body>
-	<div class="container mt-3">
+	<div class="container mt-3 m-1">
 		<div class="row align-items-center">
 			<div class="col-xl-8 text-center">
 				<canvas id="canvas" width="700" height="900"></canvas>
 			</div>
 			<div class="col-xl-4">
 				<div>
-					<button id="lapiz" type="button" class="btn btn-outline-secondary m-1" title="Dibujar"><img
+					<button id="lapiz" type="button" class="btn btn-outline-secondary m-1" ><img
 							src="images/lapiz13.png"/></button>
-					<button id="goma" type="button" class="btn btn-outline-secondary m-1" title="Borrar"><img
+					<button id="goma" type="button" class="btn btn-outline-secondary m-1"><img
 							src="images/goma2.png"/></button>
 				</div>
 				<div class="mt-1">
@@ -58,13 +58,15 @@
 						<img id="sepia" src="images/sepia.png" class="imgFiltros" name="sepia">
 						<label for="sepia">Sepia</label>
 						<img id="blancoNegro" src="images/blancoYnegro.png" class="imgFiltros" name="blancoNegro">
-						<label for="blancoNegro">Blanco y Negro</label>
+						<label for="blancoNegro">B/N</label>
 					</div>
 					<div class="col">
 						<img id="blur" src="images/blur.png" class="imgFiltros" name="blur">
 						<label for="blur">Blur</label>
 						<img id="invertirFilter" src="images/negativo.png" class="imgFiltros" name="invertirFilter">
 						<label for="invertirFilter">Negativo</label>
+						<img id="sobelFilter" src="images/sobel.png" class="imgFiltros" name="sobel">
+						<label for="sobel">Sobel</label>
 					</div>
 				</div>
 				<div class="row mt-2 ">
