@@ -1,7 +1,3 @@
-#matriz{
-    font-size:15px;
-}
-
 #canvas{
     border: solid 3px gray;
 }
@@ -10,8 +6,7 @@
     width: 75px;
     height: 75px;
     margin-top:5px;
-    margin-left: 3px;
-    
+    margin-left: 3px;   
 }
 
 button{
@@ -23,10 +18,8 @@ label{
     text-transform: uppercase;
     font-weight: bold;
 }
+
 body{
     background-image:url("../images/fondo1.jpeg");
     background-position-x: 100%;
-    
-   
-
 }
