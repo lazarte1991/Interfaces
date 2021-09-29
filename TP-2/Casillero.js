@@ -7,9 +7,9 @@ class Casillero {
 
     draw(){
         this.ctx.beginPath();
-        this.ctx.fillStyle = "#3393B5";
+        this.ctx.fillStyle = "#ffffff";
         this.ctx.lineWidth = 5;
-        this.ctx.arc(this.x, this.y, 25, 0, 2 * Math.PI);
+        this.ctx.arc(this.x, this.y, 30, 0, 2 * Math.PI);
         this.ctx.fill();
         this.ctx.closePath();
     }
