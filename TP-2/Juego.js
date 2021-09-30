@@ -37,17 +37,23 @@ function imprimirTablero(){
     }  
 }
 
-let ficha =new Ficha(ctx);
-ficha.cargarImagen();
-let fichas=[];
+let ficha =new Ficha(ctx);//creo la ficha
+ficha.cargarImagen();//cargo la imagen en la ficha
+let jugador1=new Jugador("jugador1",ficha);//le paso por parámetro la ficha al jugador
+jugador1.cargarFichas();//cargo las fichas
+
+/*let fichas=[];
 for(let i=0; i<20;i++){
     //ficha.agregarFicha(ficha);
     fichas.push(ficha);
-}
+}*/
+
+
+
 
 //fichas.pop(ficha);
 
-console.log(fichas.length);
+//console.log(fichas.length);
 
 
 

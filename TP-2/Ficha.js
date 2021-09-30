@@ -2,7 +2,6 @@ class Ficha{
 
     constructor(ctx){
         this.ctx=ctx;
-        //this.fichas=[];
     }
 
     cargarImagen (){
@@ -13,6 +12,13 @@ class Ficha{
         }
     }
 
+    //solo para ficha redonda
+    isPointInside(x,y){
+        let _x=this.posX - x;//posicion del circulo - la posicion de donde esta el mouse
+        let _y=this.posY - y;
+        return Math.sqrt(_x*_x + _y*_y)< this.radius;
+        //si la distancia es menor al radio, estoy adentro del circulo
+    }
    /* agregarFicha(){
         this.fichas.push(ficha);
     }
