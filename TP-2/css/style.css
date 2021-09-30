@@ -16,3 +16,7 @@ body {
 #cuatro, #cinco, #seis{
     margin: 5px;
 }
+
+img{
+    border-radius: 50%;
+}

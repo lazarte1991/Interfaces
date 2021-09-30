@@ -36,6 +36,9 @@ function imprimirTablero(){
         tablero.draw(600,600);
     }  
 }
+
+let ficha =new Ficha(ctx);
+ficha.cargarImagen();
     
 
 
