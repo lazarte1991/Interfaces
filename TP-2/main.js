@@ -23,9 +23,12 @@ imprimirTableroInicial();
 function imprimirTableroInicial(){
      tablero.draw(tableroWidth,tableroHeight);
 }
+
 function imprimirTablero(){
     let id = this.id;
-    if(id == 'seis' && id != null){
+    if(id == 'siete' && id != null){
+        tablero.draw(825,825);
+    }else if(id == 'seis' && id != null){
         tablero.draw(750,750);
     }else if(id == 'cinco' && id != null){
         tablero.draw(675,675);
@@ -46,3 +49,4 @@ function imprimirTablero(){
 document.getElementById('cuatro').addEventListener("click", imprimirTablero);//tablero.draw(600,600));
 document.getElementById('cinco').addEventListener("click", imprimirTablero);//tablero.draw(675,675));
 document.getElementById('seis').addEventListener("click", imprimirTablero);//tablero.draw(750,750));
+document.getElementById('siete').addEventListener("click", imprimirTablero);//tablero.draw(750,750));
