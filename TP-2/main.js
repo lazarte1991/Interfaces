@@ -39,6 +39,18 @@ function imprimirTablero(){
 
 let ficha =new Ficha(ctx);
 ficha.cargarImagen();
+let fichas=[];
+for(let i=0; i<20;i++){
+    //ficha.agregarFicha(ficha);
+    fichas.push(ficha);
+}
+
+//fichas.pop(ficha);
+
+console.log(fichas.length);
+
+
+
     
 
 
