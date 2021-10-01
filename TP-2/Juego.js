@@ -37,9 +37,10 @@ function imprimirTablero(){
     }  
 }
 
-let img;
-function elegirFicha(img){
-    
+let img=0;
+function elegirFicha(){
+    console.log("inicio func"+ img);
+
     let select = document.getElementById("selectFicha"); /*Obtener el SELECT */
     let id = select.options[select .selectedIndex].value; 
     if(id=="value1"){
@@ -51,14 +52,22 @@ function elegirFicha(img){
     }else{
         img='4';
     }
-   
+    console.log("fin func" +img);
+ 
     return img;
-  
+   
 }
 
-console.log(elegirFicha(img));
-let ficha =new Ficha(ctx,elegirFicha(img));//creo la ficha
-ficha.cargarImagen();//cargo la imagen en la ficha
+
+function cargaFichaElegida(){
+    let ficha =new Ficha(ctx,elegirFicha(img, canvas));
+    ficha.cargarImagen();
+    ficha.isPointInside();
+}
+
+
+
+
 /*let jugador1=new Jugador("jugador1",ficha);//le paso por parámetro la ficha al jugador
 jugador1.cargarFichas();//cargo las fichas
 let ficha2=new Ficha(ctx,img);
@@ -93,4 +102,3 @@ document.getElementById('cuatro').addEventListener("click", imprimirTablero);//t
 document.getElementById('cinco').addEventListener("click", imprimirTablero);//tablero.draw(675,675));
 document.getElementById('seis').addEventListener("click", imprimirTablero);//tablero.draw(750,750));
 document.getElementById('siete').addEventListener("click", imprimirTablero);//tablero.draw(750,750));
-document.getElementById('selectFicha').addEventListener("click", elegirFicha);
