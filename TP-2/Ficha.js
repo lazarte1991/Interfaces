@@ -1,23 +1,48 @@
 class Ficha{
 
-    constructor(ctx){
+    constructor(ctx,img){
         this.ctx=ctx;
-        //this.fichas=[];
+        this.img=img;
+
     }
 
     cargarImagen (){
         let imageObj = new Image();
-        imageObj.src = 'img/1.jpeg';
+        imageObj.src = 'img/'+ this.img+ '.jpeg';
+        imageObj.draggable=true;
+        imageObj.id=="event_drag"
+        imageObj.id="imgFicha";
+    /*  imageObj.ondragstart=function(e){
+
+                console.log("drag start");
+            
+        }*/
         imageObj.onload = function () {
             ctx.drawImage( imageObj, 0, 0 ,75,75); 
-        }
+       } 
+       
+	
     }
 
-   /* agregarFicha(){
-        this.fichas.push(ficha);
+    //solo para ficha redonda
+  
+    isPointInside(x,y){
+        let _x=this.posX - x;//posicion del circulo - la posicion de donde esta el mouse
+        let _y=this.posY - y;
+        return Math.sqrt(_x*_x + _y*_y)< this.radius;
+        //si la distancia es menor al radio, estoy adentro del circulo
     }
-
-    eliminarFicha(){
-        this.fichas.pop(ficha);
+ 
+    drag(e){
+        e.dataTransfer.setData("img",ev.target.id);
+        console.log("esta arrastrando");
+    }
+    
+    /*drop(e){
+        e.preventDefault();
+        let data= e.dataTransfer.getData("img");
+        e.target.appendChild(document.getElementById(data));
     }*/
+
+  
 }

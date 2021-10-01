@@ -37,17 +37,54 @@ function imprimirTablero(){
     }  
 }
 
-let ficha =new Ficha(ctx);
-ficha.cargarImagen();
-let fichas=[];
+let img=0;
+function elegirFicha(){
+    console.log("inicio func"+ img);
+
+    let select = document.getElementById("selectFicha"); /*Obtener el SELECT */
+    let id = select.options[select .selectedIndex].value; 
+    if(id=="value1"){
+        img='1';
+    }else if(id=="value2"){
+        img='2';
+    }else if(id=="value3"){
+        img='3';
+    }else{
+        img='4';
+    }
+    console.log("fin func" +img);
+ 
+    return img;
+   
+}
+
+
+function cargaFichaElegida(){
+    let ficha =new Ficha(ctx,elegirFicha(img, canvas));
+    ficha.cargarImagen();
+    ficha.isPointInside();
+}
+
+
+
+
+/*let jugador1=new Jugador("jugador1",ficha);//le paso por parámetro la ficha al jugador
+jugador1.cargarFichas();//cargo las fichas
+let ficha2=new Ficha(ctx,img);
+let jugador2=new Jugador("jugador2", ficha2);
+*/
+/*let fichas=[];
 for(let i=0; i<20;i++){
     //ficha.agregarFicha(ficha);
     fichas.push(ficha);
-}
+}*/
+
+
+
 
 //fichas.pop(ficha);
 
-console.log(fichas.length);
+//console.log(fichas.length);
 
 
 

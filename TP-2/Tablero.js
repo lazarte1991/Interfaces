@@ -18,7 +18,7 @@ draw(xWidth,yHeight){
         if (x  != posX) {
             for (let y = 0; y < yHeight; y+=75) {
                 if (y != posY && xAux<(this.canvasX/2)+ (xWidth/2) && yAux<(this.canvasY/2)+ (yHeight/2)) {
-                    let casillero = new Casillero(xAux, yAux, ctx);
+                    let casillero = new CasilleroCirculo(xAux, yAux, ctx);
                     yAux+=75;
                     casillero.draw();              
                 }
