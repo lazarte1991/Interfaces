@@ -1,12 +1,14 @@
 class Ficha{
 
-    constructor(ctx){
+    constructor(ctx,img){
         this.ctx=ctx;
+        console.log("img en ficha " + img);
+        this.img=img;
     }
 
-    cargarImagen (){
+    cargarImagen (img){
         let imageObj = new Image();
-        imageObj.src = 'img/1.jpeg';
+        imageObj.src = 'img/'+ this.img+ '.jpeg';
         imageObj.onload = function () {
             ctx.drawImage( imageObj, 0, 0 ,75,75); 
         }

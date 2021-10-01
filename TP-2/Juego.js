@@ -37,11 +37,33 @@ function imprimirTablero(){
     }  
 }
 
-let ficha =new Ficha(ctx);//creo la ficha
-ficha.cargarImagen();//cargo la imagen en la ficha
-let jugador1=new Jugador("jugador1",ficha);//le paso por parámetro la ficha al jugador
-jugador1.cargarFichas();//cargo las fichas
+let img;
+function elegirFicha(img){
+    
+    let select = document.getElementById("selectFicha"); /*Obtener el SELECT */
+    let id = select.options[select .selectedIndex].value; 
+    if(id=="value1"){
+        img='1';
+    }else if(id=="value2"){
+        img='2';
+    }else if(id=="value3"){
+        img='3';
+    }else{
+        img='4';
+    }
+   
+    return img;
+  
+}
 
+console.log(elegirFicha(img));
+let ficha =new Ficha(ctx,elegirFicha(img));//creo la ficha
+ficha.cargarImagen();//cargo la imagen en la ficha
+/*let jugador1=new Jugador("jugador1",ficha);//le paso por parámetro la ficha al jugador
+jugador1.cargarFichas();//cargo las fichas
+let ficha2=new Ficha(ctx,img);
+let jugador2=new Jugador("jugador2", ficha2);
+*/
 /*let fichas=[];
 for(let i=0; i<20;i++){
     //ficha.agregarFicha(ficha);
@@ -71,3 +93,4 @@ document.getElementById('cuatro').addEventListener("click", imprimirTablero);//t
 document.getElementById('cinco').addEventListener("click", imprimirTablero);//tablero.draw(675,675));
 document.getElementById('seis').addEventListener("click", imprimirTablero);//tablero.draw(750,750));
 document.getElementById('siete').addEventListener("click", imprimirTablero);//tablero.draw(750,750));
+document.getElementById('selectFicha').addEventListener("click", elegirFicha);
