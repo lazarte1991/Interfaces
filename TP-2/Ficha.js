@@ -1,9 +1,12 @@
 class Ficha{
 
-    constructor(ctx,img){
+    constructor(ctx,img,x,y,posX,posY){
         this.ctx=ctx;
         this.img=img;
-
+        this.x=x;
+        this.y=y;
+        this.posX=posX;
+        this.posY=posY;
     }
 
     cargarImagen (){
@@ -12,7 +15,7 @@ class Ficha{
         imageObj.draggable=true;
         imageObj.id=="event_drag"
         imageObj.id="imgFicha";
-    /*  imageObj.ondragstart=function(e){
+     /*   imageObj.ondragstart=function(e){
 
                 console.log("drag start");
             
@@ -27,6 +30,7 @@ class Ficha{
     //solo para ficha redonda
   
     isPointInside(x,y){
+        console.log("mouse dentro?");
         let _x=this.posX - x;//posicion del circulo - la posicion de donde esta el mouse
         let _y=this.posY - y;
         return Math.sqrt(_x*_x + _y*_y)< this.radius;
@@ -44,5 +48,5 @@ class Ficha{
         e.target.appendChild(document.getElementById(data));
     }*/
 
-  
+    
 }
