@@ -1,22 +1,52 @@
-#canvas {
-    border: solid black 1px;
+canvas {
+    border: solid 1px black;
+}
+
+.canvas{
+    text-align: center;
 }
 
 body {
+    background-image:url("../img/fondo1.jpeg");
+    background-position-x: 100%;
+}
+.contenedor {
     display: flex;
     flex-direction: row;
-}
+    justify-content: center;
 
-.botones {
-    width: 50%;
+}
+.primero, .ultimo{
+    width: 15%;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+.primero{
+    margin-right: 52px;
     display: flex;
     flex-direction: column;
+    
+}
+.ultimo{
+    margin-left: 50px;
+    justify-content: center;
+}
+button{
+    font-size: 25px;
+    
 }
 
-#cuatro, #cinco, #seis{
-    margin: 5px;
+footer{
+    text-align: center;
+
 }
 
-img{
-    border-radius: 50%;
+#reiniciar {
+margin-left: 50px;
+    display: none;
+}
+
+#iniciar {
+    display: block;
 }

@@ -1,35 +1,94 @@
 class Tablero {
-    constructor(canvasX, canvasY, ctx){
-        //this.width = width;
-        //this.height = height;
-        this.canvasX = canvasX;
-        this.canvasY = canvasY;
+
+    constructor(ctx, width, height) {
         this.ctx = ctx;
+        this.casillero = 100;
+        this.mitad = this.casillero / 2;
+        this.width = width;
+        this.height = height;
+        this.casilleros = new Map();//[];
+        this.fila = 0;
+        this.columna = 0;
+
     }
 
-draw(xWidth,yHeight){
-    let posX = (this.canvasX / 2) - (xWidth / 2);
-    let posY = (this.canvasY / 2) - (yHeight / 2);
-    ctx.fillStyle = "#3393B5";
-    ctx.fillRect(posX, posY, xWidth, yHeight);
-    let xAux=posX+75;
-    let yAux=posY+75; 
-    for (let x = 0; x < xWidth; x+=75) {
-        if (x  != posX) {
-            for (let y = 0; y < yHeight; y+=75) {
-                if (y != posY && xAux<(this.canvasX/2)+ (xWidth/2) && yAux<(this.canvasY/2)+ (yHeight/2)) {
-                    let casillero = new CasilleroCirculo(xAux, yAux, ctx);
-                    yAux+=75;
-                    casillero.draw();              
+
+    dibujarTablero(esTableroInicial) {
+        let px = canvasWidth/2 - this.width/2;
+        let py = canvasHeight - this.height;
+
+
+
+        ctx.fillStyle = "#66B2FF";
+        ctx.fillRect(px, py, this.width, this.height);//0,100,this.width, this.height
+
+        if (esTableroInicial) {
+            for (let i = py; i < this.width+py; i += this.casillero) {
+                //this.fila++;
+                for (let j = px ; j <  this.height+px; j += this.casillero) {
+                   // if (j == 0) {
+                    //     this.columna = 1;
+                    // } else {
+                    //     this.columna++;
+                    // }
+                    let casillero = new Circle(j + this.mitad, i + this.mitad, 35, "#ffffff", this.ctx);
+                    casillero.draw();
+                    let dataCasillero = [casillero, false];//, this.fila, this.columna
+                   // this.casilleros.push(dataCasillero);
+                   this.casilleros.set(""+(i + this.mitad)+(j + this.mitad), dataCasillero);
+                   //this.casilleros.set(id, dato) id= posXposY -> 15050
+
+                    // this.clearCircle(x + this.mitad, y + this.mitad, 35);
                 }
-                 
-            } 
-            yAux=posY+75;
-            xAux+=75;
+            }
+           
         }
-       
+        else {
+
+            for (const [id, dataCasillero] of this.casilleros) {
+               dataCasillero[0].draw();
+              }
+            // for (let i = 0; i < this.casilleros.length; i++) {
+
+                
+
+            // }
+        }
+      
+
+    }
+
+    getCasilleros() {
+        return this.casilleros;
+    }
+
+    clearCircle(x, y, radius) {
+        ctx.beginPath();
+        ctx.fillStyle = "#ffffff";
+        ctx.arc(x, y, radius, 0, 2 * Math.PI);
+        ctx.fill();
+        ctx.closePath();
     }
 
 
-}
+    getCasillero() {
+        return this.casillero;
+    }
+
+    getWidth() {
+        return this.width;
+    }
+
+    getHeight(){
+        return this.height;
+    }
+
+    setWidth(w){
+        this.width = w;
+    }
+
+    setHeight(h){
+        this.height = h;
+    }
+
 }
