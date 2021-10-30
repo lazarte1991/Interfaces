@@ -81,7 +81,6 @@ let contObtaculo = 1;
             pipeline.appendChild(bottomPipe);
             pipeline.appendChild(coin);
             pipeline.appendChild(obstacle);
-            console.log("crea");
             bottomPipe.style.width='60px';  
             topPipe.style.width='60px';
             coin.style.top= `${coinPosition}px`;
