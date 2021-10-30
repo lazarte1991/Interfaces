@@ -1,0 +1,176 @@
+/* Se eliminan márgenes y se pone fondo de página oscuro */
+html,body {
+  margin:0;
+  background-color: darkslategray;
+} 
+
+/*Se establece el ancho y el alto del div contenedor del juego*/
+#gameContainer{
+  width: 100%;
+  height: 100%;
+  /* border: solid coral 3px; */
+  
+}
+
+/* Se anima el personaje */
+#bird {
+  /* Tamaño de la viñeta individual */
+  width:79px;
+  height:71px;
+  /* Posicion del personaje*/
+  left: 220px;
+  bottom: 100px;
+  /*Cómo hay establecido un tamaño, se centra el personaje con margin:auto */
+  margin:auto;  
+  /* Se carga el spritesheet */
+  background:url(img/bird2.png) repeat-x;
+  /* Se aplica la animación "fly": 0.4seg, 4 viñetas y se repite infinitamente */
+  animation:fly .4s steps(4) infinite;
+  /* Se posiciona el personaje sobre la ciudad */
+  position:relative;
+
+}
+
+/* Animación de personaje volando: se mueve el spritesheet hacia la izquierda, realizando el movimiento. */
+@keyframes fly {
+  /* Se parte de la primera viñeta del sprite sheet */
+  0% { background-position:0 }
+  /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+  100% { background-position:-325px }
+}
+
+/* @keyframes fall{
+  0% {background-position: 100px}
+  100% {background-position: 700px}
+} */
+
+/*se crea el background de la ciudad, cargando una imágen, con un alto determinado*/
+#city {
+  background:url(img/b3.jpg) repeat-X;
+  height: 650px;
+   /* Se aplica la animación "movebg": 0.9seg, especificando cómo debe avanzar 
+   la animación y se establece que se repite infinitamente */
+  animation: movebg 30s linear infinite;
+  position: relative;
+
+}
+
+
+/* Div contenedor tuberias */
+#pipeline{
+  /* border: solid black 3px; */
+  /* background:url(p.png) no-repeat; */
+  /* height:100%; */
+  /*Se setea el ancho del div que contiene las tuberias*/
+  width:100%;
+  position: absolute; 
+    /* margin-left:900px;  */
+  /*Se aplica la animacion de nombre pipe, con 0.50 seg, especificando que sea de forma linear, y se repita 
+  infinitamente*/
+  animation: pipe .50s linear .20s infinite;
+  /*Se agrega display flex para poder lograr que las tubierias queden en fila*/
+  display: flex;
+  flex-direction: row;
+  
+}
+
+/*Se agrega la imágen para la tuberia de arriba, aplicando un transform rotate para poder utilizar la misma imágen
+ que la tuberia de abajo, pero con un giro de 180 grados. Se establece su posición*/
+.topPipe{
+  background:url("img/pipes.png") ;
+  transform: rotate(180deg);
+  position: relative;
+
+}
+/*Se agregando la imágen para la tuberia de abajo y se establece su posición*/
+.bottomPipe{
+  position: relative;
+  background:url("img/pipes.png") ;
+
+}
+
+/* Animación para mover ciudad, teniendo en cuenta el ancho de la imágen*/
+@keyframes movebg {
+  0% { background-position:1920px } 
+  100% { background-position:0 }
+}
+
+/*Animación para mover las tuberias*/
+@keyframes pipe {
+  0%   { background-position: 0px; }
+  100% { background-position: 100%; }
+}
+
+/*Se establece una imágen para las monedas, su tamaño y posición*/
+.coin{
+background: url("img/c.png");
+border-radius: 50%;
+width:46px;
+height: 48px;
+margin: 50px;
+position: relative;
+}
+
+.coin2{
+  background: url("img/c2.png");
+  border-radius: 50%;
+  width:46px;
+  height: 48px;
+  margin: 50px;
+  position: relative;
+}
+/*Se da estilo al div contenedor de la información del juego*/
+#info, footer{
+font-size: 30px;
+color:red;
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.gameOver{
+  background: url("img/game.png");
+  width:623px;
+  height: 580px;
+  margin-left:500px;
+  position:relative;
+}
+
+.obstacle2 {
+
+  background: url("img/obstaculo_2.png") repeat-x;
+  /* border-radius: 50%; */
+  /* width:46px;
+  height: 48px; */
+  margin: 50px;
+  position: relative;
+  animation:fire .9s steps(6) infinite;
+
+  /* Tamaño de la viñeta individual */
+  width:90px;
+  height:80px;
+  /* Posicion del personaje*/
+  /* left: 220px; */
+  /* bottom: 100px; */
+  /*Cómo hay establecido un tamaño, se centra el personaje con margin:auto */
+  /* margin:auto;   */
+  /* Se carga el spritesheet */
+  /* background:url(bird2.png) repeat-x; */
+  /* Se aplica la animación "fly": 0.4seg, 4 viñetas y se repite infinitamente */
+  /* animation:fly .4s steps(4) infinite; */
+  /* Se posiciona el personaje sobre la ciudad */
+  /* position:relative; */
+
+}
+
+/* Animación de personaje volando: se mueve el spritesheet hacia la izquierda, realizando el movimiento. */
+@keyframes fire {
+  /* Se parte de la primera viñeta del sprite sheet */
+  0% { background-position:0 }
+  /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+  100% { background-position:570px }
+} 
+
+#level, #points{
+  color:greenyellow;
+}
