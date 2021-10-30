@@ -28,7 +28,7 @@ let contObtaculo = 1;
 
     //Se crea la función que mueve al pájaro si se apreta la tecla espacio
     function moveBird(e) {
-        if (e.keyCode === 32) {
+        if (e.keyCode === 38) {
             jump();
         }
     }
@@ -81,7 +81,6 @@ let contObtaculo = 1;
             pipeline.appendChild(bottomPipe);
             pipeline.appendChild(coin);
             pipeline.appendChild(obstacle);
-            console.log("crea");
             bottomPipe.style.width='60px';  
             topPipe.style.width='60px';
             coin.style.top= `${coinPosition}px`;

@@ -128,6 +128,8 @@ flex-direction: row;
 justify-content: space-between;
 }
 
+
+
 .gameOver{
   background: url("img/game.png");
   width:623px;
