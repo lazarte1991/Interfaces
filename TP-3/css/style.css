@@ -305,7 +305,7 @@ footer {
 /*  BOLAS DE FUEGO */
 
 .explosion {
-    background: url(../images/obstaculo_44.png) repeat-x;
+    background: url(../images/FireBall.png) repeat-x;
     position: absolute;
     animation: moveexp .9s steps(6) infinite;
     /* Tamaño de la viñeta individual */
