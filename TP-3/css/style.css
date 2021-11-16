@@ -1,0 +1,444 @@
+@font-face {
+    font-family: GameFont;
+    src: url(../font/Gameplay.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background: linear-gradient( #6be9f1, #98eb69, #6be9f1);
+}
+
+.title {
+    width: 205px;
+    height: 32px;
+    background: url(../images/FlappyBird.png);
+    position: relative;
+    margin: 0 auto;
+}
+
+footer {
+    font-family: gameFont;
+    text-align: center;
+}
+
+.start,
+.win {
+    color: darkcyan;
+    font-family: gameFont;
+    font-size: 20px;
+    overflow: hidden;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    background-color: rgb(122, 122, 122, 0.2);
+    text-align: center;
+}
+
+.win {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.divStart-1,
+.divStart-2,
+.divStart-3,
+.divStart-4 {
+    margin-top: 60px;
+}
+
+.divStart-3 h4 {
+    color: rgb(62, 129, 7);
+}
+
+.divStart-4 img {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.city {
+    overflow: hidden;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0);
+    display: none;
+}
+
+.gameDate {
+    width: 760px;
+    font-family: gameFont;
+    font-size: 10px;
+    z-index: 10;
+    position: absolute;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.coinPoints {
+    margin-top: 10px;
+}
+
+.coinImg {
+    width: 25px;
+    height: 20px;
+}
+
+.barra {
+    width: 780px;
+    margin-top: 500px;
+    font-family: gameFont;
+    font-size: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+}
+
+#info,
+#text {
+    font-family: gameFont;
+    font-size: 10px;
+}
+
+.layer {
+    width: 100%;
+    height: 100%;
+}
+
+.layer-1 {
+    background: url(../images/1_suelo.png) repeat-x 0px 0px;
+    position: absolute;
+    animation: movebg 20s linear infinite;
+    z-index: 5;
+}
+
+.layer-2 {
+    background: url(../images/2_pasto.png) repeat-x 0px 0px;
+    position: absolute;
+    animation: movebg 30s linear infinite;
+    z-index: 4;
+}
+
+.layer-3 {
+    background: url(../images/3_edificios.png) repeat-x 0px 0px;
+    position: absolute;
+    animation: movebg 50s linear infinite;
+    z-index: 3;
+}
+
+.layer-4 {
+    background: url(../images/4_destello.png) repeat-x 0px 0px;
+    position: absolute;
+    animation: movebg 15s linear infinite;
+    z-index: 3;
+}
+
+.layer-5 {
+    background: url(../images/5_nubes.png) repeat-x 0px 0px;
+    position: absolute;
+    animation: movebg 80s linear infinite;
+    z-index: 2;
+}
+
+.layer-6 {
+    background: url(../images/6_cielo.png) repeat-x 0px 0px;
+    position: absolute;
+    animation: movebg 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes movebg {
+    0% {
+        background-position: 1920px
+    }
+    100% {
+        background-position: 0
+    }
+}
+
+.bird-blue {
+    width: 55.25px;
+    height: 46px;
+    position: relative;
+    z-index: 7;
+    background: url(../images/BirdBlue.png) repeat-x;
+}
+
+.bird-red {
+    width: 55.25px;
+    height: 46px;
+    position: relative;
+    z-index: 7;
+    background: url(../images/BirdRed.png) repeat-x;
+}
+
+.bird-green {
+    width: 55.25px;
+    height: 46px;
+    position: relative;
+    z-index: 7;
+    background: url(../images/BirdGreen.png) repeat-x;
+}
+
+
+/* Animación de personaje volando: se mueve el spritesheet hacia la izquierda, realizando el movimiento. */
+
+@keyframes fly {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        background-position: 0px;
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+    100% {
+        background-position: -220px;
+    }
+}
+
+.gameOver {
+    background: url(../images/GameOver.png);
+    width: 545px;
+    height: 545px;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    display: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.restart {
+    background-color: gold;
+    width: 250px;
+    font-family: gameFont;
+    font-size: 20px;
+    z-index: 10;
+    position: relative;
+    text-align: center;
+    border: none;
+    margin-top: 500px;
+}
+
+.reiniciar {
+    background-color: gold;
+    width: 250px;
+    font-family: gameFont;
+    font-size: 20px;
+    z-index: 10;
+    position: relative;
+    text-align: center;
+    border: none;
+    margin-left: 275px;
+    margin-top: 50px;
+}
+
+.restart,
+.reiniciar:hover {
+    animation: movRestart 1s linear infinite;
+}
+
+@keyframes movRestart {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        background-color: gold;
+        color: black;
+    }
+    50% {
+        background-color: black;
+        color: gold;
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+    100% {
+        background-color: gold;
+        color: black;
+    }
+}
+
+
+/* MONEDAS */
+
+.coin {
+    background: url(../images/Coin.png);
+    position: absolute;
+    animation: movecoin .9s steps(6) infinite;
+    /* Tamaño de la viñeta individual */
+    width: 46px;
+    height: 36px;
+    z-index: 7;
+}
+
+@keyframes movecoin {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        background-position: 0
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+    100% {
+        background-position: 280px
+    }
+}
+
+@keyframes movecoinCaptura {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        transform: translate(0, 0);
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+    100% {
+        transform: translate(0, -200px);
+        opacity: 0;
+    }
+}
+
+
+/*  BOLAS DE FUEGO */
+
+.explosion {
+    background: url(../images/obstaculo_44.png) repeat-x;
+    position: absolute;
+    animation: moveexp .9s steps(6) infinite;
+    /* Tamaño de la viñeta individual */
+    width: 23px;
+    height: 23px;
+    z-index: 7;
+}
+
+
+/* Animación de personaje volando: se mueve el spritesheet hacia la izquierda, realizando el movimiento. */
+
+@keyframes moveexp {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        background-position: 0
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+    100% {
+        background-position: 139px
+    }
+}
+
+
+/* TUBOS */
+
+.topPipe {
+    background: url(../images/PipeTop.png) repeat-x;
+    width: 38px;
+    height: 236px;
+    position: absolute;
+    z-index: 6;
+}
+
+.bottomPipe {
+    background: url(../images/PipeBottom.png) repeat-x;
+    width: 38px;
+    height: 236px;
+    position: absolute;
+    z-index: 6;
+}
+
+
+/* Random Top Pipe keyframes*/
+
+@keyframes movepp1 {
+    0% {
+        transform: translate(900px, -65px);
+    }
+    100% {
+        transform: translate(-200px, -65px);
+    }
+}
+
+@keyframes movepp2 {
+    0% {
+        transform: translate(900px, -80px);
+    }
+    100% {
+        transform: translate(-200px, -80px);
+    }
+}
+
+@keyframes movepp3 {
+    0% {
+        transform: translate(900px, -50px);
+    }
+    100% {
+        transform: translate(-200px, -50px);
+    }
+}
+
+@keyframes movepp4 {
+    0% {
+        transform: translate(900px, -100px);
+    }
+    100% {
+        transform: translate(-200px, -100px);
+    }
+}
+
+@keyframes movepp5 {
+    0% {
+        transform: translate(900px, -110px);
+    }
+    100% {
+        transform: translate(-200px, -110px);
+    }
+}
+
+
+/* Random Bottom Pipe keyframes*/
+
+@keyframes movepp6 {
+    0% {
+        transform: translate(900px, 320px);
+    }
+    100% {
+        transform: translate(-200px, 320px);
+    }
+}
+
+@keyframes movepp7 {
+    0% {
+        transform: translate(900px, 335px);
+    }
+    100% {
+        transform: translate(-200px, 335px);
+    }
+}
+
+@keyframes movepp8 {
+    0% {
+        transform: translate(900px, 340px);
+    }
+    100% {
+        transform: translate(-200px, 340px);
+    }
+}
+
+@keyframes movepp9 {
+    0% {
+        transform: translate(900px, 355px);
+    }
+    100% {
+        transform: translate(-200px, 355px);
+    }
+}
+
+@keyframes movepp10 {
+    0% {
+        transform: translate(900px, 365px);
+    }
+    100% {
+        transform: translate(-200px, 365px);
+    }
+}
