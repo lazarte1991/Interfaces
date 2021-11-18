@@ -1,0 +1,35 @@
+img{
+    width:75%;
+    height:75%;
+    margin: 20px;
+}
+
+.images{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenido{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px;
+}
+body{
+    background-color:#D8BFD8;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    margin:50px;
+    font-size: medium; 
+    align-items: center;
+}
+
+#link{
+    margin:30px;
+}
