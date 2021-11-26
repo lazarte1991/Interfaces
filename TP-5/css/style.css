@@ -17,6 +17,7 @@ body {
 .loginContainer {
     margin: 50px;
     margin-top: 150px;
+    margin-bottom: 0;
     align-items: center;
     justify-content: space-around;
 }
@@ -71,6 +72,7 @@ button {
 }
 
 .loginContainer {
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
 }
@@ -152,5 +154,48 @@ input {
     /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
     100% {
         background-position: 224px
+    }
+}
+
+.huella {
+    margin-left: 500px;
+    background: url(../img/huellas.png) repeat-x;
+    height: 267px;
+    /* width: 72px; */
+    position: relative;
+    animation: movehuella 5s infinite;
+}
+
+@keyframes movehuella {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        width: 0;
+    }
+    11.11% {
+        width: 38.88px;
+    }
+    22.22% {
+        width: 77.76px;
+    }
+    33.33% {
+        width: 122.46px;
+    }
+    44.44% {
+        width: 167.16px;
+    }
+    55.55% {
+        width: 221.66px;
+    }
+    66.66% {
+        width: 283.16px;
+    }
+    77.77% {
+        width: 351.66px;
+    }
+    88.88% {
+        width: 436.96px;
+    }
+    100% {
+        width: 505px;
     }
 }
