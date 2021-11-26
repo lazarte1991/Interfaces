@@ -1,0 +1,156 @@
+* {
+    font-family: PetFont;
+    /* font-weight: bold; */
+}
+
+@font-face {
+    font-family: PetFont;
+    src: url(../font/Coco-Sharp-Bold-trial.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    background-color: #E5DFF5;
+}
+
+.loginContainer {
+    margin: 50px;
+    margin-top: 150px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form,
+label {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.recuperoPass {
+    margin-bottom: 1px;
+    font-size: small;
+}
+
+.botonesLogin {
+    flex-direction: column;
+}
+
+button {
+    border: none;
+}
+
+#logo {
+    background-image: url(../img/texto_logo.png);
+    width: 419px;
+    height: 199px;
+    /* margin-left: 100px;
+    display: flex;
+    flex-direction: column; */
+}
+
+#nombreRed {
+    text-transform: uppercase;
+    font-size: 80px;
+    font-family: sans-serif;
+    margin: 50px;
+    font-weight: bold;
+}
+
+#logo img {
+    width: 10%;
+    height: 20%;
+    position: fixed;
+    margin-block: 10px;
+    margin-inline: 250px;
+}
+
+.loginContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    font-size: medium;
+}
+
+input {
+    margin-top: 1px;
+    margin-bottom: 3px;
+    height: 40px;
+    width: 100%;
+    /* size: 100px; */
+    border: none;
+    background-color: #C4C4C4;
+}
+
+.btn-ingreso {
+    height: 40px;
+    width: 48%;
+    font-size: 15px;
+}
+
+.btn-registro {
+    background-color: #8BDE76;
+}
+
+.btn-login {
+    background-color: #3085E8;
+}
+
+.botonesLogin {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+/************************************* PRUEBA ****************************************/
+
+.perro {
+    background: url(../img/perrito_animado_2.png) repeat-x;
+    position: relative;
+    animation: movedog .9s steps(4) infinite;
+    /* Tamaño de la viñeta individual */
+    width: 76.5px;
+    height: 66px;
+    z-index: 7;
+}
+
+@keyframes movedog {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        background-position: 0
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+    100% {
+        background-position: -307px
+    }
+}
+
+.hueso {
+    background: url(../img/hueso.png) repeat-x;
+    position: relative;
+    animation: movebone .9s steps(6) infinite;
+    /* Tamaño de la viñeta individual */
+    width: 37px;
+    height: 29px;
+    z-index: 7;
+}
+
+@keyframes movebone {
+    /* Se parte de la primera viñeta del sprite sheet */
+    0% {
+        background-position: 0
+    }
+    /* El tamaño total de ancho del sprite. Es negativo para que no "vuele" hacia atrás */
+    100% {
+        background-position: 224px
+    }
+}
