@@ -199,3 +199,12 @@ input {
         width: 505px;
     }
 }
+
+/************************************* MURO NOTICIAS ****************************************/
+
+#navbar{
+    background-color:975FCE;
+    border: 2px solid black;
+    height: 20%;
+    position: sticky;
+}
