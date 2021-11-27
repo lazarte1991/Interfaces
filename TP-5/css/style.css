@@ -202,9 +202,58 @@ input {
 
 /************************************* MURO NOTICIAS ****************************************/
 
-#navbar{
+.navbar{
     background-color:975FCE;
+    /* border: 2px solid black; */
+    height: 120px;
+    position: sticky; 
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.navBotones{
+    display: flex;
+    align-items: flex-end;
+}
+.navBotones button{  
+    background-color: transparent;
+    justify-content: space-between;
+    margin-left:30px;
+   
+}
+
+.logoHeader, .busqueda{
+    display: flex;
+    align-items: center;
+}
+
+.busqueda input{
+    width:400px;
+    height: 40px;
+    border:none;
+    padding-left: 10px;
+    background-color: #C4C4C4;
+}
+.busqueda img{
+    width:40px;
+    height:40px;
+    margin-right: 20px; 
+}
+
+.contenedor{
+    display: flex;
+}
+
+.comunidad{
     border: 2px solid black;
-    height: 20%;
-    position: sticky;
+    
+}
+
+.muroCentral{
+    border: 2px solid black;
+}
+
+.publicidad{
+    border: 2px solid black;
 }
