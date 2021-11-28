@@ -248,8 +248,8 @@ input {
 
 .comunidad{
     /* border: 2px solid black; */
-    width:25%;
-    padding: 15px;
+   width:25%;
+   padding: 15px;
    display: flex;
    flex-direction: column;
     
@@ -291,10 +291,16 @@ input {
 .ficha{
     display: flex;
     flex-direction: row;
-    width: 75%;
     height:40px;
     align-items: center;
     background-color: #C4C4C4; 
+}
+
+.ficha img{
+    margin-right: 20px;
+    width: 25%;
+    height: 65%;
+    border-radius: 50%;
 }
 .sugerenciaContactoIndividual{
     align-items: center;
@@ -315,12 +321,25 @@ input {
 
 .muroCentral{
     border: 2px solid black;
+      /* border: 2px solid black; */
+      width:50%;
+      padding: 15px;
+     display: flex;
+     flex-direction: column;
+}
+
+.publicacion{
+
 }
 
 .publicidad{
-    border: 2px solid black;
+    width:25%;
+    margin-bottom: 5px;
 }
 
+.publicidad img{
+    width:100%;
+}
 .botonesComunicacion{
     display: flex;
     align-items: center;
