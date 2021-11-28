@@ -333,12 +333,15 @@ input {
 }
 
 .publicidad{
+    padding-top: 15px;
+    padding-left: 15px;
     width:25%;
-    margin-bottom: 5px;
+
 }
 
 .publicidad img{
     width:100%;
+    margin-bottom: 5px;
 }
 .botonesComunicacion{
     display: flex;
