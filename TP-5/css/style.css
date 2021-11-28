@@ -243,11 +243,74 @@ input {
 
 .contenedor{
     display: flex;
+    
 }
 
 .comunidad{
-    border: 2px solid black;
+    /* border: 2px solid black; */
+    width:25%;
+    padding: 15px;
+   display: flex;
+   flex-direction: column;
     
+}
+.contactosHeader{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+.contactosHeader img{
+    width:30px;
+    height: 30px;
+    margin-left: 20px;
+  
+}
+.fichaContacto{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    width: 75%;
+    height:40px;
+    align-items: center;
+    background-color: #C4C4C4;
+    margin-bottom:5px;
+    
+}
+
+.fichaContacto img{
+    margin-right:20px;
+    width:30px;
+    height: 30px;
+}
+
+.sugerenciasContactos{
+    flex-direction: column;  
+   
+}
+.ficha{
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    height:40px;
+    align-items: center;
+    background-color: #C4C4C4; 
+}
+.sugerenciaContactoIndividual{
+    align-items: center;
+    background-color: #C4C4C4;
+    padding: 5px;
+    width: 75%;
+    height:70px;
+    margin-bottom: 5px;
+}
+ 
+.botonSugerencias{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .muroCentral{
@@ -256,4 +319,12 @@ input {
 
 .publicidad{
     border: 2px solid black;
+}
+
+.botonesComunicacion{
+    display: flex;
+    align-items: center;
+    width: 75%;
+    justify-content: space-evenly;
+    
 }
