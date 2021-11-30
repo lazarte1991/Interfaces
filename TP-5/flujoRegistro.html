@@ -25,12 +25,12 @@
                     <div class="perro"></div>
                 </div>
                 <div class="reg-2">
-                    <img src="./img/dos.png" alt="">
+                    <img id="pagina-2-reg" src="./img/dos.png" alt="">
 
                     <!-- <div class="linea-1"></div> -->
                 </div>
                 <div class="reg-3">
-                    <img src="./img/tres.png" alt="">
+                    <img id="pagina-3-reg" src="./img/tres.png" alt="">
                     <div class="hueso"></div>
                 </div>
             </div>
@@ -39,7 +39,7 @@
         <div class="reg-flujo-2" id="reg-flujo-2">
             <div class="animacion_perro_registro">
                 <div class="reg-1">
-                    <img src="./img/uno.png" alt="">
+                    <img id="pagina-1-reg" src="./img/uno.png" alt="">
 
                 </div>
                 <div class="reg-2">
@@ -48,7 +48,7 @@
                     <!-- <div class="linea-1"></div> -->
                 </div>
                 <div class="reg-3">
-                    <img src="./img/tres.png" alt="">
+                    <img id="pagina-3a-reg" src="./img/tres.png" alt="">
 
                     <div class="hueso"></div>
                 </div>
@@ -57,11 +57,11 @@
         <div class="reg-flujo-3" id="reg-flujo-3">
             <div class="animacion_perro_registro">
                 <div class="reg-1">
-                    <img src="./img/uno.png" alt="">
+                    <img id="pagina-1a-reg" src="./img/uno.png" alt="">
 
                 </div>
                 <div class="reg-2">
-                    <img src="./img/dos.png" alt="">
+                    <img id="pagina-2a-reg" src="./img/dos.png" alt="">
                     <!-- <div class="linea-1"></div> -->
                 </div>
                 <div class="reg-3">
@@ -79,41 +79,44 @@
             <div class="reg-pag-1" id="reg-pag-1">
                 <div>
                     <label for="usuario">Usuario</label>
-                    <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                    <label for="usuario">Contraseña</label>
-                    <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                    <label for="usuario">Repetí tu contraseña</label>
-                    <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    <input id="usuario" type="text" name="usuario">
+                    <label for="pass">Contraseña</label>
+                    <input id="pass" type="password" name="pass">
+                    <label for="passDos">Repetí tu contraseña</label>
+                    <input id="passDos" type="password" name="passDos">
+                    <p class="error" id="error-1"></p>
                 </div>
             </div>
             <div class="reg-pag-2" id="reg-pag-2">
                 <div>
-                    <label for="usuario">Nombre y Apellido</label>
-                    <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    <label for="nombreUsuario">Nombre y Apellido</label>
+                    <input id="nombreUsuario" type="text" name="nombreUsuario">
                     <div class="ciudad-codPostal">
-                        <div>
-                            <label for="usuario">Ciudad</label>
-                            <input class="ciudad" type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        <div class="ciudad">
+                            <label for="ciudad">Ciudad</label>
+                            <input id="ciudad" type="text" name="ciudad">
                         </div>
-                        <div>
-                            <label for="usuario">Cod. Postal</label>
-                            <input class="codPostal" type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                        <div class="codPostal">
+                            <label for="codigoPostal">Cod. Postal</label>
+                            <input id="codigoPostal" type="text" name="codigoPostal">
                         </div>
 
                     </div>
-                    <label for="usuario">Seleccioná tu foto</label>
-                    <input class="file" type="file" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    <label for="fotoUsuario">Seleccioná tu foto</label>
+                    <input id="fotoUsuario" class="file" type="file" name="fotoUsuario">
+                    <p class="error" id="error-2"></p>
                 </div>
             </div>
             <div class="reg-pag-3" id="reg-pag-3">
                 <div>
-                    <p class="agregar-mascota">Agregá a tu mascota<img src="https://img.icons8.com/material-rounded/30/000000/plus.png" /></p>
-                    <label for="usuario">Nombre</label>
-                    <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                    <label for="usuario">Especie</label>
-                    <input type="text" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-                    <label for="usuario">Seleccioná su foto</label>
-                    <input class="file" type="file" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+                    <h2 class="agregar-mascota">Agregá a tu mascota<img src="https://img.icons8.com/material-rounded/30/000000/plus.png" /></h2>
+                    <label for="nombreMascota">Nombre</label>
+                    <input id="nombreMascota" type="text" name="nombreMascota">
+                    <label for="especie">Especie</label>
+                    <input id="especie" type="text" name="especie">
+                    <label for="fotoMascota">Seleccioná su foto</label>
+                    <input id="fotoMascota" class="file" type="file" name="fotoMascota">
+                    <p class="error" id="error-3"></p>
                 </div>
             </div>
             <div class="siguiente-1" id="siguiente-1">
