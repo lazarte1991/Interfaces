@@ -86,7 +86,7 @@ input {
     margin-bottom: 3px;
     height: 40px;
     width: 100%;
-    /* size: 100px; */
+    padding-left: 10px;
     border: none;
     background-color: #C4C4C4;
 }
@@ -125,6 +125,11 @@ input {
     justify-content: space-between;
 }
 
+button a {
+    text-decoration: none;
+    color: black;
+}
+
 .siguiente-1,
 .siguiente-2,
 .registrarme {
@@ -146,6 +151,11 @@ input {
     /* display: flex;*/
     /* flex-direction: column; */
     /* align-items: center; */
+}
+
+.formulario p {
+    font-size: 12px;
+    color: red;
 }
 
 .reg-pag-1,
