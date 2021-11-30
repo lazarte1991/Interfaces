@@ -205,6 +205,7 @@ input {
 .navbar{
     background-color:975FCE;
     /* border: 2px solid black; */
+    /*BOX-SHADOW*/
     height: 120px;
     position: sticky; 
     display: flex;
@@ -246,7 +247,7 @@ input {
     
 }
 
-.comunidad{
+.comunidad, .perfilPersonal{
     /* border: 2px solid black; */
    width:25%;
    padding: 15px;
@@ -320,33 +321,155 @@ input {
 }
 
 .muroCentral{
-    border: 2px solid black;
+    
       /* border: 2px solid black; */
-      width:50%;
-      padding: 15px;
-     display: flex;
-     flex-direction: column;
+    width:50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
+.publicacionPropia, .publicacion{
+    height: auto;
+    width:100%;
+    border: 1px  solid black;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px  solid black;
+    margin-bottom: 10px;
+ 
+}
+
+
+
+.info{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.info img{
+    width:18%;
+    height:60%;
+    margin: 2px;
+
+    align-items: center;
+}
+
+.botonesPublicacion{
+    display: flex; 
+    width: 100%; 
+    justify-content: space-evenly;
+}
+
+.botonesPublicacion button{
+
+    width:42px;
+    height: 32px;
+  
+    
+}
+
+.botonesPublicacion img{
+    /* margin-right:20px; */
+    width:30px;
+    height: 30px;
+}
+
+.publicacionPropia input{
+    width:400px;
+    height:40px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+/* .publicacionPropia img{
+    width: 90px;
+    height: 50px;
+} */
 .publicacion{
-
+    display: flex;
+    height: auto;
+    border: 1px  solid black;
+    margin-bottom: 10px;
+    flex-direction: column;
 }
 
-.publicidad{
+.imagenPublicada{
+    width:100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.imagenPublicada img{
+    width:60%;
+    height:80%;
+    margin: 10px;
+}
+
+.publicidad, .chats{
     padding-top: 15px;
     padding-left: 15px;
     width:25%;
-
 }
 
 .publicidad img{
     width:100%;
     margin-bottom: 5px;
 }
+
 .botonesComunicacion{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     width: 75%;
     justify-content: space-evenly;
     
+}
+
+.botonesComunicacion button, .reacciones button, .botonesPublicacion button{
+    background-color: transparent;
+}
+
+.reacciones{
+    
+    /* height:40px; 
+    align-items:flex-start;   
+    justify-content: space-between;  */
+    display: flex; 
+    width: 100%; 
+    justify-content: space-evenly;
+    background-color: #FFFFFF;
+}
+.reacciones button{
+    text-transform: uppercase;
+    margin-right:20px;
+ 
+}
+
+.reacciones img{
+    margin-right: 10px;
+}
+.perfilPersonal h2{
+    display: flex;
+    justify-content: center;
+}
+
+/* .perfil img{
+    width: 30px;
+    height: 30px;
+    align-items: center;
+} */
+
+.info h4{
+    display: flex;
+    align-items: center;
+}
+
+.fichacontacto h4{
+
+    flex-direction: column;
 }
