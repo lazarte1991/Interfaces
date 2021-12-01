@@ -283,6 +283,7 @@ button a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .perfilPersonal,
@@ -403,12 +404,14 @@ textarea:focus {
 
 .sugerenciasContactos {
     flex-direction: column;
+  
 }
 
 .ficha {
     display: flex;
     flex-direction: row;
     height: 40px;
+    width: 100%;
     align-items: center;
     background-color: #C4C4C4;
 }
@@ -424,7 +427,7 @@ textarea:focus {
     align-items: center;
     background-color: #C4C4C4;
     padding: 5px;
-    width: 75%;
+    width: 23%;
     height: 70px;
     margin-bottom: 5px;
 }
@@ -462,7 +465,10 @@ textarea:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
+    width:100%;
 }
+
 
 .info img {
     width: 18%;
@@ -473,6 +479,16 @@ textarea:focus {
 .botonesPublicacion {
     display: flex;
     width: 100%;
+
+
+/* .info h5{
+
+    align-items: flex-end;
+    
+}  */
+.botonesPublicacion{
+    display: flex; 
+    width: 100%; 
     justify-content: space-evenly;
 }
 
@@ -529,7 +545,7 @@ textarea:focus {
 .publicidad img {
     width: 100%;
     height: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px; 
 }
 
 .animacion_perro_registro {
@@ -659,9 +675,8 @@ textarea:focus {
 .info h5 {
     display: flex;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
-}
+    justify-content: space-around ;
+
 
 .info h5 {
     display: flex;
@@ -671,7 +686,6 @@ textarea:focus {
 .fichacontacto h4 {
     flex-direction: column;
 }
-
 
 /************************************* PRUEBA ****************************************/
 
