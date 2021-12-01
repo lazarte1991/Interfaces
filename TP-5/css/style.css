@@ -275,6 +275,8 @@ button a {
     
 }
 
+
+
 .contactos{
     display: flex;
     flex-direction: column;
@@ -282,12 +284,13 @@ button a {
     margin-bottom: 10px;
 }
 
-.perfilPersonal, .contactos{
+.perfilPersonal, .contactos, .sugerenciasContactos{
     background-color: rgb(196, 196, 196, 0.5);
     padding: 10px;
+   
 }
 
-.contactosHeader {
+.contactosHeader, .sugerenciasContactos {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -299,7 +302,7 @@ button a {
     margin-left: 20px;
 }
 
-.fichaContacto {
+.fichaContacto, .ficha  {
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -309,6 +312,16 @@ button a {
     background-color:E5E5E5;
     margin-bottom: 5px;
 }
+
+.sugerenciaContactoIndividual {
+  
+    align-items: center;
+    background-color: E5E5E5;
+    /* padding: 5px; */
+    width: 95%;
+    height: 80px;
+    margin-bottom: 5px;
+} 
 
 .fichaContacto img {
     margin-right: 20px;
@@ -327,17 +340,18 @@ button a {
 }
 .sugerenciasContactos {
     flex-direction: column;
+    margin-top: 10px;
   
 }
 
-.ficha {
+/* .ficha {
     display: flex;
     flex-direction: row;
     height: 40px;
     width: 100%;
     align-items: center;
     background-color: #C4C4C4;
-}
+} */
 
 .ficha img {
     margin-right: 20px;
@@ -346,14 +360,6 @@ button a {
     border-radius: 50%;
 }
 
-.sugerenciaContactoIndividual {
-    align-items: center;
-    background-color: #C4C4C4;
-    padding: 5px;
-    width: 23%;
-    height: 70px;
-    margin-bottom: 5px;
-}
 
 .botonSugerencias {
     display: flex;
@@ -361,6 +367,11 @@ button a {
     justify-content: space-around;
     margin-top: 5px;
     margin-bottom: 5px;
+   
+}
+
+.botonSugerencias button{
+     background-color: rgba(209, 157, 157, 0.5);
 }
 
 
