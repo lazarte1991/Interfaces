@@ -761,14 +761,15 @@ textarea:focus {
     flex-direction: column;
 }
 
-.galeria h2{
-    
-}
+
 .galeria li {
 	margin: 5px;
 }
 
-.galeria img {
+.galeria h3, .galeria h5{
+    margin:5px;
+}
+.galeria img, .galeria video{
 	width: 150px;
 	height: 100px;
 }
@@ -797,7 +798,7 @@ textarea:focus {
 	margin: 15px 0;
 }
 
-.imagen {
+.imagen, .video {
 	width: 100%;
 	height: 50%;
 	
@@ -806,20 +807,20 @@ textarea:focus {
 	align-items: center;
 }
 
-.imagen a {
+.imagen a, .video a{
 	color: #fff;
 	font-size: 40px;
 	text-decoration: none;
 	margin: 0 10px;
 }
 
-.imagen a:nth-child(2) {
+.imagen a:nth-child(2), .video a:nth-child(2) {
 	margin: 0;
 	height: 100%;
 	flex-shrink: 2;
 }
 
-.imagen img {
+.imagen img, .video img {
 	width: 500px;
 	height: 100%;
 	max-width: 100%;
@@ -840,4 +841,9 @@ textarea:focus {
 	padding: 5px;
 	border-radius: 50%;
 	line-height: 25px;
+}
+
+.publicacionesRealizadas{
+    display: flex;
+    flex-direction: row;
 }
