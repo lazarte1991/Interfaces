@@ -279,6 +279,7 @@ button a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .perfilPersonal, .contactos{
@@ -326,12 +327,14 @@ button a {
 }
 .sugerenciasContactos {
     flex-direction: column;
+  
 }
 
 .ficha {
     display: flex;
     flex-direction: row;
     height: 40px;
+    width: 100%;
     align-items: center;
     background-color: #C4C4C4;
 }
@@ -347,7 +350,7 @@ button a {
     align-items: center;
     background-color: #C4C4C4;
     padding: 5px;
-    width: 75%;
+    width: 23%;
     height: 70px;
     margin-bottom: 5px;
 }
@@ -388,16 +391,22 @@ button a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    
+    width:100%;
 }
+
 
 .info img{
     width:18%;
     height:60%;
-    margin: 5px;
-
-   
+    margin: 5px;  
 }
 
+/* .info h5{
+
+    align-items: flex-end;
+    
+}  */
 .botonesPublicacion{
     display: flex; 
     width: 100%; 
@@ -454,13 +463,13 @@ button a {
 .publicidad{
     width:100%;
     height:300px;
-    margin-top: 10px;
+
 }
 
 .publicidad img{
     width:100%;
     height: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px; 
 }
 
 
@@ -593,14 +602,11 @@ button a {
 .info h4, .info h5{
     display: flex;
     align-items: center;
-    margin-left: 5px;
-    margin-right: 5px;
+    justify-content: space-around ;
+
 }
 
-.info h5{
-    display: flex;
-    align-items: flex-end;
-}
+
 .fichacontacto h4{
 
     flex-direction: column;
