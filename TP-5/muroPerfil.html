@@ -20,9 +20,10 @@
             <input type="text" placeholder="Búsqueda">
         </div>
         <div class="navBotones">
-            <button class="btnHome"><img src="https://img.icons8.com/ios-filled/40/000000/home.png"/></button>
-            <button class="btnPerfil"><img src="https://img.icons8.com/ios-filled/40/000000/user.png"/></button>
+            <button class="btnHome"><a href="muroNoticias.html"><img src="https://img.icons8.com/ios-filled/40/000000/home.png"/></a></button>
+            <button class="btnPerfil"><a href="muroPerfil.html"><img src="https://img.icons8.com/ios-filled/40/000000/user.png"/></a></button>
             <button class="btnNotificacion"><img src="https://img.icons8.com/ios-filled/40/000000/appointment-reminders--v1.png"/></button>
+            <button><img src="https://img.icons8.com/ios-filled/40/000000/settings.png"/></button>
         </div>
    </div>
    <div class="contenedor">
@@ -71,7 +72,7 @@
             </div>
             <div class="publicacionesRealizadas">
                 <ul class="galeria">
-                    <h3>Fotos</h3>
+                    <h3>Fotos Publicadas</h3>
                     <h5>Click en la imágen para ver la galeria</h5>
                     <li><a href="#img1"><img src="./img/hombre1.jpeg"></a></li>
                 </ul>
@@ -118,7 +119,7 @@
                 
                     <div class="video">
                         <a href="#video4">&#60;</a>
-                        <a href="#video2"><img src="./videos/milo.mp4"></a>
+                        <a href="#video2"><video src="./videos/milo.mp4"></a>
                         <a href="#video2">></a>
                     </div>
                     <a class="cerrar" href="">X</a>
@@ -128,7 +129,7 @@
                     
                     <div class="video">
                         <a href="#video1">&#60;</a>
-                        <a href="#video3"><img src="./videos/milo.mp4"></a>
+                        <a href="#video3"><video src="./videos/milo.mp4"></a>
                         <a href="#video3">></a>
                     </div>
                     <a class="cerrar" href="">X</a>
@@ -138,7 +139,7 @@
     
                     <div class="video">
                         <a href="#video2">&#60;</a>
-                        <a href="#video4"><img src="./videos/milo.mp4"></a>
+                        <a href="#video4"><video src="./videos/milo.mp4"></a>
                         <a href="#video4">></a>
                     </div>
                     <a class="cerrar" href="">X</a>
@@ -148,7 +149,7 @@
                     
                     <div class="video">
                         <a href="#video3">&#60;</a>
-                        <a href="#video1"><img src="./videos/milo.mp4"></a>
+                        <a href="#video1"><video src="./videos/milo.mp4"></a>
                         <a href="#video1">></a>
                     </div>
                     <a class="cerrar" href="">X</a>
@@ -165,9 +166,9 @@
                 <img src="./img/perro-labrador-portada.jpg" alt="" >
             </div>
             <div class="reacciones">
-                <button><img src="https://img.icons8.com/ios-filled/20/000000/filled-like.png"/> like</button>
-                <button><img src="https://img.icons8.com/ios-filled/20/000000/speech-bubble-with-dots.png"/>comentar</button>
-                <button><img src="https://img.icons8.com/ios-filled/20/000000/forward-arrow.png"/>compartir</button>
+                <button id="botonLike" onclick="contar()"><img src="https://img.icons8.com/ios-filled/20/000000/filled-like.png"/> like</button>
+                <button id="botonComentar"><img src="https://img.icons8.com/ios-filled/20/000000/speech-bubble-with-dots.png"/>comentar</button>
+                <button id="botonCompartir"><img src="https://img.icons8.com/ios-filled/20/000000/forward-arrow.png"/>compartir</button>
             </div>
         </div>
  
@@ -209,7 +210,7 @@
     </div>
     
 </div>
-
+<script src="./js/muro.js"></script>
 </body>
 
 </html>
