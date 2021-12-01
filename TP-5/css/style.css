@@ -91,6 +91,10 @@ input {
     background-color: #C4C4C4;
 }
 
+input:focus {
+    outline: none;
+}
+
 .btn-ingreso {
     height: 40px;
     width: 48%;
@@ -264,24 +268,25 @@ button a {
 
 .contenedor {
     display: flex;
-    margin-top:25px;
+    margin-top: 25px;
     justify-content: space-between;
 }
 
-.comunidad, .perfilPersonal{
+.comunidad,
+.perfilPersonal {
     width: 23%;
     display: flex;
     flex-direction: column;
-    
 }
 
-.contactos{
+.contactos {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.perfilPersonal, .contactos{
+.perfilPersonal,
+.contactos {
     background-color: rgb(196, 196, 196, 0.5);
     padding: 10px;
 }
@@ -305,8 +310,79 @@ button a {
     width: 95%;
     height: 40px;
     align-items: center;
-    background-color:E5E5E5;
+    background-color: E5E5E5;
     margin-bottom: 5px;
+}
+
+.chat {
+    background-color: rgb(248, 248, 242);
+    width: 48%;
+    height: 100%;
+    padding: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    overflow-y: scroll;
+    resize: none;
+    padding: 10px;
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 20px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #975FCE;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.cuerpo-chat {
+    height: 530px;
+    overflow-y: scroll;
+}
+
+.cuerpo-chat::-webkit-scrollbar {
+    width: 10px;
+    margin-right: 20px;
+}
+
+.cuerpo-chat::-webkit-scrollbar-thumb {
+    background: #975FCE;
+}
+
+.msj-contacto {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.msj-propio {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.msj-propio p {
+    background-color: rgb(196, 196, 196, 0.5);
+}
+
+.msj-contacto p {
+    background-color: #E5DFF5;
+}
+
+.msj-propio p,
+.msj-contacto p {
+    height: auto;
+    width: auto;
+    display: table;
+    padding: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .fichaContacto img {
@@ -314,16 +390,17 @@ button a {
     width: 30px;
     height: 30px;
 }
-.fichaContacto div{
+
+.fichaContacto div {
     flex-direction: column;
-    
-
 }
 
-.fichaContacto h3, .fichaContacto h5{
+.fichaContacto h3,
+.fichaContacto h5 {
     height: 48%;
-    margin:0px;            
+    margin: 0px;
 }
+
 .sugerenciasContactos {
     flex-direction: column;
 }
@@ -360,7 +437,6 @@ button a {
     margin-bottom: 5px;
 }
 
-
 .muroCentral {
     /* border: 2px solid black; */
     /* border: 2px solid black; */
@@ -371,98 +447,90 @@ button a {
     align-items: center;
 }
 
-.publicacionPropia, .publicacion{
+.publicacionPropia,
+.publicacion {
     height: auto;
-    width:95%;
+    width: 95%;
     display: flex;
     flex-direction: column;
     padding: 10px;
     margin-bottom: 10px;
     background-color: rgb(196, 196, 196, 0.5);
- 
 }
 
-
-
-.info{
+.info {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.info img{
-    width:18%;
-    height:60%;
+.info img {
+    width: 18%;
+    height: 60%;
     margin: 5px;
-
-   
 }
 
-.botonesPublicacion{
-    display: flex; 
-    width: 100%; 
+.botonesPublicacion {
+    display: flex;
+    width: 100%;
     justify-content: space-evenly;
 }
 
-.botonesPublicacion button{
-
-    width:42px;
+.botonesPublicacion button {
+    width: 42px;
     height: 32px;
-  
-    
 }
 
-.botonesPublicacion img{
+.botonesPublicacion img {
     /* margin-right:20px; */
-    width:30px;
+    width: 30px;
     height: 30px;
 }
 
-.publicacionPropia input{
-    width:400px;
-    height:40px;
+.publicacionPropia input {
+    width: 400px;
+    height: 40px;
     margin-left: 5px;
     margin-right: 5px;
-
 }
+
 
 /* .publicacionPropia img{
     width: 90px;
     height: 50px;
 } */
-.publicacion{
+
+.publicacion {
     display: flex;
     height: auto;
     margin-bottom: 10px;
     flex-direction: column;
 }
 
-.imagenPublicada{
-    width:100%;
+.imagenPublicada {
+    width: 100%;
     height: 200px;
     display: flex;
     justify-content: center;
-    
 }
 
-.imagenPublicada img{
-    width:60%;
-    height:80%;
+.imagenPublicada img {
+    width: 60%;
+    height: 80%;
     margin: 10px;
 }
 
-.publicidad{
-    width:100%;
-    height:300px;
+.publicidad {
+    width: 100%;
+    height: 300px;
     margin-top: 10px;
 }
 
-.publicidad img{
-    width:100%;
+.publicidad img {
+    width: 100%;
     height: 100%;
     margin-bottom: 5px;
 }
-
 
 .animacion_perro_registro {
     margin-top: 50px;
@@ -544,65 +612,63 @@ button a {
 
 /* .publicacion {} */
 
-
-
-
 .botonesComunicacion {
     display: flex;
     align-items: flex-end;
     width: 75%;
     justify-content: space-evenly;
-    
 }
 
-.botonesComunicacion button, .reacciones button, .botonesPublicacion button{
+.botonesComunicacion button,
+.reacciones button,
+.botonesPublicacion button {
     background-color: transparent;
 }
 
-.reacciones{
-    
+.reacciones {
     /* height:40px; 
     align-items:flex-start;   
     justify-content: space-between;  */
-    display: flex; 
-    width: 100%; 
+    display: flex;
+    width: 100%;
     justify-content: space-evenly;
     background-color: #FFFFFF;
 }
-.reacciones button{
+
+.reacciones button {
     text-transform: uppercase;
-    margin-right:20px;
- 
+    margin-right: 20px;
 }
 
-.reacciones img{
+.reacciones img {
     margin-right: 10px;
 }
-.perfilPersonal h2{
+
+.perfilPersonal h2 {
     display: flex;
     justify-content: center;
-    
 }
 
-.perfil img{
+.perfil img {
     width: 30px;
     height: 30px;
     align-items: center;
 }
 
-.info h4, .info h5{
+.info h4,
+.info h5 {
     display: flex;
     align-items: center;
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.info h5{
+.info h5 {
     display: flex;
     align-items: flex-end;
 }
-.fichacontacto h4{
 
+.fichacontacto h4 {
     flex-direction: column;
 }
 
