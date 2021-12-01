@@ -279,7 +279,10 @@ button a {
     flex-direction: column;
 }
 
-
+.perfil{
+    height:66.5%;
+    padding-bottom: 10px;
+}
 
 
 .contactos {
@@ -287,9 +290,10 @@ button a {
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
+    
 }
 
-.perfilPersonal, .contactos, .sugerenciasContactos{
+.perfil, .contactos, .sugerenciasContactos{
 
     background-color: rgb(196, 196, 196, 0.5);
     padding: 10px;
@@ -487,10 +491,6 @@ textarea:focus {
     margin: 5px;
 }
 
-.botonesPublicacion {
-    display: flex;
-    width: 100%;
-
 
 /* .info h5{
 
@@ -550,13 +550,13 @@ textarea:focus {
 .publicidad {
     width: 100%;
     height: 300px;
-    margin-top: 10px;
+   
 }
 
 .publicidad img {
     width: 100%;
     height: 100%;
-    margin-bottom: 10px; 
+    margin-bottom: 10px;
 }
 
 .animacion_perro_registro {
@@ -674,6 +674,9 @@ textarea:focus {
 .perfilPersonal h2 {
     display: flex;
     justify-content: center;
+    margin:0px;
+    padding-top: 10px;
+    background-color: rgb(196, 196, 196, 0.5);
 }
 
 .perfil img {
@@ -687,7 +690,7 @@ textarea:focus {
     display: flex;
     align-items: center;
     justify-content: space-around ;
-
+}
 
 .info h5 {
     display: flex;
