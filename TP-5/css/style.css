@@ -10,6 +10,13 @@
     font-weight: normal;
 }
 
+@font-face {
+    font-family: PetFont-Regular;
+    src: url(../font/RobotoCondensed-Light.ttf   );
+    font-style: normal;
+    font-weight: normal;
+}
+
 body {
     background-color: #E5DFF5;
 }
@@ -407,6 +414,7 @@ textarea:focus {
     margin-right: 20px;
     width: 30px;
     height: 30px;
+    border-radius: 50%;
 }
 
 .fichaContacto div {
@@ -436,8 +444,8 @@ textarea:focus {
 
 .ficha img {
     margin-right: 20px;
-    width: 25%;
-    height: 65%;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
@@ -486,9 +494,10 @@ textarea:focus {
 
 
 .info img {
-    width: 18%;
-    height: 60%;
+    width: 50px;
+    height: 50px;
     margin: 5px;
+    border-radius: 50%;
 
 }
 
@@ -654,14 +663,14 @@ textarea:focus {
     background-color: transparent;
 }
 
-.reacciones {
+.reacciones, .contador {
     /* height:40px; 
     align-items:flex-start;   
     justify-content: space-between;  */
     display: flex;
     width: 100%;
     justify-content: space-evenly;
-    background-color: #FFFFFF;
+    background-color: #E5DFF5;
 }
 
 .reacciones button {
@@ -849,3 +858,34 @@ textarea:focus {
     display: flex;
     flex-direction: row;
 }
+
+
+
+/******************************toggle************************************/
+/* .toggleLike{
+    display:none;
+}
+
+.reacciones button h4{
+    display: flex;
+    flex-direction: row;
+} */
+
+.contador{
+    height: 20px;
+    margin-bottom: 2px;
+    display: flex;
+}
+
+
+#contadorLikes, #contadorComentarios, #contadorCompartidos {
+    margin:2px;
+    font-family:PetFont-Regular;
+ 
+}
+
+
+/* .contadorLikes h4{
+    
+    flex-direction: row;
+} */
