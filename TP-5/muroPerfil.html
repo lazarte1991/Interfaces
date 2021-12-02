@@ -13,7 +13,7 @@
 <body>
    <div class="navbar">
         <div class="logoHeader">
-            <img src="./img/logo_header.png" alt="">
+            <a href="muroNoticias.html"><img src="./img/logo_header.png" alt=""></a>
         </div>
         <div class="busqueda">
             <img src="https://img.icons8.com/ios-filled/50/000000/search--v2.png"/>
@@ -43,6 +43,10 @@
             <div class="info">
                 <img src="https://img.icons8.com/ios-filled/50/000000/star.png"/>
                 <h4>Favoritos</h4>  
+            </div>
+            <div class="info">
+                <img src="https://img.icons8.com/ios-filled/50/000000/image-gallery.png"/>
+                <h4>Galería</h4>  
             </div>
             
         </div>
@@ -165,8 +169,15 @@
             <div class="imagenPublicada">
                 <img src="./img/perro-labrador-portada.jpg" alt="" >
             </div>
+            <div class="contador">
+                <h5 id="contadorLikes"> 14 likes</h5>
+                <h5 id="contadorComentarios"> 29 comentarios</h5>
+                <h5 id="contadorCompartidos"> 2 compartido</h5>
+            </div>
             <div class="reacciones">
-                <button id="botonLike" onclick="contar()"><img src="https://img.icons8.com/ios-filled/20/000000/filled-like.png"/> like</button>
+                <button id="botonLike">
+                    <img src="https://img.icons8.com/ios-filled/20/000000/filled-like.png" id="like"/>like
+                </button> 
                 <button id="botonComentar"><img src="https://img.icons8.com/ios-filled/20/000000/speech-bubble-with-dots.png"/>comentar</button>
                 <button id="botonCompartir"><img src="https://img.icons8.com/ios-filled/20/000000/forward-arrow.png"/>compartir</button>
             </div>
@@ -181,14 +192,14 @@
                 <img src="https://img.icons8.com/ios-filled/50/000000/marker-o.png"/>
             </div>
             <div class="fichaContacto">
-                <img src="https://img.icons8.com/ios-filled/40/000000/user.png"/>
+                <img src="./img/vet1.jpeg"/>
                 <div>
                     <h3>María Garcia</h3>
                     <h5>San Martin 1423</h5>
                 </div>
             </div>
             <div class="fichaContacto">
-                <img src="https://img.icons8.com/ios-filled/40/000000/user.png"/>
+                <img src="./img/vet2.jpeg"/>
                 <div>
                     <h3>Julieta Ortiz</h3>
                     <h5>Sarmiento 1004</h5> 
@@ -196,7 +207,7 @@
                 
             </div>
             <div class="fichaContacto">
-                <img src="https://img.icons8.com/ios-filled/40/000000/user.png"/>
+                <img src="./img/vet3.jpeg"/>
                 <div>
                     <h3>Alberto Marin</h3>
                     <h5>Roca 135</h5>  
