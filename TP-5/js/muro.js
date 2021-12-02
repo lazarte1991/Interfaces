@@ -51,13 +51,23 @@ let valorComentarios=29;
 
 function actualizarComentarios(){
 
-    valorComentarios++;
-    document.getElementById("contadorComentarios").innerHTML=valorComentarios + " comentarios"; 
-    let elementos=document.querySelectorAll("inputComentarios");
-    for(let elem of elementos){
-        elem.classList.toggle("mostrar");
+    let div=document.querySelectorAll("div");
+    for(let di of div){
+        di.classList.replace("inputComentarios", "mostrar");  
     }
-    
-
+    if(event.keyCode == 13){
+        borrarComentarios();
+    }
 }
 
+function borrarComentarios(){
+   
+   
+        valorComentarios++;
+        document.getElementById("contadorComentarios").innerHTML=valorComentarios + " comentarios"; 
+        let div=document.querySelectorAll("div");
+    for(let di of div){
+        di.classList.replace("mostrar", "inputComentarios");  
+    }
+    
+}

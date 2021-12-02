@@ -181,10 +181,13 @@
                 <button id="botonCompartir"><img src="https://img.icons8.com/ios-filled/20/000000/forward-arrow.png"/>compartir</button>
             </div>
             <div class="inputComentarios">
-                <input id="comentariosTerceros" cols="20" rows="8" placeholder="Escribe un mensaje aquí"></textarea>
+              
+                <input id="comentariosTerceros" cols="20" rows="8" placeholder="Escribe un mensaje aquí" onkeyup = "if(event.keyCode == 13)borrarComentarios()"></input> 
+               
+
             </div>
         </div>
- 
+     
        
     </div>
     <div class="comunidad">
