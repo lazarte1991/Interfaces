@@ -306,7 +306,7 @@ button a {
     padding: 10px;
 }
 
-.contactosHeader,
+.contactosHeader,.chatsPersonales,
 .sugerenciasContactos, .tituloPublicaciones {
     display: flex;
     flex-direction: row;
@@ -433,21 +433,29 @@ textarea:focus {
     margin: 0px;
 }
 
-.sugerenciasContactos {
+.sugerenciasContactos, .chatsPersonales {
     flex-direction: column;
     margin-top: 10px;
 }
 
-
-/* .ficha {
+.chatsPersonales{
+    /* position: fixed; */
+    /* margin-top: 200px; */
+    /* justify-content: flex-end; */
     display: flex;
-    flex-direction: row;
-    height: 40px;
-    width: 100%;
-    align-items: center;
-    background-color: #C4C4C4;
-} */
+   
+    
+}
 
+.chatsPersonales a{
+    text-decoration: none;
+    color:black;
+}
+
+/* .chatsPersonales img{
+    width: 30px;
+    height: 30px;
+} */
 .ficha img {
     margin-right: 20px;
     width: 40px;
