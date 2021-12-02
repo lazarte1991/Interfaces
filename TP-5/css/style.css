@@ -306,7 +306,7 @@ button a {
 }
 
 .contactosHeader,
-.sugerenciasContactos {
+.sugerenciasContactos, .tituloPublicaciones {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -935,3 +935,26 @@ textarea:focus {
     
     flex-direction: row;
 } */
+
+.info a{
+    text-decoration: none;
+    color: #000;
+}
+
+.info a:hover{
+   font-size: 120%;
+   color:dimgray;
+}
+
+.galeriaPublicaciones{
+    width: 74%;
+    border: 1px solid black;
+    display:flex;
+    justify-content:center;
+    align-items: baseline;
+   
+}
+
+.tituloPublicaciones{
+    margin-bottom: 40px;
+}
