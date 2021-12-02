@@ -289,6 +289,7 @@ button a {
 .perfil {
     height: 66.5%;
     padding-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .contactos {
@@ -299,8 +300,8 @@ button a {
 }
 
 .perfil,
-.contactos,
-.sugerenciasContactos {
+.contactos, .chatsPersonales,
+.sugerenciasContactos{
     background-color: rgb(196, 196, 196, 0.5);
     padding: 10px;
 }
@@ -947,7 +948,7 @@ textarea:focus {
     display: flex;
 }
 
-#contadorLikes,
+#contadorLikes,#contadorLikes1, #contadorLikes2,
 #contadorComentarios,
 #contadorCompartidos {
     margin: 2px;

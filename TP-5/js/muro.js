@@ -31,3 +31,18 @@ function actualizar() {
     
 }
 
+ let contenedor=document.getElementByClass("mensajeBuscador");
+function buscar ( ) {
+
+    
+    let str = document.getElementById("busqueda").value;
+   
+    if(str=="g"){
+       contenedor.innerHTML+="Debe ingresar caracteres";
+
+    }
+    
+  }
+  
+  
+  
