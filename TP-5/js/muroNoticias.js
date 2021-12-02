@@ -73,7 +73,7 @@ function actualizarComentarios2(){
 
     let div=document.querySelectorAll("div");
     for(let di of div){
-        di.classList.replace("inputComentarios", "mostrar");  
+        di.classList.replace("inputComentarios2", "mostrar");  
     }
     if(event.keyCode == 13){
         borrarComentarios2();
@@ -85,7 +85,7 @@ function borrarComentarios2(){
     document.getElementById("contadorComentarios2").innerHTML=valorComentarios2 + " comentarios"; 
     let div=document.querySelectorAll("div");
     for(let di of div){
-        di.classList.replace("mostrar", "inputComentarios");  
+        di.classList.replace("mostrar", "inputComentarios2");  
     }
 }
 

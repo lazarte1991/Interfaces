@@ -1010,6 +1010,6 @@ textarea:focus {
     display: show;
 }
 
-.inputComentarios{
+.inputComentarios, .inputComentarios2{
     display: none;
 }
