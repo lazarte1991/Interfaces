@@ -1021,3 +1021,15 @@ textarea:focus {
 .inputComentarios, .inputComentarios2{
     display: none;
 }
+
+
+/********************************buscador************************/
+.mensajeBuscador{
+    display: show;
+    border: 3px solid black;
+    width: 46%;
+    /* padding: 15px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
