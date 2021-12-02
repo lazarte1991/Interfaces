@@ -39,3 +39,67 @@ function actualizarContador2() {
    
 }
     
+
+let btnComentarios=document.getElementById("botonComentar1").addEventListener("click", actualizarComentarios1);
+  
+let valorComentarios1=739;
+
+function actualizarComentarios1(){
+
+    let div=document.querySelectorAll("div");
+    for(let di of div){
+        di.classList.replace("inputComentarios", "mostrar");  
+    }
+    if(event.keyCode == 13){
+        borrarComentarios1();
+    }
+}
+
+function borrarComentarios1(){
+    valorComentarios1++;
+    document.getElementById("contadorComentarios1").innerHTML=valorComentarios1 + " comentarios"; 
+    let div=document.querySelectorAll("div");
+    for(let di of div){
+        di.classList.replace("mostrar", "inputComentarios");  
+    }
+}
+
+
+let btnComentarios2=document.getElementById("botonComentar2").addEventListener("click", actualizarComentarios2);
+  
+let valorComentarios2=245;
+
+function actualizarComentarios2(){
+
+    let div=document.querySelectorAll("div");
+    for(let di of div){
+        di.classList.replace("inputComentarios2", "mostrar");  
+    }
+    if(event.keyCode == 13){
+        borrarComentarios2();
+    }
+}
+
+function borrarComentarios2(){
+    valorComentarios2++;
+    document.getElementById("contadorComentarios2").innerHTML=valorComentarios2 + " comentarios"; 
+    let div=document.querySelectorAll("div");
+    for(let di of div){
+        di.classList.replace("mostrar", "inputComentarios2");  
+    }
+}
+
+let btnCompartir1=document.getElementById("botonCompartir1").addEventListener("click", contar1);
+let btnCompartir2=document.getElementById("botonCompartir2").addEventListener("click", contar2);
+
+let valorCompartidos1=503;
+let valorCompartidos2=162;
+function contar1(){
+    valorCompartidos1++;
+    document.getElementById("contadorCompartidos1").innerHTML=valorCompartidos1 + " compartidos"; 
+}
+
+function contar2(){
+    valorCompartidos2++;
+    document.getElementById("contadorCompartidos2").innerHTML=valorCompartidos2 + " compartidos"; 
+}

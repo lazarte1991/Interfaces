@@ -310,9 +310,8 @@ button a {
     padding: 10px;
 }
 
-.contactosHeader,
-.sugerenciasContactos,
-.tituloPublicaciones {
+.contactosHeader,.chatsPersonales,
+.sugerenciasContactos, .tituloPublicaciones {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -445,21 +444,29 @@ textarea:focus {
     font-family: PetFont-Regular;
 }
 
-.sugerenciasContactos {
+.sugerenciasContactos, .chatsPersonales {
     flex-direction: column;
     margin-top: 10px;
 }
 
-
-/* .ficha {
+.chatsPersonales{
+    /* position: fixed; */
+    /* margin-top: 200px; */
+    /* justify-content: flex-end; */
     display: flex;
-    flex-direction: row;
-    height: 40px;
-    width: 100%;
-    align-items: center;
-    background-color: #C4C4C4;
-} */
+   
+    
+}
 
+.chatsPersonales a{
+    text-decoration: none;
+    color:black;
+}
+
+/* .chatsPersonales img{
+    width: 30px;
+    height: 30px;
+} */
 .ficha img {
     margin-right: 20px;
     width: 40px;
@@ -966,11 +973,11 @@ textarea:focus {
     display: flex;
 }
 
-#contadorLikes,
-#contadorLikes1,
-#contadorLikes2,
-#contadorComentarios,
-#contadorCompartidos {
+
+#contadorLikes,#contadorLikes1, #contadorLikes2,
+#contadorComentarios,#contadorComentarios1,#contadorComentarios2,
+#contadorCompartidos, #contadorCompartidos1, #contadorCompartidos2 {
+
     margin: 2px;
     font-family: PetFont-Regular;
 }
@@ -1026,6 +1033,6 @@ textarea:focus {
     display: show;
 }
 
-.inputComentarios {
+.inputComentarios, .inputComentarios2{
     display: none;
 }
