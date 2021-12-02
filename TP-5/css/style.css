@@ -972,13 +972,38 @@ textarea:focus {
 
 .galeriaPublicaciones{
     width: 74%;
-    border: 1px solid black;
     display:flex;
     justify-content:center;
-    align-items: baseline;
-   
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(196, 196, 196, 0.5);
 }
 
+
+
 .tituloPublicaciones{
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
+.galeriaPropia{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 150px;
+    grid-column-gap: 10px;
+    grid-row-gap: 1em;
+    margin-bottom: 10px;
+ 
+ 
+}
+
+.galeriaPropia img{
+    width: 150px;
+    height: 150px;
+}
+
+
+/* .galeriaPropia div{
+    border: 1px solid black;
+    height:150px;
+    width: 150px;
+    margin:10px;
+} */
