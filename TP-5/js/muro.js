@@ -31,18 +31,33 @@ function actualizar() {
     
 }
 
- let contenedor=document.getElementByClass("mensajeBuscador");
-function buscar ( ) {
+//  let contenedor=document.getElementByClass("mensajeBuscador");
+// function buscar ( ) {
 
     
-    let str = document.getElementById("busqueda").value;
+//     let str = document.getElementById("busqueda").value;
    
-    if(str=="g"){
-       contenedor.innerHTML+="Debe ingresar caracteres";
+//     if(str=="g"){
+//        contenedor.innerHTML+="Debe ingresar caracteres";
 
+//     }
+    
+//   }
+  
+
+  let btnComentarios=document.getElementById("botonComentar").addEventListener("click", actualizarComentarios);
+  
+let valorComentarios=29;
+
+function actualizarComentarios(){
+
+    valorComentarios++;
+    document.getElementById("contadorComentarios").innerHTML=valorComentarios + " comentarios"; 
+    let elementos=document.querySelectorAll("inputComentarios");
+    for(let elem of elementos){
+        elem.classList.toggle("mostrar");
     }
     
-  }
-  
-  
-  
+
+}
+

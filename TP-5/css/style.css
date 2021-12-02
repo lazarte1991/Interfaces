@@ -1002,9 +1002,14 @@ textarea:focus {
 }
 
 
-/* .galeriaPropia div{
-    border: 1px solid black;
-    height:150px;
-    width: 150px;
-    margin:10px;
-} */
+.comentarios{
+    display: show;
+}
+
+.mostrar{
+    display: show;
+}
+
+.inputComentarios{
+    display: none;
+}
