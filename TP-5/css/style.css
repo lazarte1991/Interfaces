@@ -949,8 +949,8 @@ textarea:focus {
 }
 
 #contadorLikes,#contadorLikes1, #contadorLikes2,
-#contadorComentarios,
-#contadorCompartidos {
+#contadorComentarios,#contadorComentarios1,#contadorComentarios2,
+#contadorCompartidos, #contadorCompartidos1, #contadorCompartidos2 {
     margin: 2px;
     font-family: PetFont-Regular;
 }
