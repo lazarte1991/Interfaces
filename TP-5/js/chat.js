@@ -1,5 +1,5 @@
 let txtArea = document.getElementById("txt-area");
-let cuerpoChat = document.getElementById("cuerpo-chat");
+let cuerpoChat = document.querySelector(".cuerpo-chat");
 
 
 document.addEventListener('keydown', chekTextArea);
@@ -22,6 +22,7 @@ function enviar() {
         <p>${txtArea.value}</p>
         <p class="hora">00:23</p>
         </div>`;
+        txtArea.value = "";
     }
 
 }
