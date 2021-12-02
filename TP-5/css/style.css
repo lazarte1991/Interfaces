@@ -279,28 +279,27 @@ button a {
     flex-direction: column;
 }
 
-.perfil{
-    height:66.5%;
+.perfil {
+    height: 66.5%;
     padding-bottom: 10px;
 }
-
 
 .contactos {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
-    
 }
 
-.perfil, .contactos, .sugerenciasContactos{
-
+.perfil,
+.contactos,
+.sugerenciasContactos {
     background-color: rgb(196, 196, 196, 0.5);
     padding: 10px;
-   
 }
 
-.contactosHeader, .sugerenciasContactos {
+.contactosHeader,
+.sugerenciasContactos {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -312,7 +311,8 @@ button a {
     margin-left: 20px;
 }
 
-.fichaContacto, .ficha  {
+.fichaContacto,
+.ficha {
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -324,14 +324,14 @@ button a {
 }
 
 .sugerenciaContactoIndividual {
-  
     align-items: center;
     background-color: E5E5E5;
     /* padding: 5px; */
     width: 95%;
     height: 80px;
     margin-bottom: 5px;
-} 
+}
+
 .chat {
     background-color: rgb(248, 248, 242);
     width: 48%;
@@ -422,8 +422,8 @@ textarea:focus {
 .sugerenciasContactos {
     flex-direction: column;
     margin-top: 10px;
-  
 }
+
 
 /* .ficha {
     display: flex;
@@ -441,18 +441,16 @@ textarea:focus {
     border-radius: 50%;
 }
 
-
 .botonSugerencias {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin-top: 5px;
     margin-bottom: 5px;
-   
 }
 
-.botonSugerencias button{
-     background-color: rgba(209, 157, 157, 0.5);
+.botonSugerencias button {
+    background-color: rgba(209, 157, 157, 0.5);
 }
 
 .muroCentral {
@@ -480,16 +478,16 @@ textarea:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    
-    width:100%;
+    width: 100%;
 }
 
-
 .info img {
-    width: 18%;
+    /* width: 18%;
     height: 60%;
-    margin: 5px;
-
+    margin: 5px; */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
 
@@ -498,9 +496,10 @@ textarea:focus {
     align-items: flex-end;
     
 }  */
-.botonesPublicacion{
-    display: flex; 
-    width: 100%; 
+
+.botonesPublicacion {
+    display: flex;
+    width: 100%;
     justify-content: space-evenly;
     margin-bottom: 10px;
 }
@@ -552,7 +551,6 @@ textarea:focus {
 .publicidad {
     width: 100%;
     height: 300px;
-   
 }
 
 .publicidad img {
@@ -676,7 +674,7 @@ textarea:focus {
 .perfilPersonal h2 {
     display: flex;
     justify-content: center;
-    margin:0px;
+    margin: 0px;
     padding-top: 10px;
     background-color: rgb(196, 196, 196, 0.5);
 }
@@ -691,7 +689,7 @@ textarea:focus {
 .info h5 {
     display: flex;
     align-items: center;
-    justify-content: space-around ;
+    justify-content: space-around;
 }
 
 .info h5 {
@@ -702,6 +700,7 @@ textarea:focus {
 .fichacontacto h4 {
     flex-direction: column;
 }
+
 
 /************************************* PRUEBA ****************************************/
 
@@ -752,100 +751,148 @@ textarea:focus {
 /*Estilos de la galeria*/
 
 .galeria {
-	width: 90%;
-	margin: auto;
-	list-style: none;
-	padding: 20px;
-	box-sizing: border-box;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     flex-direction: column;
 }
 
-
 .galeria li {
-	margin: 5px;
+    margin: 5px;
 }
 
-.galeria h3, .galeria h5{
-    margin:5px;
+.galeria h3,
+.galeria h5 {
+    margin: 5px;
 }
-.galeria img, .galeria video{
-	width: 150px;
-	height: 100px;
+
+.galeria img,
+.galeria video {
+    width: 150px;
+    height: 100px;
 }
+
 
 /*Estilos del modal*/
 
 .modal {
-	display: none;
+    display: none;
 }
 
 .modal:target {
-	
-	display: block;
-	position: fixed;
-	background: rgba(0,0,0,0.8);
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .modal h3 {
-	color: #fff;
-	font-size: 30px;
-	text-align: center;
-	margin: 15px 0;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
 }
 
-.imagen, .video {
-	width: 100%;
-	height: 50%;
-	
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.imagen,
+.video {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.imagen a, .video a{
-	color: #fff;
-	font-size: 40px;
-	text-decoration: none;
-	margin: 0 10px;
+.imagen a,
+.video a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
 }
 
-.imagen a:nth-child(2), .video a:nth-child(2) {
-	margin: 0;
-	height: 100%;
-	flex-shrink: 2;
+.imagen a:nth-child(2),
+.video a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
 }
 
-.imagen img, .video img {
-	width: 500px;
-	height: 100%;
-	max-width: 100%;
-	border: 7px solid #fff;
-	box-sizing: border-box;
+.imagen img,
+.video img {
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 7px solid #fff;
+    box-sizing: border-box;
 }
 
 .cerrar {
-	display: block;
-	background: #fff;
-	width: 25px;
-	height: 25px;
-	margin: 15px auto;
-	text-align: center;
-	text-decoration: none;
-	font-size: 25px;
-	color: #000;
-	padding: 5px;
-	border-radius: 50%;
-	line-height: 25px;
+    display: block;
+    background: #fff;
+    width: 25px;
+    height: 25px;
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
 }
 
-.publicacionesRealizadas{
+.publicacionesRealizadas {
     display: flex;
     flex-direction: row;
 }
+
+
+/* -------------------------------------------LEANDRO------------------------------------------------ */
+
+.dia {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.dia p {
+    text-align: center;
+    width: 40px;
+    padding: 5px;
+    background-color: rgb(196, 196, 196, 0.3);
+}
+
+.f-chat {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.header-chat h2 {
+    width: 75%;
+    font-size: 25px;
+}
+
+.header-chat {
+    background-color: #E5DFF5;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+}
+
+.i-chat {
+    margin: 5px;
+}
+
+
+/* ------------------------------------------------------------------------------------------- */
