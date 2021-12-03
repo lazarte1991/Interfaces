@@ -1,5 +1,6 @@
 * {
     font-family: PetFont;
+    color: #383635;
     /* font-weight: bold; */
 }
 
@@ -55,7 +56,6 @@ body {
     flex-direction: row;
     z-index: 1;
 }
-
 
 label {
     width: 50%;
@@ -244,7 +244,7 @@ input:focus {
 
 button a {
     text-decoration: none;
-    color: black;
+    color: #383635;
 }
 
 .siguiente-1,
@@ -382,6 +382,10 @@ button a {
     margin-right: 20px;
 }
 
+.comunidad img {
+    margin-top: 10px;
+}
+
 .contenedor {
     display: flex;
     margin-top: 25px;
@@ -405,13 +409,13 @@ button a {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     padding-bottom: 5px;
 }
 
-.contactos img{
-    margin:15px;
+.contactos img {
+    margin: 15px;
 }
+
 .perfil,
 .contactos,
 .chatsPersonales,
@@ -444,22 +448,23 @@ button a {
     width: 95%;
     height: 40px;
     align-items: center;
-    background-color: E5E5E5;
+    background-color: #E5E5E5;
     margin-top: 5px;
 }
 
 .sugerenciaContactoIndividual {
+    display: flex;
     align-items: center;
-    background-color: E5E5E5;
+    background-color: #E5E5E5;
     padding: 5px;
     width: 95%;
-    height: 85px;
+    height: 70px;
     margin-bottom: 10px;
 }
 
 .chat {
     background-color: rgb(248, 248, 242);
-    width: 48%;
+    width: 50%;
     height: 95%;
     padding: 10px;
     margin-bottom: 10px;
@@ -566,20 +571,26 @@ textarea:focus {
 
 .chatsPersonales {
     display: flex;
-   
 }
 
 .chatsPersonales a {
     text-decoration: none;
-    color: black;
+    color: #383635;
 }
-
 
 .ficha img {
     margin-right: 20px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+}
+
+.sugerenciaContactoIndividual img {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
 }
 
 .botonSugerencias {
@@ -590,12 +601,24 @@ textarea:focus {
     margin-bottom: 5px;
 }
 
-.botonSugerencias button {
-    background-color: rgba(209, 157, 157, 0.5);
+.eliminar {
+    background-color: rgb(196, 196, 196);
+}
+
+.eliminar,
+.agregar {
+    margin: 5px;
+    width: auto;
+}
+
+.agregar {
+    background-color: #975FCE;
+    color: #E5E5E5;
+    ;
 }
 
 .muroCentral {
-    width: 46%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -604,7 +627,7 @@ textarea:focus {
 .publicacionPropia,
 .publicacion {
     height: auto;
-    width: 95%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -626,7 +649,6 @@ textarea:focus {
     border-radius: 50%;
 }
 
-
 .botonesPublicacion {
     display: flex;
     width: 100%;
@@ -644,11 +666,18 @@ textarea:focus {
     height: 30px;
 }
 
-.publicacionPropia input {
+
+/* .publicacionPropia input {
     width: 400px;
     height: 40px;
     margin-left: 5px;
     margin-right: 5px;
+} */
+
+.publicacionPropia .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .publicacion {
@@ -713,7 +742,6 @@ textarea:focus {
     width: 140px;
 }
 
-
 .linea-1 {
     height: 4px;
     width: 100%;
@@ -748,8 +776,6 @@ textarea:focus {
         background-position: 224px
     }
 }
-
-
 
 .botonesComunicacion {
     display: flex;
@@ -857,8 +883,6 @@ textarea:focus {
     }
 }
 
-
-
 .galeria {
     width: 90%;
     margin: auto;
@@ -885,7 +909,6 @@ textarea:focus {
     width: 150px;
     height: 100px;
 }
-
 
 .modal {
     display: none;
@@ -919,7 +942,8 @@ textarea:focus {
 
 .imagen a,
 .video a {
-    color: #fff;
+    color: #383635;
+    /*#fff;*/
     font-size: 40px;
     text-decoration: none;
     margin: 0 10px;
@@ -950,7 +974,7 @@ textarea:focus {
     text-align: center;
     text-decoration: none;
     font-size: 25px;
-    color: #000;
+    color: #383635;
     padding: 5px;
     border-radius: 50%;
     line-height: 25px;
@@ -960,7 +984,6 @@ textarea:focus {
     display: flex;
     flex-direction: row;
 }
-
 
 .dia {
     display: flex;
@@ -1027,7 +1050,6 @@ textarea:focus {
 
 /* ------------------------------------------------------------------------------------------- */
 
-
 .contador {
     height: 20px;
     margin-bottom: 2px;
@@ -1047,25 +1069,31 @@ textarea:focus {
     font-family: PetFont-Regular;
 }
 
-
-
 .info a {
     text-decoration: none;
-    color: #000;
+    color: #383635;
+}
+
+.info input {
+    width: 90%;
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .info a:hover {
-    font-size: 120%;
-    color: dimgray;
+    /* font-size: 120%; */
+    margin-left: 10px;
+    color: rgb(0, 0, 0);
 }
 
 .galeriaPublicaciones {
-    width: 74%;
+    width: 75.5%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: rgb(196, 196, 196, 0.5);
+    margin-bottom: 10px;
 }
 
 .tituloPublicaciones {
@@ -1103,7 +1131,7 @@ textarea:focus {
 /********************************BUSCADOR************************/
 
 .mensajeBuscador {
-    width: 46%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1121,6 +1149,7 @@ textarea:focus {
 
 .fichaContactoBusqueda {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     padding-right: 10px;
     padding-left: 10px;
@@ -1166,7 +1195,9 @@ nav {
     display: none;
 }
 
+
 /**********************************MOBILE ************************************************/
+
 @media (max-width: 700px) {
     .perfilPersonal,
     .comunidad {
@@ -1187,39 +1218,35 @@ nav {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 5px;
-        justify-items:baseline;
+        justify-items: baseline;
         align-items: start;
     }
-
-    .logoheader img{
-        width:100px;
+    .logoheader img {
+        width: 100px;
         height: 50px;
-     
     }
-    .logoHeader{
+    .logoHeader {
         grid-column: 1 / 2;
         grid-row: 1;
-        margin-right:50px;
-
-    } 
-   .busqueda{
+        margin-right: 50px;
+    }
+    .busqueda {
         grid-column: 2 / 2;
         grid-row: 1;
-       
     }
-
-    .busqueda img{
+    .busqueda img {
         width: 20px;
         height: 20px;
         justify-items: end;
         margin-left: 10px;
         padding-left: 100px;
     }
-    nav{
+    nav {
         grid-column: 1;
         grid-row: 2;
         align-items: baseline;
         height: auto;
+        z-index: 10;
     }
     .navbar input {
         display: none;
@@ -1241,22 +1268,17 @@ nav {
     nav input {
         display: none;
     }
-
-  
     label {
         width: 30px;
         height: 30px;
         line-height: 20px;
         font-weight: bold;
         text-align: center;
-        user-select:auto;
-       
+        user-select: auto;
     }
- 
     label:hover {
         background-color: #975FCE;
     }
-
     input:checked~label {
         background: rgb(196, 196, 196, 0.5);
     }
@@ -1277,10 +1299,7 @@ nav {
         padding-bottom: 2px;
         list-style: none;
         border-bottom: 1px solid grey;
-       
     }
-    
-   
     nav img {
         width: 10px;
         height: 10px;
@@ -1288,16 +1307,12 @@ nav {
     }
     nav {
         display: block;
-       
-        
     }
-   
-    .reacciones img{
+    .reacciones img {
         width: 10px;
         height: 10px;
     }
-
-    .contador h5{
+    .contador h5 {
         font-size: 10px;
     }
 }
