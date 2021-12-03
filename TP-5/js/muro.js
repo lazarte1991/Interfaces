@@ -162,7 +162,7 @@ let contactos=[{
     
 
 function buscar () {
-    let str = document.getElementById("busqueda").value;
+    let str = document.getElementById("busqueda").value.toLowerCase();
     let div=document.querySelectorAll("div");
     for(let di of div){
         di.classList.replace("muroCentral", "mensajeBuscador");  
@@ -173,11 +173,12 @@ function buscar () {
     else{
     
         for(let contacto of contactos){
-            if(contacto.nombre.includes(str)){
+            if(contacto.nombre.toLowerCase().includes(str)){
                 console.log(contacto.ficha);
                 document.querySelector(".mensajeBuscador").innerHTML=`${contacto.ficha}`;
                 if(contacto.publicacion!=undefined)
                 document.querySelector(".mensajeBuscador").innerHTML+=`${contacto.publicacion}`;
+                break;
             }
             else{
                 document.querySelector(".mensajeBuscador").innerHTML='<h2>No hay resultados</h2>';
@@ -186,3 +187,5 @@ function buscar () {
     }
     
 }
+
+
