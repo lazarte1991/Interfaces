@@ -21,21 +21,101 @@ body {
     background-color: #E5DFF5;
 }
 
-.loginContainer {
-    height: 100%;
-    margin-bottom: 0;
-    align-items: center;
-    justify-content: space-evenly;
+
+/* .city {
+    overflow: hidden;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 10px;
+    position: relative;
+    border: 2px solid rgba(0, 0, 0);
+    display: none;
+} */
+
+
+/* .loginContainer {
+
     display: flex;
     flex-direction: row;
+} */
+
+.loginContainer {
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+    /* margin: 50px; */
+    /* margin-top: 150px; */
+    position: absolute;
+    margin-bottom: 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
 }
 
 
-form,
 label {
+    width: 50%;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+}
+
+.layer-1 {
+    height: 100%;
+    width: 100%;
+    background: url(../img/p-capa-1.png)no-repeat 70% 50%;
+    position: absolute;
+    animation: move-layer-1 3s ease-in-out 1;
+    z-index: 3;
+}
+
+.layer-2 {
+    height: 100%;
+    width: 100%;
+    background: url(../img/p-capa-2.png)no-repeat 70% 50%;
+    position: absolute;
+    animation: move-layer-2 2.5s ease-in-out 1;
+    z-index: 4;
+}
+
+.layer-3 {
+    height: 100%;
+    width: 100%;
+    background: url(../img/p-capa-3.png)no-repeat 70% 50%;
+    position: absolute;
+    animation: move-layer-3 3.5s ease-in-out 1;
+    z-index: 5;
+}
+
+@keyframes move-layer-1 {
+    0% {
+        transform: translateY(900px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-layer-2 {
+    0% {
+        transform: translateY(-1100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes move-layer-3 {
+    0% {
+        transform: translateX(900px);
+    }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 label {
@@ -49,6 +129,16 @@ label {
 
 .botonesLogin {
     flex-direction: column;
+    position: absolute;
+    z-index: 15;
+}
+
+.pass-login,
+.usuario-login {
+    margin-left: 100px;
+    width: 20%;
+    position: absolute;
+    z-index: 15;
 }
 
 button {
@@ -81,7 +171,8 @@ h3 {
     font-size: medium;
 }
 
-input {
+input,
+.input-login {
     margin-top: 1px;
     margin-bottom: 3px;
     height: 40px;
@@ -91,14 +182,34 @@ input {
     background-color: #C4C4C4;
 }
 
-input:focus {
-    outline: none;
+.input-login,
+.label-login,
+.form,
+.recuperoPass,
+.error,
+.botonesLogin {
+    position: sticky;
+    z-index: 15;
 }
 
-.btn-ingreso {
-    height: 40px;
-    width: 48%;
+.btn-registro,
+.btn-login {
     font-size: 15px;
+    width: 45%;
+    height: 40px;
+}
+
+.form {
+    margin-left: 20%;
+    /* z-index: 15; */
+    /* z-index: 14; */
+    /* position: absolute; */
+    /* position: sticky; */
+    width: 20%;
+}
+
+input:focus {
+    outline: none;
 }
 
 .btn-registro,
@@ -115,11 +226,13 @@ input:focus {
 }
 
 .btn-login {
-    background-color: #3085E8;
+    background-color: #975FCE;
+    /*#3085E8;*/
 }
 
 .btn-login:hover {
-    background-color: #5c98dd;
+    background-color: #a88ac7;
+    /*#5c98dd;*/
 }
 
 .botonesLogin {
@@ -157,7 +270,8 @@ button a {
     /* align-items: center; */
 }
 
-.formulario p {
+.formulario p,
+.error {
     font-size: 12px;
     color: red;
 }

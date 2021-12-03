@@ -18,12 +18,15 @@ function chekTextArea() {
 
 }
 
+
 function enviar() {
+    let d = new Date();
+    let hora = d.getHours() + ":" + d.getMinutes()
 
     if (txtArea.value != "") {
         cuerpoChat.innerHTML += `<div class="msj-propio">
         <p>${txtArea.value}</p>
-        <p class="hora">00:23</p>
+        <p class="hora">${hora}</p>
         </div>`;
         txtArea.value = "";
         messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
