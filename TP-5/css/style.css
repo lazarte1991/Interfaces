@@ -22,12 +22,22 @@ body {
 }
 
 .loginContainer {
-    margin: 50px;
-    margin-top: 150px;
+    height: 100%;
+    /* margin: 50px; */
+    /* margin-top: 150px; */
     margin-bottom: 0;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
 }
+
+
+/* .loginContainer {
+
+    display: flex;
+    flex-direction: row;
+} */
 
 form,
 label {
@@ -76,12 +86,6 @@ button {
     position: fixed;
     margin-block: 10px;
     margin-inline: 250px;
-}
-
-.loginContainer {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: row;
 }
 
 h3 {
@@ -286,12 +290,12 @@ button a {
     width: 23%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .perfil {
     height: 66.5%;
     padding-bottom: 10px;
-    margin-bottom: 10px;
 }
 
 .contactos {
@@ -310,8 +314,10 @@ button a {
     padding: 10px;
 }
 
-.contactosHeader,.chatsPersonales,
-.sugerenciasContactos, .tituloPublicaciones {
+.contactosHeader,
+.chatsPersonales,
+.sugerenciasContactos,
+.tituloPublicaciones {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -324,7 +330,8 @@ button a {
 }
 
 .fichaContacto,
-.ficha, .fichaContactoBusqueda {
+.ficha,
+.fichaContactoBusqueda {
     display: flex;
     flex-direction: row;
     padding: 5px;
@@ -383,6 +390,7 @@ textarea:focus {
 .cuerpo-chat {
     height: 530px;
     overflow-y: scroll;
+    padding-right: 10px;
 }
 
 .cuerpo-chat::-webkit-scrollbar {
@@ -423,7 +431,8 @@ textarea:focus {
     font-family: PetFont-Regular;
 }
 
-.fichaContacto img, .fichaContactoBusqueda img {
+.fichaContacto img,
+.fichaContactoBusqueda img {
     margin-right: 20px;
     width: 30px;
     height: 30px;
@@ -444,29 +453,30 @@ textarea:focus {
     font-family: PetFont-Regular;
 }
 
-.sugerenciasContactos, .chatsPersonales {
+.sugerenciasContactos,
+.chatsPersonales {
     flex-direction: column;
     margin-top: 10px;
 }
 
-.chatsPersonales{
+.chatsPersonales {
     /* position: fixed; */
     /* margin-top: 200px; */
     /* justify-content: flex-end; */
     display: flex;
-   
-    
 }
 
-.chatsPersonales a{
+.chatsPersonales a {
     text-decoration: none;
-    color:black;
+    color: black;
 }
+
 
 /* .chatsPersonales img{
     width: 30px;
     height: 30px;
 } */
+
 .ficha img {
     margin-right: 20px;
     width: 40px;
@@ -973,11 +983,15 @@ textarea:focus {
     display: flex;
 }
 
-
-#contadorLikes,#contadorLikes1, #contadorLikes2,
-#contadorComentarios,#contadorComentarios1,#contadorComentarios2,
-#contadorCompartidos, #contadorCompartidos1, #contadorCompartidos2 {
-
+#contadorLikes,
+#contadorLikes1,
+#contadorLikes2,
+#contadorComentarios,
+#contadorComentarios1,
+#contadorComentarios2,
+#contadorCompartidos,
+#contadorCompartidos1,
+#contadorCompartidos2 {
     margin: 2px;
     font-family: PetFont-Regular;
 }
@@ -1033,19 +1047,20 @@ textarea:focus {
     display: show;
 }
 
-.inputComentarios, .inputComentarios2{
+.inputComentarios,
+.inputComentarios2 {
     display: none;
 }
 
 
 /********************************buscador************************/
-.mensajeBuscador{
+
+.mensajeBuscador {
     /* display: show;
     border: 3px solid black;
     width: 100%;
     height:200px;
     /* padding: 15px; */
-
     /*flex-direction: column;
     align-items: center; */
     width: 46%;
@@ -1055,21 +1070,55 @@ textarea:focus {
     align-items: center;
 }
 
-.fichaContactoBusqueda button{
+.fichaContactoBusqueda button {
     display: flex;
     flex-direction: row;
-   
 }
-.fichaContactoBusqueda div{
+
+.fichaContactoBusqueda div {
     display: flex;
     align-items: center;
-    
-
 }
-.fichaContactoBusqueda{
+
+.fichaContactoBusqueda {
     display: flex;
     justify-content: space-between;
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 10px;
+}
+
+
+/* -------------------------- PRUEBA---------------------------------------- */
+
+.icono-loading-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.icono-loading {
+    background: url(../img/icono-loading-1.png) no-repeat;
+    background-position-y: center;
+    height: 210px;
+    width: 97px;
+    /* width: 72px; */
+    position: absolute;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    20% {
+        transform: translateY(-45px);
+    }
+    40% {
+        transform: translateY(0px);
+        background: url(../img/icono-loading-2.png) no-repeat;
+    }
+    60% {
+        transform: translateY(-25px);
+    }
 }

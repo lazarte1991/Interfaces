@@ -6,6 +6,9 @@ document.addEventListener('keydown', chekTextArea);
 document.addEventListener('keyup', chekTextArea);
 document.getElementById("send").addEventListener("click", enviar);
 
+var messageBody = document.querySelector('#cuerpo-chat');
+messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
+
 function chekTextArea() {
     if (txtArea.value != "") {
         document.getElementById("send").src = "https://img.icons8.com/ios-glyphs/35/975FCE/paper-plane.png";
@@ -23,6 +26,7 @@ function enviar() {
         <p class="hora">00:23</p>
         </div>`;
         txtArea.value = "";
+        messageBody.scrollTop = messageBody.scrollHeight - messageBody.clientHeight;
     }
 
 }

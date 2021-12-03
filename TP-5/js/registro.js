@@ -17,6 +17,12 @@ let fotoUsuario = document.getElementById("fotoUsuario");
 let nombreMascota = document.getElementById("nombreMascota");
 let especie = document.getElementById("especie");
 let fotoMascota = document.getElementById("fotoMascota");
+let iLoading = document.getElementById("icono-loading-container");
+let usuarioLogin = document.getElementById("usuario-login");
+let passLogin = document.getElementById("pass-login");
+let form = document.getElementById("form");
+let logo = document.getElementById("logo");
+let usuarios = [];
 
 // .reg-flujo-2,
 // .reg-flujo-3,
@@ -29,27 +35,73 @@ document.getElementById("btn-siguiente-1").addEventListener("click", paginaUno);
 document.getElementById("btn-siguiente-2").addEventListener("click", paginaDos);
 document.getElementById("btn-registrarme").addEventListener("click", paginaTres);
 document.getElementById("pagina-1-reg").addEventListener("click", mostrarPaginaUno);
-document.getElementById("pagina-2-reg").addEventListener("click", chequeoItemDos);
-document.getElementById("pagina-3-reg").addEventListener("click", chequeoItemTres);
-document.getElementById("pagina-2a-reg").addEventListener("click", chequeoItemDos);
 document.getElementById("pagina-1a-reg").addEventListener("click", mostrarPaginaUno);
+document.getElementById("pagina-2-reg").addEventListener("click", chequeoItemDos);
+document.getElementById("pagina-2a-reg").addEventListener("click", chequeoItemDos);
+document.getElementById("pagina-3-reg").addEventListener("click", chequeoItemTres);
 document.getElementById("pagina-3a-reg").addEventListener("click", chequeoItemTres);
+// document.getElementById("ingresar-login").addEventListener("click", consola); //chequeoLogin
 
-function paginaUno() {
+function consola() {
+    console.log("KKKKKKKKKKKKKKKKKKKKK");
+}
+
+
+function mostrar(id) {
+    regFlujo1.style.display = "none";
+    regFlujo2.style.display = "none";
+    regFlujo3.style.display = "none";
+    regPag1.style.display = "none";
+    regPag2.style.display = "none";
+    regPag3.style.display = "none";
+    siguiente1.style.display = "none";
+    siguiente2.style.display = "none";
+    registrarme.style.display = "none";
+    iLoading.style.display = "block";
+    iLoading.style.display = "flex";
+
+    setTimeout(() => {
+        if (id == "pagina-1-reg" || id == "pagina-1a-reg") {
+            iLoading.style.display = "none";
+            mostrarPaginaUno();
+        }
+        if (id == "pagina-2-reg" || id == "pagina-2a-reg" || id == "btn-siguiente-1") {
+            mostrarPaginaDos();
+        }
+        if (id == "pagina-3-reg" || id == "pagina-3a-reg" || id == "btn-siguiente-2") {
+            mostrarPaginaTres();
+        }
+        if (id == "btn-registrarme") {
+            location.href = "index.html";
+        }
+    }, 4000);
+
+}
+
+
+
+function paginaUno(event) {
+    let id = event.srcElement.id
+    let user = [];
     if (chequeoUno()) {
-        mostrarPaginaDos();
+        user.push(usuario.value);
+        user.push(passDos.value);
+        usuarios.push(user);
+        mostrar(id);
     }
 }
 
-function paginaDos() {
+function paginaDos(event) {
+    let id = event.srcElement.id
     if (chequeoDos()) {
-        mostrarPaginaTres();
+        mostrar(id);
     }
 }
 
-function paginaTres() {
+function paginaTres(event) {
+    let id = event.srcElement.id
     if (chequeoTres()) {
-        //Redirigir a otra pagina
+        mostrar(id);
     }
 }
 
@@ -180,6 +232,7 @@ function mostrarPaginaUno() {
     siguiente1.style.display = "flex";
     siguiente2.style.display = "none";
     registrarme.style.display = "none";
+    iLoading.style.display = "none";
 }
 
 function mostrarPaginaDos() {
@@ -194,6 +247,7 @@ function mostrarPaginaDos() {
     siguiente2.style.display = "block";
     siguiente2.style.display = "flex";
     registrarme.style.display = "none";
+    iLoading.style.display = "none";
 }
 
 function mostrarPaginaTres() {
@@ -208,10 +262,68 @@ function mostrarPaginaTres() {
     regPag3.style.display = "flex";
     registrarme.style.display = "block";
     registrarme.style.display = "flex";
+    iLoading.style.display = "none";
 }
 
-// function paginaDos() {
-//     if (nombreMascota != "" || especie != "" || fotoMascota != "") {
-//         siguienteUno();
+// function chequeoLogin(event) {
+//     let id = event.srcElement.id
+//     console.log("ENTRA AL CHEQUEO LOGIN");
+//     let check = 0;
+//     let retorno = false;
+//     if (usuarioLogin.value == "") {
+//         usuarioLogin.style.border = "solid 1px red";
+//         check = 1;
+//         if (passLogin.value == "") {
+//             passLogin.style.border = "solid 1px red";
+//             check = 1;
+//         }
+//     } else if (passLogin.value == "") {
+//         passLogin.style.border = "solid 1px red";
+//         check = 1;
+//     } else {
+//         usuarios.forEach(elem => {
+//             if (elem[0] == usuarioLogin.value) {
+
+//                 if (elem[1] == passLogin) {
+//                     login(id);
+//                 } else {
+//                     passLogin.style.border = "solid 1px red";
+//                     check = 3
+//                 }
+//             } else {
+//                 usuarioLogin.style.border = "solid 1px red";
+//                 check = 2
+//             }
+//         });
 //     }
+
+
+
+
+//     if (especie.value == "") {
+//         especie.style.border = "solid 1px red";
+//         check = 1;
+//     } else {
+//         especie.style.border = "none";
+//     }
+//     if (fotoMascota.value == "") {
+//         fotoMascota.style.border = "solid 1px red";
+//         check = 1;
+//     } else {
+//         fotoMascota.style.border = "none";
+//     }
+
+//     if (check == 1) {
+//         document.getElementById("error-login").innerHTML = "*Campos incompletos";
+//     } else if (check == 2) {
+//         document.getElementById("error-login").innerHTML = "*El usuario no se encuentra registrado";
+//     } else if (check == 3) {
+//         document.getElementById("error-login").innerHTML = "*Contraseña incorrecta";
+//         retorno = true;
+//     } else {
+//         document.getElementById("error-login").innerHTML = "";
+//         retorno = true;
+//     }
+//     return retorno;
+
 // }
