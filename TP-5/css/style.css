@@ -302,10 +302,13 @@ button a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
+
     padding-bottom: 5px;
 }
 
+.contactos img{
+    margin:15px;
+}
 .perfil,
 .contactos,
 .chatsPersonales,
@@ -347,8 +350,8 @@ button a {
     background-color: E5E5E5;
     padding: 5px;
     width: 95%;
-    height: 80px;
-    margin-bottom: 5px;
+    height: 85px;
+    margin-bottom: 10px;
 }
 
 .chat {
@@ -464,6 +467,7 @@ textarea:focus {
     /* margin-top: 200px; */
     /* justify-content: flex-end; */
     display: flex;
+   
 }
 
 .chatsPersonales a {
