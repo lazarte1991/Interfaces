@@ -2,7 +2,10 @@ let iLoading = document.getElementById("icono-loading-container");
 let usuarioLogin = document.getElementById("usuario-login");
 let passLogin = document.getElementById("pass-login");
 let form = document.getElementById("form");
-let logo = document.getElementById("logo");
+// let logo = document.getElementById("logo");
+let layer1 = document.getElementById("layer-1");
+let layer2 = document.getElementById("layer-2");
+let layer3 = document.getElementById("layer-3");
 let usuarios = [];
 usuarios.push(["maria lopez", "123"]);
 usuarios.push(["user1", "123"]);
@@ -76,11 +79,13 @@ function login() {
 
     usuarioLogin.style.border = "none";
     passLogin.style.border = "none";
+
     document.getElementById("error-login").innerHTML = "";
     if (chequeoLogin() == true) {
-
+        layer1.style.display = "none"
+        layer2.style.display = "none"
+        layer3.style.display = "none"
         form.style.display = "none";
-        logo.style.display = "none";
         iLoading.style.display = "block";
         iLoading.style.display = "flex";
 
@@ -93,8 +98,10 @@ function login() {
 }
 
 function registro() {
+    layer1.style.display = "none"
+    layer2.style.display = "none"
+    layer3.style.display = "none"
     form.style.display = "none";
-    logo.style.display = "none";
     iLoading.style.display = "block";
     iLoading.style.display = "flex";
 
