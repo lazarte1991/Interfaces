@@ -497,6 +497,8 @@ textarea:focus {
     outline: none;
 }
 
+
+
 .cuerpo-chat {
     height: 530px;
     overflow-y: scroll;
@@ -689,6 +691,7 @@ textarea:focus {
 
 .imagenPublicada {
     width: 100%;
+    padding: 0px;
     height: auto;
     display: flex;
     justify-content: center;
@@ -696,8 +699,8 @@ textarea:focus {
 
 .imagenPublicada img {
     width: 100%;
-  
-    margin: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .publicidad {
@@ -1020,6 +1023,7 @@ textarea:focus {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+
 }
 
 .header-chat {
@@ -1032,8 +1036,11 @@ textarea:focus {
 }
 
 .footer-chat {
+    width: 47.8%;
     height: 60px;
-    background-color: rgb(196, 196, 196, 0.3);
+    background-color: rgb(196, 196, 196, 50);
+    position: fixed;
+    bottom: 0px;
 }
 
 .footer-chat img,
