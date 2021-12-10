@@ -19,7 +19,7 @@
 }
 
 body {
-    background-color: #E5DFF5;
+    background-color: #ffffff;
 }
 
 
@@ -689,14 +689,14 @@ textarea:focus {
 
 .imagenPublicada {
     width: 100%;
-    height: 200px;
+    height: auto;
     display: flex;
     justify-content: center;
 }
 
 .imagenPublicada img {
-    width: 60%;
-    height: 80%;
+    width: 100%;
+  
     margin: 10px;
 }
 
@@ -837,6 +837,9 @@ textarea:focus {
     flex-direction: column;
 }
 
+.navBotonesResponsive{
+        display: none;
+}
 
 /************************************* PRUEBA ****************************************/
 
@@ -1199,55 +1202,50 @@ nav {
 /**********************************MOBILE ************************************************/
 
 @media (max-width: 700px) {
+
+    body{
+        margin:0px;
+    }
     .perfilPersonal,
     .comunidad {
         display: none;
     }
     .contenedor {
-        width: 340px;
+        width: 100%;
     }
     .muroCentral {
-        width: 340px;
+        width: 100%;
         display: flex;
         align-items: center;
     }
     .navbar {
         background: linear-gradient( #a88ac7, #975FCE);
-        width: 360x;
+        width: 95%;
         height: auto;
+        margin: auto;
+        padding: auto;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 5px;
         justify-items: baseline;
-        align-items: start;
+        align-items: center;
     }
     .logoheader img {
         width: 100px;
         height: 50px;
     }
     .logoHeader {
-        grid-column: 1 / 2;
-        grid-row: 1;
-        margin-right: 50px;
+        margin-right: 100px;
+        display: flex;
     }
     .busqueda {
-        grid-column: 2 / 2;
-        grid-row: 1;
+       display: none;
     }
-    .busqueda img {
-        width: 20px;
-        height: 20px;
-        justify-items: end;
-        margin-left: 10px;
-        padding-left: 100px;
+    .navbar nav {
+        align-items: flex-end;
+        margin-left:50px;
     }
-    nav {
-        grid-column: 1;
-        grid-row: 2;
-        align-items: baseline;
-        height: auto;
-        z-index: 10;
-    }
+
     .navbar input {
         display: none;
     }
@@ -1314,5 +1312,47 @@ nav {
     }
     .contador h5 {
         font-size: 10px;
+    }
+
+     /* #layer-1, #layer-2, #layer-3{
+        display: none;
+    }
+
+    .icono-loading-container{
+        width: 100%;
+    }
+    .loginContainer{
+        display: flex;
+        align-items: center;
+    }
+    #form .form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    } */
+
+   
+    .navBotonesResponsive {
+        background-color: #a88ac7; 
+        position: fixed;
+        bottom: 20px;
+        width:100%;
+        display: flex;
+        flex-direction: row;
+    
+       
+    }
+
+    .navBotonesResponsive button{
+        background-color: transparent;
+        justify-content: center;
+        margin:auto;
+    }
+
+    .navBotonesResponsive img{
+        width: 35px;
+        height: 35px;
+    
     }
 }
