@@ -304,7 +304,7 @@ button a {
 .reg-pag-3,
 .siguiente-2,
 .registrarme {
-    display: none;
+    display:show;
 }
 
 .ciudad-codPostal {
