@@ -31,20 +31,24 @@
         </div>
         <div class="formulario">
             <div class="reg-pag-1" id="reg-pag-1">
-                <div class="form">
-                    <label for="usuario">Usuario</label>
+                <!-- <div class="form"> -->
+                <form action="confirmacion.html" method="get">
+                    <label for="usuario">Nombre de usuario</label>
                     <input id="usuario" type="text" name="usuario">
+                    <label for="mail">Email</label>
+                    <input id="mail" type="mail" name="mail">
                     <label for="pass">Contraseña</label>
                     <input id="pass" type="password" name="pass">
                     <label for="passDos">Repetí tu contraseña</label>
                     <input id="passDos" type="password" name="passDos">
+                    <p class="error" id="error-1"></p>
                     <label for="fotoUsuario">Seleccioná tu foto</label>
                     <input id="fotoUsuario" class="file" type="file" name="fotoUsuario">
-                    <p class="error" id="error-1"></p>
                     <div class="registrarme" id="registrarme">
                         <button id="btn-registrarme" type="submit" class="btn-registrarme">Registrarme</button>
                     </div>
-                </div>
+                </form>
+                <!-- </div> -->
             </div>
         </div>
         <div class="icono-loading-container" id="icono-loading-container">

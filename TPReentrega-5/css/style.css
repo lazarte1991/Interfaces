@@ -287,7 +287,7 @@ button a {
     flex-direction: column;
 }
 
-.form{
+form{
     width:30%;
     border: 3px solid rgb(160, 67, 189);
     margin:0px;
@@ -297,22 +297,38 @@ button a {
     box-shadow: 0px 10px 10px rgb(182, 92, 209);
 }
 
-.form input{
+form input{
     background-color: white;
 }
-/* .reg-pag-1 div,
-.reg-pag-2 div,
-.reg-pag-3 div {
-    width: 30%;
-} */
+#baja{
+    font-style: italic;
+    text-decoration: underline;
+    color: blue;
+}
 
+.containerConfirmacion{
+    display: flex;
+    flex-direction: column;
+    margin:20px;
 
-/* .reg-flujo-1,
-.reg-pag-1,
-.siguiente-1 {
-    display: block;
-} */
+    /* width:50%; */
+    align-items: center;
+}
 
+.infoConfirmacion{
+    width: 40%;
+    justify-content: center;
+    border: 3px solid rgb(160, 67, 189);
+    padding: 10px;
+    border-radius: 5%;
+    background-color: #dcc7f3;
+    box-shadow: 0px 10px 10px rgb(182, 92, 209);
+}
+
+.infoConfirmacion h3{
+    padding-top: 15px;
+    font-style: italic;
+}
 .reg-flujo-2,
 .reg-flujo-3,
 .reg-pag-2,

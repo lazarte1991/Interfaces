@@ -16,13 +16,20 @@
         <div class="logoHeader">
             <img src="./img/logo_header.png" alt="">
         </div>
-
     </div>
-    <div class="container">
-        <p>Te enviamos un mail de confirmación a {usuario.value}</p>
-        <p>Gracias por registrarte!</p>
+    <div class="containerConfirmacion"> 
+        <div class="infoConfirmacion">
+            <p id="aqui"></p>
+            <script type="text/javascript">
+            var url_string = window.location.href; //
+            var url = new URL(url_string);
+            var c = url.searchParams.get("mail");
+            document.getElementById("aqui").innerHTML = "Te enviamos un mail de confirmación a " + c;
+            </script>
+            <p>Gracias por registrarte!</p>
+            <h3>Si querés darte de baja, hacé click <span id="baja">aqui</span></h3>
+        </div>
     </div>
-    <!-- <script src="js/registro2.js"></script> -->
 </body>
 
 </html>
