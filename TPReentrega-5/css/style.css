@@ -281,15 +281,30 @@ button a {
 .reg-pag-3 {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-top: 20px;
+    flex-direction: column;
 }
 
-.reg-pag-1 div,
+.form{
+    width:30%;
+    border: 3px solid black;
+    margin:0px;
+    padding: 20px;
+    border-radius: 5%;
+    background-color: #dcc7f3;
+    box-shadow: 5px 5px;
+}
+
+.form input{
+    background-color: white;
+}
+/* .reg-pag-1 div,
 .reg-pag-2 div,
 .reg-pag-3 div {
-    width: 400px;
-}
+    width: 30%;
+} */
 
 
 /* .reg-flujo-1,
@@ -723,7 +738,7 @@ textarea:focus {
 .animacion_perro_registro {
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .perro {
