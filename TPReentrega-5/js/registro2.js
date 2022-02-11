@@ -20,17 +20,12 @@ document.getElementById("btn-registrarme").addEventListener("click", paginaUno);
 
 
 function mostrar(id) {
-    // regFlujo1.style.display = "none";
-    // regPag1.style.display = "none";
+    regFlujo1.style.display = "none";
+    regPag1.style.display = "none";
     registrarme.style.display = "flex";
     iLoading.style.display = "block";
     iLoading.style.display = "flex";
-
     setTimeout(() => {
-        if (id == "pagina-1-reg" || id == "pagina-1a-reg") {
-            iLoading.style.display = "none";
-            mostrarPaginaUno();
-        }
         if (id == "btn-registrarme") {
             location.href = "confirmacion.html";
         }
