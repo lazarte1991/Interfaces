@@ -29,7 +29,7 @@ function mostrar(id) {
         if (id == "btn-registrarme") {
             location.href = "confirmacion.html";
         }
-    }, 3000);
+    }, 4000);
 
 }
 
