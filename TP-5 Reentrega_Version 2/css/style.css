@@ -1,7 +1,8 @@
 * {
     font-family: PetFont;
     /* color: #383635;  ORIGINAL*/
-    color: #4A4A4A;
+    /* color: #4A4A4A; */
+    color: #999999;
     /* font-weight: bold; */
 }
 
@@ -490,15 +491,27 @@ button a {
     zoom: 120%;
 }
 
-.perfil-nav,
-.perfil-nav-selected {
+.perfil-nav {
     width: 35px;
     height: 35px;
+}
+
+.bloque1 .perfil-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.perfil-nav,
+.perfil-nav-selected {
+    /* width: 35px;
+    height: 35px; */
     border-radius: 30px;
 }
 
 .perfil-nav-selected {
-    border: solid #FFF 1px;
+    width: 37px;
+    height: 37px;
+    border: solid #FFF 2px;
 }
 
 .btnHome i {
@@ -534,7 +547,7 @@ button a {
 }
 
 .bloque2::-webkit-scrollbar {
-    width: 5px;
+    width: 2px;
     margin-right: 20px;
 }
 
@@ -545,7 +558,7 @@ button a {
 }
 
 .bloque1::-webkit-scrollbar {
-    width: 5px;
+    width: 2px;
     margin-right: 20px;
 }
 
@@ -557,20 +570,26 @@ button a {
 
 .bloque1,
 .bloque2 {
-    width: 23%;
+    width: 18%;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    position: fixed;
     overflow-y: scroll;
     height: 100%;
     padding-bottom: 40px;
+}
+
+.bloque1 {
+    position: fixed;
+    /* padding-right: 0; */
 }
 
 .bloque2 {
     margin-left: 65rem;
     overflow: auto;
     direction: rtl;
+    position: fixed;
+    padding-left: 0.75rem;
 }
 
 .perfil {
@@ -592,11 +611,8 @@ button a {
     margin-top: 0.5rem!important;
     margin-left: 1rem!important;
     border-radius: 15px!important;
-    border-top-left-radius: 15px !important;
-    border-top-right-radius: 15px !important;
-    border-bottom-right-radius: 15px !important;
-    border-bottom-left-radius: 15px !important;
     box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important;
+    width: 90%;
 }
 
 .contactos img {
@@ -755,7 +771,37 @@ textarea:focus {
     margin-right: 20px;
     width: 30px;
     height: 30px;
+}
+
+.fichaContacto_1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.fichaContacto_1 div {
     border-radius: 50%;
+    background: linear-gradient( var(--color1), var(--color2));
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.fichaContacto_1 img {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.fichaContacto_1 h3 {
+    margin: 0;
+    font-size: 14px;
 }
 
 
@@ -915,13 +961,27 @@ textarea:focus {
 
 .publicidad {
     width: 100%;
-    height: 300px;
+    height: 900px;
+    margin-bottom: 100px;
 }
 
 .publicidad img {
     width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
+    height: 160px;
+    /* margin-bottom: 100px; */
+    /* background: linear-gradient(to bottom, #A0CBA4, #4E8953) no-repeat 100%; */
+    /* widht: auto; */
+    /* height: 500%; */
+    direction: ltr;
+    /* color: #fff; */
+    /* font-size: 1.3rem; */
+    padding: .5rem;
+}
+
+.bloque2 img {
+    width: 100%;
+    height: 160px;
+    /* margin-bottom: 100px; */
     /* background: linear-gradient(to bottom, #A0CBA4, #4E8953) no-repeat 100%; */
     /* widht: auto; */
     /* height: 500%; */
