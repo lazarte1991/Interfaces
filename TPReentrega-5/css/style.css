@@ -783,6 +783,7 @@ button a {
 
 .fichaContacto{
     display: flex;
+    flex-direction: column;
     width: 200px;
     height: 100%;
     align-items: center;
@@ -1027,6 +1028,7 @@ textarea:focus {
     width: 85px;
     height: 35px;
     border-radius: 30px;
+    margin-bottom: 20px;
     
 }
 
