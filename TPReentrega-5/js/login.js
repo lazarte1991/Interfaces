@@ -92,7 +92,7 @@ function login() {
         setTimeout(() => {
             iLoading.style.display = "none";
             location.href = "muroNoticias.html";
-        }, 4000);
+        }, 2000);
     }
 
 }
