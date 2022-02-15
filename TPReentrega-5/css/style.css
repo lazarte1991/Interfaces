@@ -775,10 +775,12 @@ button a {
     margin: 0;
     font-size: 14px;
 }
-.titulo{
+.titulo,h2{
     font-family: PetFont-Regular;
-    font-size: large;
+    font-size: large !important;
 }
+
+
 .fichaContacto{
     display: flex;
     flex-direction: column;
@@ -925,7 +927,7 @@ textarea:focus {
     padding: 15px;
     margin-top: 10px;
     margin-bottom: 10px;
-    font-family: PetFont-Regular;
+    font-family: PetFont-light;
 }
 
 .fichaContacto button{
@@ -1304,6 +1306,7 @@ textarea:focus {
     justify-content: center;
     margin: 0px;
     padding-top: 10px;
+    font-family: PetFont-Regular;
 }
 
 .perfilPersonal div{
@@ -1600,6 +1603,7 @@ textarea:focus {
 }
 
 .dia p {
+    font-family: PetFont-Regular;
     text-align: center;
     width: 40px;
     padding: 5px;
@@ -2037,12 +2041,13 @@ hr{
     
 }
 
-
+/* 
 h2{
     font-size: large;
-}
+    
+} */
 
 
 h3,h4, h5{
-    font-size: medium;
+    font-size: medium !important;
 }
