@@ -1861,6 +1861,20 @@ textarea:focus {
     padding-left: 20px;
 }
 
+.busqAv-selected{
+    margin: 10px;
+    font-family: PetFont-Regular;
+    width: 70%;
+    height: 40px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    /* margin-right: 5px; */
+    background: linear-gradient( var(--color2), var(--color3));
+    color:#fafafa;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
 .busqAv{
     margin: 10px;
     font-family: PetFont-Regular;
@@ -2152,8 +2166,8 @@ nav {
 hr{
     width:90%;
     border: 1px solid rgb(160, 157, 157);
-    margin-top:1px;
-    margin-bottom: 1px;
+    margin-top:3px;
+    margin-bottom: 3px;
     margin-left: 25px;
     
 }
