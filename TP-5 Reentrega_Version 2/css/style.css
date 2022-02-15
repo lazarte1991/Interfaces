@@ -1,8 +1,8 @@
 * {
-    font-family: PetFont;
+    font-family: PetFont-Light;
     /* color: #383635;  ORIGINAL*/
     /* color: #4A4A4A; */
-    color: #999999;
+    color: #353535;
     /* font-weight: bold; */
 }
 
@@ -28,7 +28,11 @@ color: #020275;
     --color2: #a88ac7;
     --color3: #C4C4C4;
     --color4: #c4c4c480;
-    --card: #fff
+    --inputColor: #eee;
+    --colorHover: #eee;
+    --card: #fff;
+    --hoverGris: rgba(196, 196, 196, 0.521);
+    --hoverVioleta: #975fce80;
 }
 
 
@@ -83,27 +87,27 @@ color: #020275;
 
 /* latin */
 
-@font-face {
-    font-family: PetFont;
-    font-style: normal;
-    /* font-weight: 900; */
-    font-display: swap;
-    /* src: url(https://fonts.gstatic.com/s/fredokaone/v12/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format('woff2'); */
-    src: url(../font/FredokaOne-Regular.ttf);
-    /* unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; */
-}
-
 
 /* @font-face {
     font-family: PetFont;
-    src: url(../font/RobotoCondensed-Bold.ttf   );
     font-style: normal;
-    font-weight: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/fredokaone/v12/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2) format('woff2');
+    src: url(../font/FredokaOne-Regular.ttf);
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 } */
 
 @font-face {
-    font-family: PetFont-Regular;
+    font-family: PetFont-Light;
     src: url(../font/RobotoCondensed-Light.ttf   );
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: PetFont-Regular;
+    src: url(../font/RobotoCondensed-Regular.ttf  );
     font-style: normal;
     font-weight: normal;
 }
@@ -112,6 +116,7 @@ body {
     /* background-color: #E5DFF5; */
     background-color: var(--colorBody);
     margin: 0;
+    font-family: PetFont-Light;
 }
 
 
@@ -132,6 +137,10 @@ body {
     display: flex;
     flex-direction: row;
 } */
+
+a {
+    text-decoration: none;
+}
 
 .loginContainer {
     overflow-x: hidden;
@@ -436,16 +445,17 @@ button a {
     background: linear-gradient( var(--color1), var(--color2));
     /* border: 2px solid black; */
     /*BOX-SHADOW*/
-    height: 90px;
+    height: 70px;
     /* position: sticky; */
     display: flex;
-    padding: 15px;
+    padding: 10px;
     justify-content: space-between;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
+    align-items: center;
 }
 
 .navBotones {
@@ -471,7 +481,7 @@ button a {
     /* grid-column: 2 / 2;
     grid-row: 1; */
     border-radius: 30px;
-    background-color: #eee!important;
+    background-color: var(--inputColor)!important;
     height: 35px;
     padding-right: 1rem;
     padding-left: 0.5rem;
@@ -486,7 +496,7 @@ button a {
     border: 0!important;
     font-size: 14px!important;
     width: 250px!important;
-    background-color: #eee!important;
+    background-color: var(--inputColor)!important;
     height: 30px;
     /* line-height: 32px;
     width: 400px;
@@ -571,6 +581,7 @@ button a {
 
 .bloque1::-webkit-scrollbar {
     width: 2px;
+    height: 124px;
     margin-right: 20px;
 }
 
@@ -584,7 +595,7 @@ button a {
 .bloque2 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    /* margin-bottom: 500px; */
     overflow-y: scroll;
     height: 100%;
     padding-bottom: 40px;
@@ -592,9 +603,14 @@ button a {
     padding-top: 1rem;
 }
 
+.divFalso {
+    height: 200px;
+    width: 95%;
+}
+
 .bloque1 {
     position: fixed;
-    width: 18%;
+    width: 20%;
     /* padding-right: 0; */
 }
 
@@ -608,12 +624,12 @@ button a {
 }
 
 .muroCentral {
-    width: 56%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     /* margin-left: 21rem; */
-    margin-left: 20%;
+    margin-left: 26%;
     padding-bottom: 100px;
     padding-top: 1rem;
 }
@@ -623,22 +639,33 @@ button a {
     padding-bottom: 10px;
 }
 
-.contactos {
+.sugerenciasContactos {
+    margin-top: 1rem;
+}
+
+.contactos,
+.sugerenciasContactos {
     /* display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 5px; */
     /* +++++++++++++++++++++++++ */
     background-color: var(--card)!important;
-    padding-bottom: 0.25rem!important;
+    /* padding-bottom: 1rem!important; */
     /* padding-left: 1rem!important; */
-    padding-top: 1rem!important;
-    margin-bottom: 0.5rem!important;
+    /* padding-top: 1rem!important; */
+    /* margin-bottom: 0.5rem!important; */
     /* margin-top: 0.5rem!important; */
     margin-left: 1rem!important;
     border-radius: 15px!important;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
-    width: 90%;
+    width: 95%;
+}
+
+.sugerenciasContactos h3 {
+    margin-left: 1rem;
+    font-size: 18px;
+    color: #aaaaaa
 }
 
 .contactos img {
@@ -646,15 +673,13 @@ button a {
 }
 
 .perfil,
-.chatsPersonales,
-.sugerenciasContactos {
+.chatsPersonales {
     background-color: rgb(196, 196, 196, 0.5);
     padding: 10px;
 }
 
 .contactosHeader,
 .chatsPersonales,
-.sugerenciasContactos,
 .tituloPublicaciones {
     flex-direction: row;
     align-items: center;
@@ -690,27 +715,68 @@ button a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 12px 15px 12px 15px;
     white-space: nowrap;
     position: relative;
     font-size: 15px;
     font-weight: 600;
     line-height: 28px;
     color: #888;
-    height: 54px;
     display: flex;
     overflow: hidden;
     transition: all .2s ease;
 }
 
+.fichContacto,
+.fichaContactoBusqueda {
+    padding: 12px 15px 12px 15px;
+    height: 54px;
+}
+
+.ficha {
+    height: 2.5rem;
+}
+
+.ficha h3 {
+    font-size: 16px;
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    height: 20px;
+    color: #353535;
+}
+
+.ficha h4 {
+    height: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0.5rem;
+    font-size: 11px;
+}
+
+.ficha img {
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.ficha div {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
 .sugerenciaContactoIndividual {
     display: flex;
-    align-items: center;
-    background-color: #E5E5E5;
-    padding: 5px;
-    width: 95%;
-    height: 70px;
-    margin-bottom: 10px;
+    justify-content: start;
+    /* align-items: center; */
+    flex-direction: column;
+    /* background-color: #E5E5E5; */
+    /* padding: 5px; */
+    /* width: 70%; */
+    height: 6rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
 }
 
 .chat {
@@ -799,15 +865,25 @@ textarea:focus {
     height: 30px;
 }
 
-.fichaContacto_1 {
+.fichaContacto_1,
+.fichaContacto_top,
+.fichaContacto_botton {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
+    height: 55px;
 }
 
-.fichaContacto_1 div {
+.fichaContacto_1 {
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.fichaContacto_1 div,
+.fichaContacto_top div,
+.fichaContacto_botton div {
     border-radius: 50%;
     background: linear-gradient( var(--color1), var(--color2));
     width: 40px;
@@ -819,6 +895,12 @@ textarea:focus {
     margin-right: 1rem;
 }
 
+.fichaContacto_1:hover,
+.fichaContacto_top:hover,
+.fichaContacto_botton:hover {
+    background: var(--colorHover);
+}
+
 .fichaContacto_1 img {
     margin: 0;
     width: 20px;
@@ -827,7 +909,20 @@ textarea:focus {
 
 .fichaContacto_1 h3 {
     margin: 0;
-    font-size: 14px;
+    font-size: 16px;
+    color: #353535
+}
+
+.fichaContacto_top {
+    padding-top: 6px;
+    border-top-left-radius: 15px!important;
+    border-top-right-radius: 15px!important;
+}
+
+.fichaContacto_botton {
+    border-bottom-left-radius: 15px!important;
+    border-bottom-right-radius: 15px!important;
+    padding-bottom: 6px;
 }
 
 
@@ -846,7 +941,6 @@ textarea:focus {
     font-family: PetFont-Regular;
 }
 
-.sugerenciasContactos,
 .chatsPersonales {
     flex-direction: column;
     margin-top: 10px;
@@ -861,43 +955,48 @@ textarea:focus {
     color: #383635;
 }
 
-.ficha img {
-    margin-right: 20px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-}
-
 .sugerenciaContactoIndividual img {
-    margin-right: 20px;
+    margin-right: 0.5rem;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-left: 5px;
+    /* margin-left: 5px; */
 }
 
 .botonSugerencias {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 5px;
+    /* justify-content: space-evenly; */
+    margin-top: 10px;
     margin-bottom: 5px;
 }
 
 .eliminar {
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(206, 206, 206);
+    /* background-color: var(--color3); */
+    margin-left: 1rem;
+}
+
+.eliminar:hover {
+    background-color: var(--hoverGris);
 }
 
 .eliminar,
 .agregar {
-    margin: 5px;
-    width: auto;
+    font-family: PetFont-Regular;
+    width: 85px;
+    height: 35px;
+    border-radius: 30px;
 }
 
 .agregar {
-    background-color: var(--color1);
-    color: #E5E5E5;
-    ;
+    margin-right: 5px;
+    background: linear-gradient( var(--color1), var(--color2));
+    color: var(--card);
+}
+
+.agregar:hover {
+    background: var(--hoverVioleta);
 }
 
 .publicacionPropia,
@@ -939,6 +1038,7 @@ textarea:focus {
 .botonesPublicacion p {
     font-size: 12;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 .botonesPublicacion div {
@@ -1395,6 +1495,7 @@ textarea:focus {
     margin-right: 30px;
     margin-left: 30px;
     border-radius: 30px;
+    background-color: var(--inputColor)!important;
 }
 
 .info a:hover {
