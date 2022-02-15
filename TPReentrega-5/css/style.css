@@ -606,12 +606,20 @@ button a {
     margin-top: 100px;
     padding-bottom:100px;
 }
-
+.perfilPersonalChat{
+    width: 27%;
+    height: 633px;
+    background-color: var(--card);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
+}
 .perfilPersonal{
-    width: 23%;
+    
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin-bottom: 10px;
+    border-radius: 10px;
     /* background-color: rgb(196, 196, 196, 0.5); */
 }
 
@@ -811,15 +819,40 @@ button a {
 }
 
 .chat {
-    background-color:  rgb(196, 196, 196, 0.5);;
-    width: 50%;
-    height: 95%;
+    /* background-color:  rgb(196, 196, 196, 0.5);; */
+    width: 45%;
+    /* height: 613px; */
     padding: 0px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: var(--card);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 
+.infoPerfil{
+    display: flex;
+    flex-direction: row!important;
+    align-items: center !important;
 
+    width: 90%;
+    margin-left:10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+/* .perfilPersonal div{
+    display: flex;
+    flex-direction: row;
+} */
 
+.infoPerfil img{
+    width: 10px;
+    height: 10px;
+    margin-left: 10px;
+  
+    display: flex;
+    flex-direction: row; 
+}
 textarea {
     width: 70%;
     height: 100%;
@@ -849,13 +882,15 @@ textarea:focus {
 
 
 .cuerpo-chat {
-    height: 530px;
+    /* height: 530px; */
+    max-height: 468px;
     overflow-y: scroll;
     padding-right: 10px;
+    border-radius: 15px;
 }
 
 .cuerpo-chat::-webkit-scrollbar {
-    width: 10px;
+    width: 4px;
     margin-right: 20px;
 }
 
@@ -1028,21 +1063,43 @@ textarea:focus {
 }
 
 
-.info {
+.info, .infoChat {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 90%;
+    height: auto;
     margin-left:10px;
-    margin-bottom: 5px;
-    margin-top: 5px;
+    margin-bottom: 6px;
+    margin-top: 6px;
 }
 
+.infoChat{
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+.infoChat img{
+    width:40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+.infoChat h3, .infoChat h5{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.infoChat h3{
+    font-family: PetFont-Regular;
+}
 .info img {
     width: 50px;
     height: 50px;
     margin: 5px;
     border-radius: 50%;
+    /* display: flex;
+    flex-direction: row; */
 }
 
 #compartido{
@@ -1247,9 +1304,14 @@ textarea:focus {
     justify-content: center;
     margin: 0px;
     padding-top: 10px;
-    background-color: rgb(196, 196, 196, 0.5);
 }
 
+.perfilPersonal div{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    align-items: flex-start;
+}
  
 .perfil img {
     width: 30px;
@@ -1287,7 +1349,7 @@ textarea:focus {
 }
 .info h4{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
 }
 .info h5 {
@@ -1552,9 +1614,10 @@ textarea:focus {
 }
 
 .header-chat h2 {
-    width: 75%;
-    font-size: 25px;
+    width: 65%;
+    /* font-size: 25px; */
     margin-left: 10px;
+    
 }
 
 .header-chat,
@@ -1563,13 +1626,18 @@ textarea:focus {
     justify-content: space-around;
     align-items: center;
     padding: 10px;
+    background-color: var(--card);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    
 
 }
 
 .header-chat {
     background-color: rgb(196, 196, 196, 50);;
     width: auto;
-    height: 80px;
+    height: 70px; 
+    border-top-left-radius: 15px!important;
+    border-top-right-radius: 15px!important;
 }
 
 .header-chat div {
@@ -1578,10 +1646,12 @@ textarea:focus {
 
 .footer-chat {
     width: auto;
-    height: 50px;
+    height: 55px;
     background-color: rgb(196, 196, 196, 50);
-    position: sticky;
-    bottom: 0px;
+    position:sticky;
+    bottom: 0px;   
+    border-bottom-left-radius: 15px!important;
+    border-bottom-right-radius: 15px!important;
 }
 
 .footer-chat img,
