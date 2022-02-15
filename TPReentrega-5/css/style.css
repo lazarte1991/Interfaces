@@ -686,7 +686,7 @@ button a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width:100%;
+    width:90%;
     justify-content: flex-start;
     margin-bottom: 1rem;
 }
@@ -1176,9 +1176,9 @@ textarea:focus {
 .perfilPersonalPropia h3{
     display: flex;
     justify-content: flex-start;
-    width: 100%;
+    width: 90%;
     font-family: PetFont-light;
-    padding-left: 30px;
+    padding-left: 0px;
 }
 
 .info h3{
