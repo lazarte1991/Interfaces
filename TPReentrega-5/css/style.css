@@ -1596,6 +1596,10 @@ textarea:focus {
      color:blue;
 }
 
+.infoextra a{
+    text-decoration: none;
+}
+
 .dia {
     display: flex;
     width: 100%;
@@ -1727,13 +1731,17 @@ textarea:focus {
 }
 
 .galeriaPublicaciones {
-    width: 75.5%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: rgb(196, 196, 196, 0.5);
     margin-bottom: 10px;
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 
 .tituloPublicaciones {
@@ -1743,15 +1751,16 @@ textarea:focus {
 .galeriaPropia {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-auto-rows: 150px;
+    grid-auto-rows: 120px;
     grid-column-gap: 10px;
-    grid-row-gap: 1em;
+    grid-row-gap: 10px;
     margin-bottom: 10px;
+    
 }
 
 .galeriaPropia img {
-    width: 150px;
-    height: 150px;
+    width: 107px;
+    height: 107px;
 }
 
 .comentarios {

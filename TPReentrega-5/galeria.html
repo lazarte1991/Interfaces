@@ -14,62 +14,79 @@
 <body>
     <div class="navbar">
         <div class="logoHeader">
-            <a href="muroNoticias.html"><img src="./img/logo_header.png" alt=""></a>
+            <a href="muroNoticias.html"><img src="./img/logo_texto_3(Vector).png" alt=""></a>
         </div>
         <div class="busqueda">
-            <img src="https://img.icons8.com/ios-filled/50/383635/search--v2.png" />
-            <input type="text" placeholder="Búsqueda">
+            <img src="https://img.icons8.com/ios-filled/20/383635/search--v2.png" />
+            <input type="text" id="busqueda" placeholder="Búsqueda" onkeyup="if(event.keyCode == 13)buscar()">
         </div>
         <div class="navBotones">
-            <button class="btnHome"><a href="muroNoticias.html"><img src="https://img.icons8.com/ios-filled/40/383635/home.png"/></a></button>
-            <button class="btnPerfil"><a href="muroPerfil.html"><img src="https://img.icons8.com/ios-filled/40/383635/user.png"/></a></button>
-            <button class="btnNotificacion"><img src="https://img.icons8.com/ios-filled/40/383635/appointment-reminders--v1.png"/></button>
-            <button><img src="https://img.icons8.com/ios-filled/40/383635/settings.png"/></button>
+
+            <button class="btnHome"><a href="muroNoticias.html"><img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/30/383635/external-home-multimedia-kiranshastry-lineal-kiranshastry.png"></a></button>
+            <!-- <button class="btnHome"><a href="muroNoticias.html"><img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/30/383635/external-home-multimedia-kiranshastry-lineal-kiranshastry.png"/></a></button> -->
+
+            <!-- <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios-filled/27/FFFFFF/appointment-reminders--v1.png"/></a></button> -->
+            <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios/27/383635/appointment-reminders--v1.png"/></a></button>
+
+            <!-- <button class="btnNotificacion"><a href="chats.html"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/speech-bubble-with-dots.png"/></a></button> -->
+            <button class="btnNotificacion"><a href="chats.html"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/speech-bubble-with-dots.png"></a></button>
+
+            <!-- <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios-filled/29/FFFFFF/settings.png"/></a></button> -->
+            <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios/29/383635/settings--v1.png"/></a></button>
+
+            <!-- <button class="btnPerfil"><a href="muroPerfil.html"><img class="perfil-nav-selected" src="img/mujer1.jpeg"/></a></button> -->
+            <button class="btnPerfil"><a href="muroPerfil.html"><img class="perfil-nav" src="img/mujer1.jpeg"/></a></button>
+
         </div>
+
+
+        <nav>
+            <input type="checkbox" id="menu" />
+            <label for="menu"> ☰ </label>
+            <ul>
+                <li>
+                    <a href="muroNoticias.html"><img src="https://img.icons8.com/ios-filled/40/383635/home.png" /></a>
+                </li>
+                <li>
+                    <a href="muroPerfil.html"><img src="https://img.icons8.com/ios-filled/40/383635/user.png" /></a>
+                </li>
+                <li><img src="https://img.icons8.com/ios-filled/40/383635/appointment-reminders--v1.png" /></li>
+            </ul>
+        </nav>
+
     </div>
     <div class="contenedor">
-        <div class="perfilPersonal">
-            <img src="./img/mujer1.jpeg" alt="">
-            <h2>María López</h2>
-            <div class="perfil">
-                <!-- <h3>Detalles</h3> -->
-                <div class="info">
-                    <img src="https://img.icons8.com/ios-filled/50/383635/dog-house.png" />
-                    <a href="" id="botonHover">
-                        <h4>Tandil</h4>
+        <div class="bloque1Perfil">
+            <div class="perfilPersonalPropia">
+                <img src="img/mujer1.jpeg" alt="" class="fotoPerfil">
+                <!-- <img class="perfil-nav" src="img/mujer1.jpeg"/> -->
+                <h2>María López</h2>
+                <!-- <div class="perfil"> -->
+                <h3 class="titulo">Detalles</h3>
+                <div class="fichaContacto_2">
+                    <div>
+                        <a href=""><img src="https://img.icons8.com/ios-filled/30/ffffff/home.png"/></a>
+                    </div>
+                    <h3>Tandil</h3>
                 </div>
-                <div class="info">
-                    <img src="https://img.icons8.com/ios-filled/50/383635/pet-commands-summon.png" />
-                    <a href="" id="botonHover">
-                        <h4>Milo</h4>
-                    </a>
+                <div class="fichaContacto_2">
+                    <div>
+                        <a href=""><img src="https://img.icons8.com/ios-filled/30/ffffff/cat-footprint.png"/></a>
+                    </div>
+                    <h3>Milo</h3>
                 </div>
-                <div class="info">
-                    <img src="https://img.icons8.com/ios-filled/50/383635/star.png" />
-                    <a href="" id="botonHover">
-                        <h4>Favoritos</h4>
-                    </a>
+                <div class="fichaContacto_2">
+                    <div>
+                        <a href=""><img src="https://img.icons8.com/ios-filled/30/ffffff/pencil-tip.png"/></a>
+                    </div>
+                    <h3>Editar información</h3>
                 </div>
-                <div class="info">
-                    <img src="https://img.icons8.com/ios-filled/50/975FCE/image-gallery.png" />
-                    <a href="galeria.html" id="botonHover">
-                        <h4>Galería</h4>
-                    </a>
-                </div>
-                <div class="info">
-                    <img src="https://img.icons8.com/ios-glyphs/50/383635/speech-bubble-with-dots.png" />
-                    <a href="chats.html" id="botonHover">
-                        <h4>Chats</h4>
-                    </a>
-                </div>
-
-            </div>
+            </div> 
         </div>
         <div class="galeriaPublicaciones">
             <div class="tituloPublicaciones">
                 <h2>Tus Publicaciones</h2>
             </div>
-
             <div class="galeriaPropia">
                 <div>
                     <img src="./img/bebe.jpg" alt="">
@@ -117,7 +134,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
 </body>
 
 </html>
