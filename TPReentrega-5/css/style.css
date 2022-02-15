@@ -2183,15 +2183,16 @@ transition: opacity 400ms ease-in;
 	margin: 5% auto;
 	padding: 5px 20px 13px 20px;
 	border-radius: 10px;
-	/* background: #fff; */
-	background: #606061;
+	
+	/* background: #606061; */
+    background:#fafafa;
 	/* background: -webkit-linear-gradient(#fff, #999);
 	background: -o-linear-gradient(#fff, #999); */
-  -webkit-transition: opacity 400ms ease-in;
--moz-transition: opacity 400ms ease-in;
-transition: opacity 400ms ease-in;
-box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
-border-radius: 15px!important;
+   -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 .close2 {
 	background: #606061;
