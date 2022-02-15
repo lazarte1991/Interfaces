@@ -1,45 +1,110 @@
+/* 
 * {
     font-family: PetFont;
-    color: #383635;
-    /* font-weight: bold; */
+    color: #999999;
+} */
+
+
+/* **** Paleta de colores **** */
+
+
+/* paleta 1 */
+
+
+/* :root {
+    --color1: #975FCE;
+    --color2: #a88ac7;
+    --color3: #C4C4C4;
+    --color4: #c4c4c480;
+} */
+
+
+/* paleta 2 */
+
+
+/* :root {
+    --color1: #639CD9;
+    --color2: #639CD9;
+    --color3: #c4c4c480;
+    --color4: #C4C4C4;
+    --card: #fff
+} */
+
+
+/* paleta 3 */
+
+
+/* :root {
+    --color1: #004A7C;
+    --color2: #005691;
+    --color3: #FAFAFA;
+    --color4: #fff;
+    --card: #fff
+} */
+
+
+/* paleta 4 */
+
+
+/* :root {
+    --color1: #FFCD38;
+    --color2: #FFDD67;
+    --color3: #FAFAFA;
+    --color4: #F3F3F3;
+    --card: #fff
+} */
+
+
+/* paleta 5 */
+
+:root {
+    --color1: #975FCE;
+    --color2: #a88ac7;
+    --color3: #C4C4C4;
+    --color4: #c4c4c480;
+    --inputcolor:#eee!important;
 }
 
+
+/* latin */
+
+
+
+
 @font-face {
-    font-family: PetFont;
-    src: url(../font/RobotoCondensed-Bold.ttf   );
-    font-style: normal;
-    font-weight: normal;
+    font-family: PetFont-light;
+    src: url(../font/RobotoCondensed-Light.ttf   );
+    /* font-style: normal;
+    font-weight: normal; */
 }
 
 @font-face {
     font-family: PetFont-Regular;
-    src: url(../font/RobotoCondensed-Light.ttf   );
-    font-style: normal;
-    font-weight: normal;
+    src: url(../font/RobotoCondensed-Regular.ttf   );
+    /* font-style: normal;
+    font-weight: normal; */
 }
 
 body {
-    background-color: #ffffff;
+    /* background-color: #E5DFF5; */
+    background-color: var(--colorBody);
+    margin: 0;
+    font-family: PetFont-light;
 }
 
 
-/* .city {
-    overflow: hidden;
-    width: 800px;
-    height: 600px;
-    margin: 0 auto;
-    margin-top: 10px;
-    position: relative;
-    border: 2px solid rgba(0, 0, 0);
-    display: none;
-} */
+* {
+    /* font-family: PetFont-light; */
+    color: #383635;
+    /* font-weight: bold; */
+}
 
 
-/* .loginContainer {
-
-    display: flex;
-    flex-direction: row;
-} */
+body {
+    background-color: #ffffff;
+    background-color: var(--colorBody);
+    margin: 0;
+}
 
 .loginContainer {
     overflow-x: hidden;
@@ -179,7 +244,7 @@ input,
     width: 100%;
     padding-left: 10px;
     border: none;
-    background-color: #C4C4C4;
+    background-color: var(--color3);
 }
 
 .input-login,
@@ -217,6 +282,7 @@ input:focus {
 .btn-siguiente,
 .btn-registrarme {
     background-color: #8BDE76;
+    border-radius: 10px;
 }
 
 .btn-registro:hover,
@@ -226,15 +292,14 @@ input:focus {
 }
 
 .btn-login {
-    background-color: #975FCE;
+    background-color: var(--color1);
     /*#3085E8;*/
 }
 
 .btn-login:hover {
-    background-color: #a88ac7;
+    background-color: var(--color2);
     /*#5c98dd;*/
 }
-
 .botonesLogin {
     margin-top: 60px;
     display: flex;
@@ -287,18 +352,134 @@ button a {
     flex-direction: column;
 }
 
+.navbar {
+    /* background: linear-gradient(var(--color2), var(--color1)); */
+    /* background: linear-gradient(var(--color1), var(--color2)); */
+    background: linear-gradient( var(--color1), var(--color2));
+    /* border: 2px solid black; */
+    /*BOX-SHADOW*/
+    height: 70px;
+    /* position: sticky; */
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    align-items: center;
+}
+
+.navBotones {
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.navBotones button {
+    background-color: transparent;
+    justify-content: space-between;
+    width: 20%;
+    /* margin-left: 30px; */
+}
+
+.logoHeader,
+.busqueda {
+    display: flex;
+    align-items: center;
+}
+
+.busqueda {
+    /* grid-column: 2 / 2;
+    grid-row: 1; */
+    border-radius: 30px;
+    background-color: #eee!important;
+    height: 35px;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+}
+
+.busqueda input {
+    font-weight: 500!important;
+    padding-left: 0.5rem!important;
+    padding-bottom: 0.5rem!important;
+    padding-right: 1rem!important;
+    padding-top: 0.5rem!important;
+    border: 0!important;
+    font-size: 14px!important;
+    width: 250px!important;
+    background-color: #eee!important;
+    height: 30px;
+    /* line-height: 32px;
+    width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 30px;
+    padding-left: 10px;
+    background-color: var(--color3); */
+}
+
+.btnNotificacion img:hover,
+.btnHome img:hover,
+.btnPerfil img:hover {
+    zoom: 120%;
+}
+
+.perfil-nav {
+    width: 35px;
+    height: 35px;
+}
+
+.bloque1 .perfil-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.perfil-nav,
+.perfil-nav-selected {
+    /* width: 35px;
+    height: 35px; */
+    border-radius: 30px;
+}
+
+.perfil-nav-selected {
+    width: 37px;
+    height: 37px;
+    border: solid #FFF 2px;
+}
+
+.btnHome i {
+    font-size: 1.5em;
+    color: #383635;
+    /* text-shadow: 1px 1px 1px; */
+}
+
+
+/* .busqueda img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+} */
+
+#reg-flujo-1{
+
+    margin-top:110px;
+}
 .form{
     width:30%;
     border: 3px solid rgb(160, 67, 189);
     margin:0px;
     padding: 20px;
-    border-radius: 5%;
+    border-radius: 20px;
     background-color: #dcc7f3;
     box-shadow: 0px 10px 10px rgb(182, 92, 209);
+    margin-left: 50px;
 }
 
 .form input{
     background-color: white;
+    border-radius: 10px;
 }
 #baja{
     font-style: italic;
@@ -309,7 +490,7 @@ button a {
 .containerConfirmacion{
     display: flex;
     flex-direction: column;
-    margin:40px 20px 20px 20px;
+    margin:200px 20px 20px 20px;
     
     /* width:50%; */
     align-items: center;
@@ -318,11 +499,12 @@ button a {
 .infoConfirmacion{
     width: 40%;
     justify-content: center;
-    border: 3px solid rgb(160, 67, 189);
+    border: 3px solid var(--color2);
     padding: 10px;
-    border-radius: 2%;
-    background-color: #dcc7f3;
-    box-shadow: 0px 10px 10px rgb(182, 92, 209);
+    background-color: var(--color4);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 
 .infoConfirmacion h3{
@@ -368,20 +550,20 @@ button a {
 
 
 /************************************* MURO NOTICIAS ****************************************/
-
+/* 
 .navbar {
     /* background-color: #975FCE; */
-    background: linear-gradient( #a88ac7, #975FCE);
+    /* background: linear-gradient( #a88ac7, #975FCE); */
     /* background: linear-gradient(#975FCE, #a88ac7); */
     /* border: 2px solid black; */
     /*BOX-SHADOW*/
-    height: 120px;
+    /* height: 90px;
     position: sticky;
     display: flex;
     padding: 15px;
     justify-content: space-between;
-}
-
+} */
+/* 
 .navBotones {
     display: flex;
     align-items: flex-end;
@@ -405,22 +587,23 @@ button a {
     border: none;
     padding-left: 10px;
     background-color: #C4C4C4;
+    border-radius: 20px;
 }
 
 .busqueda img {
     width: 40px;
     height: 40px;
     margin-right: 20px;
-}
-
+} */ 
 .comunidad img {
     margin-top: 10px;
 }
 
 .contenedor {
     display: flex;
-    margin-top: 25px;
     justify-content: space-between;
+    margin-top: 100px;
+    padding-bottom:100px;
 }
 
 .perfilPersonal{
@@ -428,21 +611,32 @@ button a {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    background-color: rgb(196, 196, 196, 0.5);
+    /* background-color: rgb(196, 196, 196, 0.5); */
 }
 
+.bloque1Perfil{
+    width: 29%;
+    height: 50%;
+}
 .perfilPersonalPropia{
-    width: 30%;
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    background-color: rgb(196, 196, 196, 0.5);
+    align-items:center;
+    justify-content: center;
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 .comunidad{
     width: 23%;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+
 }
 
 .perfil {
@@ -455,6 +649,7 @@ button a {
     flex-direction: column;
     align-items: center;
     padding-bottom: 5px;
+    border-radius: 10px;
 }
 
 .contactos img {
@@ -465,8 +660,10 @@ button a {
 .contactos,
 .chatsPersonales,
 .sugerenciasContactos {
-    background-color: rgb(196, 196, 196, 0.5);
-    padding: 10px;
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 
 .contactosheader,
@@ -476,6 +673,7 @@ button a {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: small;
 }
 
 .contactosHeader img {
@@ -484,6 +682,42 @@ button a {
     margin-left: 20px;
 }
 
+.fichaContacto_2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:90%;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.fichaContacto_2 div {
+    border-radius: 50%;
+    background: linear-gradient( var(--color1), var(--color2));
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+
+.fichaContacto_2 img {
+    margin: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.fichaContacto_2 h3 {
+    margin: 0;
+    font-size: 14px;
+}
+.titulo{
+    font-family: PetFont-Regular;
+    font-size: large;
+}
 .fichaContacto,
 .ficha,
 .fichaContactoBusqueda {
@@ -493,8 +727,10 @@ button a {
     width: 95%;
     height: 40px;
     align-items: center;
-    background-color: #E5E5E5;
+    /* background-color: #E5E5E5; */
+    background-color: #fafafa;
     margin-top: 5px;
+    border-radius: 10px;
 }
 
 .sugerenciaContactoIndividual {
@@ -593,13 +829,16 @@ textarea:focus {
 .fichaContacto img,
 .fichaContactoBusqueda img {
     margin-right: 20px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 }
 
 .fichaContacto div {
     flex-direction: column;
+}
+.fichaContacto h3{
+    font-family: PetFont-Regular;
 }
 
 .fichaContacto h3,
@@ -609,7 +848,7 @@ textarea:focus {
 }
 
 .fichaContacto h5 {
-    font-family: PetFont-Regular;
+    font-family: PetFont-light;
 }
 
 .sugerenciasContactos,
@@ -674,14 +913,17 @@ textarea:focus {
 }
 
 .publicacionPropia,
-.publicacion {
+.publicacion {   
+    padding-bottom: 10px; 
+    margin-bottom: 10px;
     height: auto;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
-    padding: 0px;
-    margin-bottom: 10px;
-    background-color: rgb(196, 196, 196, 0.5);
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 
 
@@ -691,8 +933,8 @@ textarea:focus {
     align-items: center;
     width: 90%;
     margin-left:10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 
 .info img {
@@ -706,31 +948,55 @@ textarea:focus {
     font-size: 16px;
     font-style: oblique;
     padding-right: 5px;
+    font-family: PetFont-light;
     
    
 }
-
 
 .botonesPublicacion {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+
+.botonesPublicacion p {
+    font-size: 12;
+    margin-bottom: 0;
+    margin-top:0;
+}
+
+.botonesPublicacion div {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+.botonesPublicacion {
+    display: flex;
+    width: 90%;
+    justify-content:flex-end;
     margin-bottom: 20px;
 }
 
 .botonesPublicacion button {
     width: 20px;
     height: 20px;
+    margin-right: 70px;
+  
 }
 
 .botonesPublicacion img {
     width: 30px;
     height: 30px;
 }
-
+ */
 
 /* .publicacionPropia input {
-    width: 400px;
+    width: 500px;
     height: 40px;
     margin-left: 5px;
     margin-right: 5px;
@@ -858,15 +1124,17 @@ textarea:focus {
 .contador {
     display: flex;
     width: 100%;
-    justify-content: space-evenly;
-    background-color: #E5DFF5;
+    justify-content: space-around;
+
+   
 }
 .reacciones{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 .reacciones button {
     text-transform: uppercase;
     margin-right: 20px;
+    font-size: small;
 }
 
 .reacciones img {
@@ -881,9 +1149,7 @@ textarea:focus {
     background-color: rgb(196, 196, 196, 0.5);
 }
 
-/* .perfilPersonal img{
-    border-radius:50%;
-} */
+ 
 .perfil img {
     width: 30px;
     height: 30px;
@@ -891,9 +1157,38 @@ textarea:focus {
 }
 
 .fotoPerfil{
+    width:60%;
+    height:auto;
     border-radius: 50%;
+    margin-top:15px; 
+    display: flex;
+    justify-content: center;
 }
-.info h4,
+
+
+.perfilPersonalPropia h2{
+    display: flex;
+    justify-content: center;
+    font-family: PetFont-Regular;
+    padding-left: 20px;
+}
+
+.perfilPersonalPropia h3{
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    font-family: PetFont-light;
+    padding-left: 0px;
+}
+
+.info h3{
+    width: 75%;
+}
+.info h4{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
 .info h5 {
     display: flex;
     align-items: center;
@@ -906,10 +1201,11 @@ textarea:focus {
 
 }
 
-.hora{
+.horaPublicacion{
     display: flex;
     align-items: flex-end;
-    margin-left: 150px;
+   width:50%;
+   
 }
 
 .fichacontacto h4 {
@@ -1079,12 +1375,16 @@ textarea:focus {
     align-items: center;
 }
 
+.personal{
+    display: flex;
+    flex-direction: column;
+}
 .galeriaPublicadas{
-    
-
     margin-bottom: 10px;
-
-
+    background-color: var(#eeeeee);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
 }
 
 .galeria{
@@ -1092,7 +1392,7 @@ textarea:focus {
     flex-direction: column;
     align-items: center;
     border:3px solid white;
-    border-radius: 5%;
+    border-radius: 10px;
     padding-top: 10px;
     padding-right: 5px;
     padding-left:1px;
@@ -1112,10 +1412,22 @@ textarea:focus {
 }
 
 .infoextra{
-    margin-left: 220px;
+    /* margin-left: 20px; */
+    width:90%;
     margin-bottom: 20px;
-    color:blue;
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
+
+.infoextra h5{
+    font-family: PetFont-light;
+    font-size: small;
+     color:blue;
+}
+
 .dia {
     display: flex;
     width: 100%;
@@ -1208,18 +1520,27 @@ textarea:focus {
 #contadorCompartidos1,
 #contadorCompartidos2 {
     margin: 2px;
-    font-family: PetFont-Regular;
+    font-size: small;
+    font-family: PetFont-light;
 }
 
+#comentariosTerceros{
+    width:95%;
+    margin-left: 2.5%;
+    margin-right:2.5%;
+    margin-bottom: 10px;
+    background-color: #fafafa;
+}
 .info a {
     text-decoration: none;
     color: #383635;
 }
 
 .info input {
-    width: 90%;
-    margin-right: 30px;
+    width: 100%;
+    border-radius: 20px;
     margin-left: 30px;
+    background-color: #eeeeee;
 }
 
 .info a:hover {
@@ -1405,6 +1726,37 @@ nav {
     nav input {
         display: none;
     }
+
+
+.perfil-nav {
+    width: 35px;
+    height: 35px;
+}
+
+.bloque1 .perfil-nav {
+    width: 100%;
+    height: 100%;
+}
+
+.perfil-nav,
+.perfil-nav-selected {
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+}
+
+.perfil-nav-selected {
+    width: 37px;
+    height: 37px;
+    border: solid #FFF 2px;
+}
+
+.btnHome i {
+    font-size: 1.5em;
+    color: #383635;
+    /* text-shadow: 1px 1px 1px; */
+}
+
     label {
         width: 30px;
         height: 30px;
@@ -1451,6 +1803,7 @@ nav {
     }
     .contador h5 {
         font-size: 10px;
+        font-family: PetFont-light;
     }
 
      /* #layer-1, #layer-2, #layer-3{
@@ -1497,12 +1850,26 @@ nav {
 }
 
 .info .arrow{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     margin-left: 20px;
 }
 
 hr{
-    width:95%;
+    width:90%;
     border: 1px solid rgb(160, 157, 157);
+    margin-top:1px;
+    margin-bottom: 1px;
+    margin-left: 25px;
+    
+}
+
+
+h2{
+    font-size: large;
+}
+
+
+h3,h4, h5{
+    font-size: medium;
 }
