@@ -658,14 +658,17 @@ button a {
 }
 
 .contactosCercanos::-webkit-scrollbar {
-    width: 2px;
-    /* margin-bottom: 20px; */
+    /* width: 90%; */
+    height: 5px;
+    margin-top:20px;
+    margin-left: 50px;
 }
 
 .contactosCercanos::-webkit-scrollbar-thumb {
     background: var(--color1);
     background: repeating-linear-gradient( var(--color1), var(--color2));
     border-radius: 15px;
+  
 }
 .contactosCercanos{
     height: 400px;
