@@ -63,6 +63,7 @@
     --color3: #C4C4C4;
     --color4: #c4c4c480;
     --inputcolor:#eee!important;
+    --hoverVioleta: #975fce80;
 }
 
 
@@ -616,8 +617,20 @@ button a {
 
 .bloque1Perfil{
     width: 29%;
-    height: 50%;
+    height: 70%;
+    /* overflow-y:auto; */
 }
+/* .bloque1Perfil::-webkit-scrollbar {
+    width: 2px;
+    height: 124px;
+    margin-right: 5px;
+}
+
+.bloque1Perfil::-webkit-scrollbar-thumb {
+    background: var(--color1);
+    background: repeating-linear-gradient( var(--color1), var(--color2));
+    border-radius: 15px;
+} */
 .perfilPersonalPropia{
     width: 100%;
     height: 50%;
@@ -644,7 +657,44 @@ button a {
     padding-bottom: 10px;
 }
 
-.contactos {
+.contactosCercanos::-webkit-scrollbar {
+    width: 2px;
+    /* margin-bottom: 20px; */
+}
+
+.contactosCercanos::-webkit-scrollbar-thumb {
+    background: var(--color1);
+    background: repeating-linear-gradient( var(--color1), var(--color2));
+    border-radius: 15px;
+}
+.contactosCercanos{
+    height: 400px;
+    padding-top: 0%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    /* overflow-y: hidden; */
+    /* width:100%; */
+}
+.contactosCercanos div{
+    display: flex;
+    /* flex-direction: column; */
+    margin-left: 10px;
+}
+
+/* .contactosCercanos .fichaContacto{
+    display:flex;
+    flex-direction: row;
+} */
+
+*.fichas{
+    /* display: flex; */
+    height: 280px;
+    flex-direction: row;
+    margin: auto;
+    padding-left: 10px;
+}
+.contactos, .contactosCercanos {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -652,12 +702,12 @@ button a {
     border-radius: 10px;
 }
 
-.contactos img {
+.contactos img, .contactosCercanos img {
     margin: 15px;
 }
 
 .perfil,
-.contactos,
+.contactos,.contactosCercanos,
 .chatsPersonales,
 .sugerenciasContactos {
     background-color: var(--card);
@@ -718,17 +768,31 @@ button a {
     font-family: PetFont-Regular;
     font-size: large;
 }
-.fichaContacto,
+.fichaContacto{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #E5E5E5; */
+    background-color: #eeeeee;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding-top: 0%;
+}
 .ficha,
 .fichaContactoBusqueda {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 5px;
-    width: 95%;
-    height: 40px;
+    width: 45%;
+    height: 100%;
     align-items: center;
+    justify-content: center;
     /* background-color: #E5E5E5; */
-    background-color: #fafafa;
+    background-color: #eeeeee;
     margin-top: 5px;
     border-radius: 10px;
 }
@@ -826,30 +890,46 @@ textarea:focus {
     font-family: PetFont-Regular;
 }
 
-.fichaContacto img,
+.fichaContacto button{
+    margin-top: 20px;
+}
+.fichaContacto img{
+    width: 100%;
+    height: 137px;
+    margin-top: 0px;
+    padding-top: 0%;
+    border-radius: 10px;
+}
 .fichaContactoBusqueda img {
     margin-right: 20px;
-    width: 40px;
-    height: 40px;
+    width: 80px;
+    height: auto;
     border-radius: 50%;
 }
 
 .fichaContacto div {
-    flex-direction: column;
+    flex-direction: columm;
+    justify-content: center;
 }
 .fichaContacto h3{
     font-family: PetFont-Regular;
+
 }
 
 .fichaContacto h3,
 .fichaContacto h5 {
     height: 48%;
     margin: 0px;
+    display: flex;
+    justify-content: center;
 }
 
 .fichaContacto h5 {
     font-family: PetFont-light;
 }
+
+
+
 
 .sugerenciasContactos,
 .chatsPersonales {
@@ -896,15 +976,33 @@ textarea:focus {
 .eliminar,
 .agregar {
     margin: 5px;
-    width: auto;
+    
+    font-family: PetFont-Regular;
+    width: 85px;
+    height: 35px;
+    border-radius: 30px;
+}
+.agendarTurno {
+    margin: 10px;
+    font-family: PetFont-Regular;
+    width: 85px;
+    height: 35px;
+    border-radius: 30px;
+    
 }
 
-.agregar {
-    background-color: #975FCE;
-    color: #E5E5E5;
-    ;
+
+
+.agendarTurno {
+    margin-right: 5px;
+    background: linear-gradient( var(--color1), var(--color2));
+    color:#fafafa;
 }
 
+.agendarTurno:hover {
+    background: var(--hoverVioleta);
+    color:black;
+}
 .muroCentral {
     width: 50%;
     display: flex;
@@ -1368,8 +1466,10 @@ textarea:focus {
 }
 
 
+
+
 .muroCentralPerfil{
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
