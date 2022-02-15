@@ -1,0 +1,117 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">  -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="img/3a6117e3d8992ebe0eeb6bc0318a622f.jpg" class="rounded-circle">
+    <title>Muro Personal</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logoHeader">
+            <a href="muroNoticias.html"><img src="./img/logo_texto_3(Vector).png" alt=""></a>
+        </div>
+        <div class="busqueda">
+            <img src="https://img.icons8.com/ios-filled/20/383635/search--v2.png" />
+            <input type="text" id="busqueda" placeholder="Búsqueda" onkeyup="if(event.keyCode == 13)buscar()">
+        </div>
+        <div class="navBotones">
+
+            <button class="btnHome"><a href="muroNoticias.html"><img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/30/383635/external-home-multimedia-kiranshastry-lineal-kiranshastry.png"></a></button>
+            <!-- <button class="btnHome"><a href="muroNoticias.html"><img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/30/383635/external-home-multimedia-kiranshastry-lineal-kiranshastry.png"/></a></button> -->
+
+            <!-- <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios-filled/27/FFFFFF/appointment-reminders--v1.png"/></a></button> -->
+            <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios/27/383635/appointment-reminders--v1.png"/></a></button>
+
+            <!-- <button class="btnNotificacion"><a href="chats.html"><img src="https://img.icons8.com/ios-filled/30/FFFFFF/speech-bubble-with-dots.png"/></a></button> -->
+            <button class="btnNotificacion"><a href="chats.html"><img src="https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/30/383635/external-chat-bubble-user-interface-kmg-design-detailed-outline-kmg-design.png"/></a></button>
+
+            <!-- <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios-filled/29/FFFFFF/settings.png"/></a></button> -->
+            <button class="btnNotificacion"><a href=""><img src="https://img.icons8.com/ios/29/383635/settings--v1.png"/></a></button>
+
+            <!-- <button class="btnPerfil"><a href="muroPerfil.html"><img class="perfil-nav-selected" src="img/mujer1.jpeg"/></a></button> -->
+            <button class="btnPerfil"><a href="muroPerfil.html"><img class="perfil-nav-selected" src="img/mujer1.jpeg"/></a></button>
+
+        </div>
+
+
+        <nav>
+            <input type="checkbox" id="menu" />
+            <label for="menu"> ☰ </label>
+            <ul>
+                <li>
+                    <a href="muroNoticias.html"><img src="https://img.icons8.com/ios-filled/40/383635/home.png" /></a>
+                </li>
+                <li>
+                    <a href="muroPerfil.html"><img src="https://img.icons8.com/ios-filled/40/383635/user.png" /></a>
+                </li>
+                <li><img src="https://img.icons8.com/ios-filled/40/383635/appointment-reminders--v1.png" /></li>
+            </ul>
+        </nav>
+
+    </div>
+    <div class="contenedor">
+        <div class="bloque1Buscador">
+            <div class="busquedaAvanzada">
+                <h3 class="titulo">Resultados de la búsqueda</h3>
+                <h5>Filtrar</h5>
+                <button class="busqAv">Todo</button>
+                <button class="busqAv">Cercanos</button>
+                <button class="busqAv">Publicaciones</button>
+                <button class="busqAv">Compartidos conmigo</button>
+            </div> 
+        </div>
+        <div class="muroCentralPerfil">  
+                <div class="mensajeBuscadorShow">
+                    <h2 id="mensajeBusqueda"></h2>
+                </div>
+        </div>
+        <div class="comunidad">
+            <div class="contactosCercanos">
+                <div class="contactosHeader">
+                    <h2 class="titulo">Vet Cercanos</h2>
+                    <img src="https://img.icons8.com/ios-filled/50/383635/marker-o.png" />
+                </div>
+                <div class="fichas">
+                    <div class="fichaContacto">
+                        <img src="./img/vet5.jpeg" />
+                            <h3>María Garcia</h3>
+                            <h5>San Martin 1423</h5>
+                        <button class="agendarTurno">Agendar turno</button>
+                    </div>
+                    <div class="fichaContacto">
+                        <img src="./img/vet4.jpeg" />
+                        
+                            <h3>Julian Ortiz</h3>
+                            <h5>Sarmiento 1004</h5>
+                        <button class="agendarTurno">Agendar turno</button>
+                        
+                    </div>
+                    <div class="fichaContacto">
+                    <img src="./img/vet3.jpeg" />
+                    
+                        <h3>Alberto Marin</h3>
+                        <h5>Roca 135</h5>
+                        <button class="agendarTurno">Agendar turno</button>
+                    
+
+                </div>
+                </div>
+                
+              
+            </div>
+            <div class="publicidad">
+                <img src="./img/public4.jpeg" alt="">
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/buscador.js"></script>
+</body>
+
+</html>

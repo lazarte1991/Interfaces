@@ -1029,12 +1029,6 @@ textarea:focus {
     height: 35px;
     border-radius: 30px;
     margin-bottom: 20px;
-    
-}
-
-
-
-.agendarTurno {
     margin-right: 5px;
     background: linear-gradient( var(--color1), var(--color2));
     color:#fafafa;
@@ -1815,13 +1809,72 @@ textarea:focus {
 
 /********************************BUSCADOR************************/
 
-.mensajeBuscador {
+/* .mensajeBuscador {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    display: none;
+} */
+
+.mensajeBuscadorShow{
+    align-items: center;
+    display: block;
+    padding-bottom: 10px; 
+    margin-bottom: 10px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+}
+.muroCentralBusqueda{
+    padding-bottom: 10px; 
+    margin-bottom: 10px;
+    height: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
+    
+}
+.bloque1Buscador{
+    width: 20%;
+    height: 70%;
+    /* overflow-y:auto; */
+}
+.busquedaAvanzada{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    align-items:flex-start;
+    justify-content: center;
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
+    padding-left: 20px;
 }
 
+.busqAv{
+    margin: 10px;
+    font-family: PetFont-Regular;
+    width: 70%;
+    height: 40px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    /* margin-right: 5px; */
+    background: linear-gradient( var(--color1), var(--color2));
+    color:#fafafa;
+    text-transform: uppercase;
+    font-weight: bolder;
+
+}
 .fichaContactoBusqueda button {
     display: flex;
     flex-direction: row;
