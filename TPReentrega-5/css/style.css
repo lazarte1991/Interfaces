@@ -1555,6 +1555,39 @@ textarea:focus {
     border-radius: 15px!important;
 }
 
+.album{
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    height: 200px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #E5E5E5; */
+    margin-left: 10px;
+    border-radius: 10px;
+    padding-top: 0%;
+    background-color: rgb(196, 196, 196, 50);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
+}
+
+.album img{
+    width:160px;
+    height:160px;
+}
+
+
+ .album #editar{
+    width:20px;
+    height: 20px;
+    margin-left:130px;
+    padding-top: 0%;
+ 
+}
+.album h3{
+    font-family: PetFont-Regular;
+}
 .galeria{
     display: flex;
     flex-direction: column;
@@ -1745,16 +1778,18 @@ textarea:focus {
 }
 
 .tituloPublicaciones {
-    margin-bottom: 10px;
+    margin-bottom: 50px;
 }
 
 .galeriaPropia {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: 120px;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px; */
+    display: flex;
+    flex-direction: row;
     
 }
 
@@ -2060,3 +2095,72 @@ h2{
 h3,h4, h5{
     font-size: medium !important;
 }
+
+.modalDialog {
+    
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(243, 239, 239, 0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:0.9;
+	pointer-events: auto;
+}
+.modalDialog > div {
+    display: flex;
+    flex-direction: column;
+	width: 200px;
+	position: relative;
+	margin: 20% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background:  #999;
+	/* background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999); */
+  -webkit-transition: opacity 400ms ease-in;
+-moz-transition: opacity 400ms ease-in;
+transition: opacity 400ms ease-in;
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { 
+    background: var (--color1); 
+}
+
+.btnModal{
+    width:95%;
+    height: 30px;
+    border-radius: 20px;
+    margin:5px;
+    background-color:  var(--color1);
+    color:white;
+    font-family: PetFont-Regular;
+}
+
