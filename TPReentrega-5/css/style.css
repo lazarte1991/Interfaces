@@ -258,6 +258,11 @@ input,
     font-size: 15px;
     width: 45%;
     height: 40px;
+    border-radius: 10px;
+}
+
+.btn-login{
+    color: white;
 }
 
 .form {
@@ -1398,6 +1403,7 @@ textarea:focus {
     display: flex;
     align-items: flex-end;
     width: 50%;
+    font-size: 12px !important;
 }
 
 .fichacontacto h4 {
