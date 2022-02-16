@@ -470,17 +470,17 @@ button a {
 
 .form {
     width: 30%;
-    border: 3px solid rgb(160, 67, 189);
     margin: 0px;
     padding: 20px;
     border-radius: 20px;
-    background-color: #dcc7f3;
-    box-shadow: 0px 10px 10px rgb(182, 92, 209);
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
     margin-left: 50px;
 }
 
 .form input {
-    background-color: white;
+    background-color: eeeeee;
     border-radius: 10px;
 }
 
@@ -2479,12 +2479,12 @@ h5 {
 .form2{
     width: 50%;
     height: 350px;
-    border: 3px solid rgb(160, 67, 189);
     /* margin-top: 100px; */
     padding: 20px;
     border-radius: 20px;
-    background-color: #eeeeee;
-    box-shadow: 0px 10px 10px var(--color2);
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
     margin-left: 100px;
 }
 
@@ -2539,4 +2539,3 @@ h5 {
     margin: 0;
 
 }
-
