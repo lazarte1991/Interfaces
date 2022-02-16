@@ -817,11 +817,14 @@ h2 {
     /* align-items: center; */
     flex-direction: column;
     /* background-color: #E5E5E5; */
-    /* padding: 5px; */
-    /* width: 70%; */
+    padding: 5px;
+    padding-left: 13px;
+    width: 80%;
     height: 6rem;
     margin-left: 1rem;
     margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #eeeeee;
 }
 
 .chat {
@@ -1595,7 +1598,7 @@ hr {
     height: 20px;
     margin-bottom: 2px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-around;
     margin-top: 3px;
     /* align-items: center; */
     /* margin-bottom: 3px;
