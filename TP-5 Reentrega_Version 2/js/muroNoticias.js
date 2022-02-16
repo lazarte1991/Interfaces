@@ -8,7 +8,7 @@ let like2 = false;
 
 
 function actualizarContador1() {
-    let contador1 = document.getElementById("contadorLikes1").innerHTML = valor2 + " likes";
+    let contador1 = document.getElementById("contadorLikes1").innerHTML = valor2 + " Me gusta";
 
     if (contador1) {
         if (!like1) {
@@ -24,7 +24,7 @@ function actualizarContador1() {
 }
 
 function actualizarContador2() {
-    let contador2 = document.getElementById("contadorLikes2").innerHTML = valor3 + " likes";
+    let contador2 = document.getElementById("contadorLikes2").innerHTML = valor3 + " Me gusta";
     if (contador2) {
         if (!like2) {
             document.getElementById("like2").src = "https://img.icons8.com/ios-filled/20/fa314a/like--v1.png";
@@ -126,13 +126,13 @@ let contactos = [{
                             <img src="./img/gato.jpeg" alt="" >
                         </div>
                         <div class="contador">
-                            <h5 id="contadorLikes2"> 148 likes</h5>
+                            <h5 id="contadorLikes2"> 148 Me gusta</h5>
                             <h5 id="contadorComentarios2"> 245 comentarios</h5>
                             <h5 id="contadorCompartidos2"> 162 compartido</h5>
                         </div>
                         <div class="reacciones">
                             <button id="botonLike2">
-                                <img src="https://img.icons8.com/ios-filled/20/383635/filled-like.png" id="like2"/>like
+                                <img src="https://img.icons8.com/ios-filled/20/383635/filled-like.png" id="like2"/>Me gusta
                             </button> 
                             <button id="botonComentar2"><img src="https://img.icons8.com/ios-filled/20/383635/speech-bubble-with-dots.png"/>comentar</button>
                             <button id="botonCompartir2"><img src="https://img.icons8.com/ios-filled/20/383635/forward-arrow.png"/>compartir</button>
@@ -162,13 +162,13 @@ let contactos = [{
                                         <img src="./img/perro-labrador-portada.jpg" alt="" >
                                     </div>
                                     <div class="contador">
-                                        <h5 id="contadorLikes"> 14 likes</h5>
+                                        <h5 id="contadorLikes"> 14 Me gusta</h5>
                                         <h5 id="contadorComentarios"> 29 comentarios</h5>
                                         <h5 id="contadorCompartidos"> 2 compartido</h5>
                                     </div>
                                     <div class="reacciones">
                                         <button id="botonLike">
-                                            <img src="https://img.icons8.com/ios-filled/20/383635/filled-like.png" id="like"/>like
+                                            <img src="https://img.icons8.com/ios-filled/20/383635/filled-like.png" id="like"/>Me gusta
                                         </button> 
                                         <button id="botonComentar"><img src="https://img.icons8.com/ios-filled/20/383635/speech-bubble-with-dots.png"/>comentar</button>
                                         <button id="botonCompartir"><img src="https://img.icons8.com/ios-filled/20/383635/forward-arrow.png"/>compartir</button>
@@ -201,13 +201,13 @@ let contactos = [{
                     <img src="./img/perro-labrador-portada.jpg" alt="" >
                 </div>
                 <div class="contador">
-                    <h5 id="contadorLikes1"> 2954 likes</h5>
+                    <h5 id="contadorLikes1"> 2954 Me gusta</h5>
                     <h5 id="contadorComentarios1"> 739 comentarios</h5>
                     <h5 id="contadorCompartidos1"> 503 compartido</h5>
                 </div>
                 <div class="reacciones">
                     <button id="botonLike1">
-                        <img src="https://img.icons8.com/ios-filled/20/383635/filled-like.png" id="like1"/>like
+                        <img src="https://img.icons8.com/ios-filled/20/383635/filled-like.png" id="like1"/>Me gusta
                     </button> 
                     <button id="botonComentar1"><img src="https://img.icons8.com/ios-filled/20/383635/speech-bubble-with-dots.png"/>comentar</button>
                     <button id="botonCompartir1"><img src="https://img.icons8.com/ios-filled/20/383635/forward-arrow.png"/>compartir</button>
