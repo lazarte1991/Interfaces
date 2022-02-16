@@ -1280,16 +1280,23 @@ textarea:focus {
     display: flex;
     width: 100%;
     justify-content: space-around;
+    
 
    
 }
 .reacciones{
     margin-bottom: 5px;
+    font-size: medium;
+   
 }
 .reacciones button {
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-right: 20px;
-    font-size: small;
+    font-size: medium;
+    font-family: PetFont-Regular;
+    display: flex;
+    align-items: center;
+   
 }
 
 .reacciones img {
@@ -1729,7 +1736,7 @@ textarea:focus {
 #contadorCompartidos1,
 #contadorCompartidos2 {
     margin: 2px;
-    font-size: small;
+    font-size: smaller;
     font-family: PetFont-light;
 }
 
