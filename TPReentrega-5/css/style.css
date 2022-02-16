@@ -2398,3 +2398,145 @@ h5 {
 .close3:hover {
     background: var (--color1);
 }
+
+.info .publicitarPublicación{
+    margin-left: 40px;
+    width:20px;
+    height: 20px;
+}
+
+.publicidadPaga{
+    margin:20px;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left:50px;
+}
+
+.publicidadPaga .publicacion{
+    margin:50px;
+}
+
+.publicacionPaga{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    height: 396;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card);
+    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
+}
+
+.imagenPublicadaPublicidad img{
+    width:550px;
+}
+
+.credito, #codigoseg{
+    width:100px;
+    height: 70px;
+    margin-top:20px;
+}
+
+.comprar{
+    margin: 10px;
+    font-family: PetFont-Regular;
+    font-weight: bold;
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    margin-right: 5px;
+    background: linear-gradient( var(--color1), var(--color2));
+    color: #fafafa;
+}
+
+#cod{
+    width:36%;
+}
+
+#dni{
+    width: 50%;
+}
+.inputEspeciales{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+}
+
+.contenedorPago{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+.form2{
+    width: 50%;
+    height: 350px;
+    border: 3px solid rgb(160, 67, 189);
+    /* margin-top: 100px; */
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #eeeeee;
+    box-shadow: 0px 10px 10px var(--color2);
+    margin-left: 100px;
+}
+
+.form2 input {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form2 label{
+    font-family: PetFont-light;
+    font-size: medium !important;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.pagar{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #8BDE76;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+}
+
+.form2 #pagar{
+    justify-content: center !important;
+}
+
+.pago{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.metodospago{
+    display: flex;
+    flex-direction:column ;
+    margin: 20px;
+    margin-left: 100px;
+    /* align-items:center ; */
+    
+}
+.metodospago img{
+    width: 70px;
+    height: auto;
+}
+.containerPago{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: 0;
+
+}
+
