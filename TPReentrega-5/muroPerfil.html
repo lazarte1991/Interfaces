@@ -136,6 +136,42 @@
 
 
             </div>
+            <div class="publicacion">
+                <div class="info">
+                    <img src="./img/mujer1.jpeg" />
+                    <h3 class="titulo">María Lopez </h3>
+                    <h4 class="horaPublicacion">Hace 4 Hs</h4>
+                    <img src="https://img.icons8.com/ios-filled/20/000000/star--v1.png" id="star" class="publicitarPublicación"/>
+                    <h4>Publicitada</h4>
+                </div>
+                <div class="imagenPublicada">
+                    <img src="./img/gato1.jpg" alt="">
+                </div>
+                <div class="contador">
+                    <h5 id="contadorLikes"> 14 likes</h5>
+                    <h5 id="contadorComentarios"> 29 comentarios</h5>
+                    <h5 id="contadorCompartidos"> 2 compartido</h5>
+                </div>
+                <hr>
+                <div class="reacciones">
+                    <button id="botonLike">
+                    <img src="https://img.icons8.com/ios-filled/20/383635/filled-like.png" id="like"/>like
+                </button>
+                    <button id="botonComentar"><img src="https://img.icons8.com/ios-filled/20/383635/speech-bubble-with-dots.png"/>comentar</button>
+                    <a href="#openModal3"><button id="botonCompartir"><img src="https://img.icons8.com/ios-filled/20/383635/forward-arrow.png"/>compartir</button></a>
+                    <div id="openModal3" class="modalDialog3">
+                        <div>
+                            <a href="#close3" title="Close" class="close3">X</a>
+                            <button class="btnModal">Compartir ahora (ṕublico)</button>
+                            <button class="btnModal">Enviar por messenger</button>
+                            <button class="btnModal">Mas opciones</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="inputComentarios">
+                    <input id="comentariosTerceros" cols="20" rows="8" placeholder="Escribe un mensaje aquí" onkeyup="if(event.keyCode == 13)borrarComentarios()"></input>
+                </div>
+            </div>
 
             <div class="publicacion">
                 <div class="info">
