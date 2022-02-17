@@ -1649,7 +1649,7 @@ h5 span {
 #contadorCompartidos2 {
     margin: 2px;
     font-size: small;
-    font-family: PetFont-light;
+    font-family: PetFont-light; 
 }
 
 .info a {
@@ -1984,5 +1984,10 @@ nav {
 
 .btnModal:hover {
     background-color: var(--color2);
+}
+
+
+#contadorLikes1,#contadorLikes2, #contadorLikes3, #contadorLikes4, #contadorLikes5{
+    margin-right: 5px;
 }
 /*************************************Rocio**********************************************/
