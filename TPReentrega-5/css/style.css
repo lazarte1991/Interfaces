@@ -261,7 +261,7 @@ input,
     border-radius: 10px;
 }
 
-.btn-login{
+.btn-login {
     color: white;
 }
 
@@ -794,8 +794,8 @@ button a {
 
 .fichaContacto_2 img {
     margin: 0;
-    width: 20px;
-    height: 20px;
+    /* width: 20px;
+    height: 20px; */
 }
 
 .fichaContacto_2 h3 {
@@ -1329,7 +1329,6 @@ textarea:focus {
 .reacciones {
     margin-bottom: 5px;
     font-size: medium;
-   
 }
 
 .reacciones button {
@@ -1339,7 +1338,6 @@ textarea:focus {
     font-family: PetFont-light;
     display: flex;
     align-items: center;
-   
 }
 
 .reacciones img {
@@ -1609,13 +1607,12 @@ textarea:focus {
     height: 200px;
     align-items: center;
     justify-content: center;
-    /* background-color: #E5E5E5; */
+    background-color: #E5E5E5;
     margin-left: 10px;
     border-radius: 10px;
     padding-top: 0%;
-    background-color: rgb(196, 196, 196, 50);
-    /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    /* background-color: rgb(196, 196, 196, 50); */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.356)!important;
     border-radius: 15px!important;
 }
 
@@ -2017,178 +2014,186 @@ nav {
 }
 
 
-/**********************************MOBILE ************************************************/
+/********************************** INICIO MOBILE ************************************************/
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     body {
-        margin: 0px;
-    }
-    .perfilPersonal,
-    .comunidad {
-        display: none;
+        margin: 0;
+        /* height: 100%; */
+        width: 100%;
     }
     .contenedor {
         width: 100%;
+        height: 92%;
+        /* margin-top: 5rem; */
+        padding-botton: 1rem;
+        flex-direction: column;
+        /* align-items: center; */
+        /* justify-content: center; */
     }
-    .muroCentral {
+    #botonesResponsive button {
+        /* display: block; */
+        width: 20%;
+        height: 100%;
+    }
+    #botonesResponsive button:hover {
+        background-color: var(--colorBody);
+    }
+    #botonesResponsive .perfil-nav {
+        height: 30px;
+        width: 30px;
+    }
+    .galeriaPublicaciones {
+        width: 83%;
+        margin-left: 1rem;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .galeriaPropia {
         width: 100%;
         display: flex;
         align-items: center;
     }
-    .navbar {
-        background: linear-gradient( #a88ac7, #975FCE);
-        width: 95%;
+    .tituloPublicaciones,
+    .tituloPublicaciones h2 {
+        margin-bottom: 1rem;
+    }
+    .galeriaPublicaciones,
+    .galeriaPropia {
+        display: flex;
+        flex-direction: column;
         height: auto;
-        margin: auto;
-        padding: auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 5px;
-        justify-items: baseline;
-        align-items: center;
+    }
+    .album {
+        width: 98%;
+        height: 300px;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+    .navbar {
+        background: linear-gradient( var(--color1), var(--color2));
+        width: 92%;
+        height: 2.5rem;
+        /* margin: auto; */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        position: static;
+        z-index: 10;
     }
     .logoheader img {
-        width: 100px;
-        height: 50px;
+        width: 100%;
+        height: 60%;
     }
     .logoHeader {
-        margin-right: 100px;
+        /* margin-right: 100px; */
         display: flex;
+        width: 60%;
+        height: 100%;
     }
+    .navBotones,
     .busqueda {
         display: none;
     }
-    .navbar nav {
-        align-items: flex-end;
-        margin-left: 50px;
-    }
-    .navbar input {
+    .bloque1Perfil {
         display: none;
     }
-    .navbar img {
-        display: flex;
-        align-items: flex-end;
-    }
-    .navBotones {
-        display: none;
-    }
-    ul {
-        display: none;
-    }
-    input:checked~ul {
-        display: block;
-    }
-    .navbar input,
-    nav input {
-        display: none;
-    }
-    .perfil-nav {
-        width: 35px;
-        height: 35px;
-    }
-    .bloque1 .perfil-nav {
-        width: 100%;
-        height: 100%;
-    }
-    .perfil-nav,
-    .perfil-nav-selected {
-        width: 35px;
-        height: 35px;
-        border-radius: 30px;
-    }
-    .perfil-nav-selected {
-        width: 37px;
-        height: 37px;
-        border: solid #FFF 2px;
-    }
-    .btnHome i {
-        font-size: 1.5em;
-        color: #383635;
-        /* text-shadow: 1px 1px 1px; */
-    }
-    label {
-        width: 30px;
-        height: 30px;
-        line-height: 20px;
-        font-weight: bold;
-        text-align: center;
-        user-select: auto;
-    }
-    label:hover {
-        background-color: #975FCE;
-    }
-    input:checked~label {
-        background: rgb(196, 196, 196, 0.5);
-    }
-    ul {
-        margin-top: 0;
-        padding: 0;
-        width: 30px;
-        text-align: center;
-        align-items: center;
-    }
-    li {
-        display: block;
-        background: rgb(196, 196, 196, 0.5);
-        margin: 0;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        list-style: none;
-        border-bottom: 1px solid grey;
-    }
-    nav img {
-        width: 10px;
-        height: 10px;
-        align-items: center;
-    }
-    nav {
-        display: block;
-    }
-    .reacciones img {
-        width: 10px;
-        height: 10px;
-    }
-    .contador h5 {
-        font-size: 10px;
-        font-family: PetFont-light;
-    }
-    /* #layer-1, #layer-2, #layer-3{
-        display: none;
-    }
-
-    .icono-loading-container{
-        width: 100%;
-    }
-    .loginContainer{
-        display: flex;
-        align-items: center;
-    }
-    #form .form{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    } */
-    .navBotonesResponsive {
-        background-color: #a88ac7;
-        position: fixed;
-        bottom: 20px;
-        width: 100%;
+    #bloque1_Perfil {
         display: flex;
         flex-direction: row;
+        width: 100%;
+        padding-left: 1rem;
+        height: auto;
+        margin-top: -80px;
+        justify-content: flex-start;
+        background: var(--card) !important;
+        border-radius: 15px;
+        margin-bottom: 1rem;
     }
-    .navBotonesResponsive button {
-        background-color: transparent;
+    .bloque_div_1 {
+        display: flex;
         justify-content: center;
-        margin: auto;
+        align-items: center;
+        width: 150px;
+        flex-direction: column;
+        box-shadow: 1px 1px 3px rgba(90, 89, 89, 0.514);
+        border-radius: 10px;
     }
-    .navBotonesResponsive img {
-        width: 35px;
-        height: 35px;
+    .bloque_div_2 {
+        display: flex;
+        justify-content: flex-start;
+        width: 150px;
+        flex-direction: column;
+        align-items: center;
     }
+    .fotoPerfil {
+        width: 50px;
+        height: 70px;
+    }
+    #bloque1_Perfil h2 {
+        display: flex;
+        justify-content: center;
+        font-family: PetFont-Regular;
+        /* padding-left: 20px; */
+    }
+    #bloque1_Perfil h3 {
+        display: flex;
+        justify-content: flex-start;
+        width: 90%;
+        font-family: PetFont-light;
+        font-size: 10p;
+        /* padding-left: 0px; */
+        /* padding-left: 20px; */
+    }
+    .titulo_detalles {
+        /* display: flex; */
+        /* justify-content: center;
+        align-items: center; */
+        text-align: center;
+        font-size: 5px;
+        font-family: PetFont-light;
+    }
+    .fichaContacto_2 div {
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background-color: linear-gradient( var(--color1), var(--color2));
+    }
+    .fichaContacto_2 {
+        margin-bottom: 3px;
+    }
+    /* ------------------------------------------------- */
+    #botonesResponsive {
+        /* display: none; */
+        display: none;
+        flex-direction: row;
+        /* margin-top: 3.75rem; */
+        width: 100%;
+        height: 2.5rem;
+        background-color: var(--color3);
+        z-index: 1;
+    }
+    .album a {
+        margin-left: 8rem !important;
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+    .img_album {
+        width: 95% !important;
+        height: 70% !important;
+        border-radius: 10px !important;
+    }
+    /* .album img {
+        width: 80%;
+        height: 60%;
+        border-radius: 10px;
+    } */
+    /* ------------------------------------------------------------ */
 }
+
+
+/********************************** FIN MOBILE ************************************************/
 
 .info .arrow {
     width: 10px;
@@ -2351,9 +2356,10 @@ h5 {
     font-family: PetFont-Regular;
 }
 
-.btnModal:hover{
-    color: var(--color1);
+.btnModal:hover {
+    background-color: var(--color2);
 }
+
 .modalDialog3 {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
@@ -2415,27 +2421,27 @@ h5 {
     background: var (--color1);
 }
 
-.info .publicitarPublicación{
+.info .publicitarPublicación {
     margin-left: 40px;
-    width:20px;
+    width: 20px;
     height: 20px;
 }
 
-.publicidadPaga{
-    margin:20px;
-    width:50%;
+.publicidadPaga {
+    margin: 20px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-left:50px;
+    margin-left: 50px;
 }
 
-.publicidadPaga .publicacion{
-    margin:50px;
+.publicidadPaga .publicacion {
+    margin: 50px;
 }
 
-.publicacionPaga{
+.publicacionPaga {
     padding-bottom: 10px;
     margin-bottom: 10px;
     height: 396;
@@ -2448,19 +2454,21 @@ h5 {
     border-radius: 15px!important;
 }
 
-.imagenPublicadaPublicidad img{
-    width:530px;
+
+.imagenPublicadaPublicidad img {
+    width: 550px;
     padding: 10px;
     border-radius: 10px;
 }
 
-.credito, #codigoseg{
-    width:100px;
+.credito,
+#codigoseg {
+    width: 100px;
     height: 70px;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
-.comprar{
+.comprar {
     margin: 10px;
     font-family: PetFont-Regular;
     font-weight: bold;
@@ -2473,28 +2481,29 @@ h5 {
     color: #fafafa;
 }
 
-#cod{
-    width:36%;
+#cod {
+    width: 36%;
 }
 
-#dni{
+#dni {
     width: 50%;
 }
-.inputEspeciales{
+
+.inputEspeciales {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-  
 }
 
-.contenedorPago{
-    width:100%;
+.contenedorPago {
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 100px;
     padding-bottom: 100px;
 }
-.form2{
+
+.form2 {
     width: 50%;
     height: 350px;
     /* margin-top: 100px; */
@@ -2511,14 +2520,14 @@ h5 {
     border-radius: 10px;
 }
 
-.form2 label{
+.form2 label {
     font-family: PetFont-light;
     font-size: medium !important;
     width: 50%;
     margin-top: 10px;
 }
 
-.pagar{
+.pagar {
     margin-top: 10px;
     margin-bottom: 20px;
     background-color: #8BDE76;
@@ -2527,114 +2536,39 @@ h5 {
     height: 40px;
 }
 
-.form2 #pagar{
+.form2 #pagar {
     justify-content: center !important;
 }
 
-.pago{
+.pago {
     margin-top: 10px;
     display: flex;
     justify-content: center;
 }
 
-.metodospago{
+.metodospago {
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     margin: 20px;
     margin-left: 100px;
     /* align-items:center ; */
-    
 }
-.metodospago img{
+
+.metodospago img {
     width: 70px;
     height: auto;
 }
-.containerPago{
-    width:100%;
+
+.containerPago {
+    width: 100%;
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     margin: 0;
-
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*************************************Leandro**********************************************/
+
 
 /*************************************Leandro**********************************************/
