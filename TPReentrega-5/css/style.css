@@ -700,6 +700,7 @@ button a {
 }
 
 .contactosCercanos {
+    width:90%;
     height: 400px;
     padding-top: 0%;
     display: flex;
@@ -754,7 +755,7 @@ button a {
     border-radius: 15px!important;
 }
 
-.contactosheader,
+.contactosheader,.contactosHeader1,
 .chatsPersonales,
 .sugerenciasContactos,
 .tituloPublicaciones {
@@ -764,7 +765,7 @@ button a {
     font-size: small;
 }
 
-.contactosHeader img {
+.contactosHeader img, .contactosHeader1 img {
     width: 30px;
     height: 30px;
     margin-left: 20px;
@@ -811,18 +812,26 @@ h2 {
 .fichaContacto {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 225px;
     height: 100%;
     align-items: center;
     justify-content: space-between;
     /* background-color: #E5E5E5; */
     background-color: #eeeeee;
-    margin-top: 5px;
+    
     margin-left: 10px;
     border-radius: 10px;
     padding-top: 0%;
 }
 
+.contactosheader{
+    margin-top:20px;
+}
+
+
+.contactosheader1{
+    margin-top:8px;
+}
 .ficha {
     display: flex;
     flex-direction: column;
@@ -850,7 +859,7 @@ h2 {
 .chat {
     /* background-color:  rgb(196, 196, 196, 0.5);; */
     width: 45%;
-    /* height: 613px; */
+    height: 613px;
     padding: 0px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -955,6 +964,7 @@ textarea:focus {
     margin-top: 10px;
     margin-bottom: 10px;
     font-family: PetFont-light;
+    /* border-radius: 10px; */
 }
 
 .fichaContacto button {
@@ -1203,28 +1213,31 @@ textarea:focus {
 }
 
 .imagenPublicada {
-    width: 100%;
-    padding: 0px;
+    width: 97%;
+    padding: 10px;
     height: auto;
     display: flex;
     justify-content: center;
 }
 
 .imagenPublicada img {
-    width: 100%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    width: 97%;
+    border-radius: 10px;
 }
 
 .publicidad {
     width: 100%;
     height: 300px;
+    margin-top:10px;
+    margin-bottom: 10px;
 }
 
 .publicidad img {
     width: 100%;
     height: 100%;
+    margin-top:10px;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 .animacion_perro_registro {
@@ -1322,7 +1335,7 @@ textarea:focus {
     text-transform: capitalize;
     margin-right: 20px;
     font-size: medium;
-    font-family: PetFont-Regular;
+    font-family: PetFont-light;
     display: flex;
     align-items: center;
 }
@@ -1758,10 +1771,13 @@ textarea:focus {
 #contadorCompartidos1,
 #contadorCompartidos2 {
     margin: 2px;
-    font-size: smaller;
+    font-size: smaller!important;
     font-family: PetFont-light;
 }
 
+.reacciones a{
+    text-decoration: none;
+}
 #comentariosTerceros {
     width: 95%;
     margin-left: 2.5%;
@@ -2438,8 +2454,11 @@ h5 {
     border-radius: 15px!important;
 }
 
+
 .imagenPublicadaPublicidad img {
     width: 550px;
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .credito,
