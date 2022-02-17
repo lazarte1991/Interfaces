@@ -706,6 +706,7 @@ button a {
     display: flex;
     flex-direction: column;
     overflow-x: scroll;
+    margin-bottom: 10px;
     /* overflow-y: hidden; */
     /* width:100%; */
 }
