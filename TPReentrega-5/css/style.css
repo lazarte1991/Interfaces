@@ -1414,7 +1414,7 @@ textarea:focus {
 .horaPublicacion {
     display: flex;
     align-items: flex-end;
-    width: 50%;
+    width: 45%;
     font-size: 12px !important;
 }
 
@@ -1799,11 +1799,11 @@ textarea:focus {
     background-color: #eeeeee;
 }
 
-.info a:hover {
-    /* font-size: 120%; */
+ .info a:hover {
+
     margin-left: 10px;
     color: rgb(0, 0, 0);
-}
+} 
 
 .galeriaPublicaciones {
     width: 70%;
@@ -2423,11 +2423,15 @@ h5 {
 }
 
 .info .publicitarPublicación {
-    margin-left: 40px;
+    /* margin-left: 40px; */
     width: 20px;
     height: 20px;
 }
 
+.publicitarPublicación img:hover{
+    width: 30px;
+    height: 30px;
+}
 .publicidadPaga {
     margin: 20px;
     width: 50%;
@@ -2572,6 +2576,44 @@ h5 {
 #star:hover{
     width:30px;
     height: 30px;
+}
+
+.modalDialog4 {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(243, 239, 239, 0.8);
+    z-index: 99999;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog4:target {
+    opacity: 0.9;
+    pointer-events: auto;
+}
+
+.modalDialog4>div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    position: relative;
+    margin: 20% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    /* background: #fff; */
+    background: #938c8c;
+    /* background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999); */
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
 }
 
 /*************************************Leandro**********************************************/
