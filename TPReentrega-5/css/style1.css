@@ -719,7 +719,7 @@ h2 {
 .horaPublicacion {
     display: flex;
     align-items: flex-end;
-    width: 45%;
+    width: 40%;
 }
 
 .contactosHeader,
@@ -819,6 +819,7 @@ h2 {
     /* background-color: #E5E5E5; */
     padding: 5px;
     padding-left: 13px;
+    padding-top: 1rem;
     width: 80%;
     height: 6rem;
     margin-left: 1rem;
@@ -1605,7 +1606,7 @@ hr {
     /* margin-bottom: 3px;
     margin-left: 25px;
     margin-right: 25px; */
-    width: 94%;
+    width: 98%;
 }
 
 #like1 {
@@ -1627,6 +1628,7 @@ h5 span {
 
 .contador h5 {
     font-size: 13px;
+    width: 30%;
 }
 
 .contador div {
@@ -1637,8 +1639,16 @@ h5 span {
     margin-right: 2.5rem;
 }
 
+.contador span {
+    margin-right: 4px;
+}
+
+#contadorCompartidos,
 #contadorComentarios {
     margin-right: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+    display: flex;
 }
 
 #contadorComentarios,
@@ -1649,7 +1659,7 @@ h5 span {
 #contadorCompartidos2 {
     margin: 2px;
     font-size: small;
-    font-family: PetFont-light; 
+    font-family: PetFont-light;
 }
 
 .info a {
@@ -1665,10 +1675,11 @@ h5 span {
     background-color: var(--inputColor)!important;
 }
 
-.info a:hover {
+.publicitarPublicación:hover {
     /* font-size: 120%; */
-    margin-left: 10px;
-    color: rgb(0, 0, 0);
+    /* margin-left: 10px;
+    color: rgb(0, 0, 0); */
+    zoom: 120%;
 }
 
 .galeriaPublicaciones {
@@ -1895,22 +1906,14 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 /*************************************Rocio**********************************************/
+
 .info .publicitarPublicación {
     margin-left: 40px;
     width: 20px;
     height: 20px;
 }
+
 .modalDialog4 {
     position: fixed;
     font-family: Arial, Helvetica, sans-serif;
@@ -1986,8 +1989,13 @@ nav {
     background-color: var(--color2);
 }
 
-
-#contadorLikes1,#contadorLikes2, #contadorLikes3, #contadorLikes4, #contadorLikes5{
+#contadorLikes1,
+#contadorLikes2,
+#contadorLikes3,
+#contadorLikes4,
+#contadorLikes5 {
     margin-right: 5px;
 }
+
+
 /*************************************Rocio**********************************************/
