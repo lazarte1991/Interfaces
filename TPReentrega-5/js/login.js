@@ -107,8 +107,8 @@ function registro() {
 
     setTimeout(() => {
         iLoading.style.display = "none";
-        location.href = "flujoRegistro.html";
-    }, 4000);
+        location.href = "registro.html";
+    }, 2500);
 
 
 }

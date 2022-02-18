@@ -123,7 +123,7 @@ label {
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .layer-1 {
@@ -283,14 +283,28 @@ input:focus {
 .btn-siguiente,
 .btn-siguiente,
 .btn-registrarme {
-    background-color: #8BDE76;
-    border-radius: 10px;
+    background-color: #8BDE76 !important;
+    border-radius: 10px !important;
 }
 
 .btn-registro:hover,
 .btn-siguiente:hover,
-.btn-registrarme:hover {
-    background-color: #a9d89c;
+.btn-registrarme:hover,
+.pagar:hover {
+    background-color: rgba(169, 216, 156, 0.8) !important;
+}
+
+.pagar {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #8BDE76;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+}
+
+.form2 #pagar {
+    justify-content: center !important;
 }
 
 .btn-login {
@@ -316,8 +330,7 @@ button a {
 }
 
 .siguiente-1,
-.siguiente-2,
-.registrarme {
+.siguiente-2 {
     margin-top: 60px;
     display: flex;
     justify-content: center;
@@ -331,7 +344,12 @@ button a {
     font-size: 15px;
 }
 
+.formulario #form {
+    margin: 0;
+}
+
 .formulario {
+    z-index: 10;
     width: 100%;
     /* display: flex;*/
     /* flex-direction: column; */
@@ -426,7 +444,7 @@ button a {
 .btnNotificacion img:hover,
 .btnHome img:hover,
 .btnPerfil img:hover {
-    zoom: 120%;
+    zoom: 110%;
 }
 
 .perfil-nav {
@@ -522,6 +540,12 @@ button a {
 .siguiente-2,
 .registrarme {
     display: show;
+}
+
+.registrarme {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 .ciudad-codPostal {
@@ -622,7 +646,8 @@ button a {
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 15px;
+    padding-left: 1rem;
 }
 
 .perfilPersonalChat {
@@ -645,21 +670,7 @@ button a {
 .bloque1Perfil {
     width: 29%;
     height: 70%;
-    /* overflow-y:auto; */
 }
-
-
-/* .bloque1Perfil::-webkit-scrollbar {
-    width: 2px;
-    height: 124px;
-    margin-right: 5px;
-}
-
-.bloque1Perfil::-webkit-scrollbar-thumb {
-    background: var(--color1);
-    background: repeating-linear-gradient( var(--color1), var(--color2));
-    border-radius: 15px;
-} */
 
 .perfilPersonalPropia {
     width: 100%;
@@ -943,6 +954,7 @@ textarea:focus {
     display: flex;
     justify-content: flex-start;
     padding-left: 10px;
+    border-radius: 10px;
 }
 
 .msj-propio {
@@ -1064,13 +1076,14 @@ textarea:focus {
 .agendarTurno {
     margin: 10px;
     font-family: PetFont-Regular;
-    width: 85px;
-    height: 35px;
+    width: 150px;
+    height: auto;
     border-radius: 30px;
     margin-bottom: 20px;
     margin-right: 5px;
     background: linear-gradient( var(--color1), var(--color2));
     color: #fafafa;
+    padding: 0.75rem;
 }
 
 .agendarTurno:hover {
@@ -1084,6 +1097,116 @@ textarea:focus {
     flex-direction: column;
     align-items: center;
 }
+
+
+/* 555555555555555555555555555555555555555555555 */
+
+.publicacion_Propia {
+    flex-direction: row;
+    height: auto;
+    width: 88%;
+    display: flex;
+    /* flex-direction: column; */
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--card);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
+    border-radius: 15px!important;
+}
+
+.info_ {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 10%;
+}
+
+.input_publicacion_ input {
+    width: 85%;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 30px;
+    border-radius: 30px;
+    background-color: var(--inputcolor)!important;
+    width: 88%;
+    padding-left: 1rem;
+}
+
+.info_ a {
+    text-decoration: none;
+    color: #383635;
+}
+
+.info_ h4 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.info_ h5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.info_ img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 50%;
+}
+
+
+/* .publicacion_Propia_ .info_ {
+    display: flex;
+    align-items: center;
+    width: 10%;
+} */
+
+.info_input_ {
+    width: 85%;
+}
+
+
+/* .info_input_ input {
+    border-radius: 30px;
+    background-color: var(--inputColor);
+    width: 88%;
+    padding-left: 1rem;
+} */
+
+.input_publicacion_ {
+    display: flex;
+    justify-content: center;
+}
+
+.botonesPublicacion_ {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-left: 6px;
+}
+
+.botonesPublicacion_ button {
+    background-color: transparent;
+}
+
+.botonesPublicacion_ p {
+    font-size: 12;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.botonesPublicacion_ div {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* 55555555555555555555555555555555555 */
 
 .publicacionPropia,
 .publicacion {
@@ -1130,7 +1253,7 @@ textarea:focus {
 }
 
 .infoChat h3 {
-    font-family: PetFont-Regular;
+    font-family: PetFont-light;
 }
 
 .info img {
@@ -1606,12 +1729,13 @@ textarea:focus {
 .album {
     display: flex;
     flex-direction: column;
-    width: 180px;
-    height: 200px;
+    width: 170px;
+    height: 190px;
     align-items: center;
     justify-content: center;
     background-color: #E5E5E5;
     margin-left: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     padding-top: 0%;
     /* background-color: rgb(196, 196, 196, 50); */
@@ -1622,6 +1746,7 @@ textarea:focus {
 .album img {
     width: 160px;
     height: 160px;
+    border-radius: 10px;
 }
 
 .album #editar {
@@ -1654,6 +1779,7 @@ textarea:focus {
     height: 107px;
     margin-left: 5px;
     margin-bottom: 5px;
+    border-radius: 10px;
 }
 
 .infoextra {
@@ -1802,20 +1928,20 @@ textarea:focus {
     background-color: #eeeeee;
 }
 
- .info a:hover {
-
+.info a:hover {
     margin-left: 10px;
     color: rgb(0, 0, 0);
-} 
+}
 
 .galeriaPublicaciones {
-    width: 70%;
+    width: 68%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background-color: rgb(196, 196, 196, 0.5);
     margin-bottom: 10px;
+    margin-right: 1rem;
     background-color: var(--card);
     /* box-shadow: 0 8px 30px rgba(0, 0, 0, .05)!important; */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.178)!important;
@@ -1823,7 +1949,7 @@ textarea:focus {
 }
 
 .tituloPublicaciones {
-    margin-bottom: 50px;
+    margin-bottom: 1rem;
 }
 
 .galeriaPropia {
@@ -1926,6 +2052,11 @@ textarea:focus {
     font-weight: bolder;
 }
 
+.busqAv:hover,
+.eliminar:hover {
+    background: linear-gradient( var(--color2), var(--color3));
+}
+
 .busqAv {
     margin: 10px;
     font-family: PetFont-Regular;
@@ -1976,6 +2107,12 @@ textarea:focus {
     height: 50px;
     margin: 15px;
     border-radius: 50%;
+}
+
+.container_reg {
+    margin-top: 95px;
+    /* display: flex;
+    justify-content: space-evenly; */
 }
 
 
@@ -2207,7 +2344,7 @@ nav {
 
 hr {
     width: 90%;
-    border: 1px solid rgb(160, 157, 157);
+    /* border: 1px solid rgb(160, 157, 157); */
     margin-top: 3px;
     margin-bottom: 3px;
     margin-left: 25px;
@@ -2311,10 +2448,10 @@ h5 {
 .modalDialog2>div {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 350px;
     position: relative;
     margin: 5% auto;
-    padding: 5px 20px 13px 20px;
+    padding: 5px 10px 5px 20px;
     border-radius: 10px;
     /* background: #606061; */
     background: #fafafa;
@@ -2431,12 +2568,14 @@ h5 {
     height: 20px;
 }
 
-.publicitarPublicación img:hover{
+
+/* .publicitarPublicación img:hover {
     width: 30px;
     height: 30px;
-}
+} */
+
 .publicidadPaga {
-    margin: 20px;
+    /* margin: 20px; */
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -2462,10 +2601,13 @@ h5 {
     border-radius: 15px!important;
 }
 
-.imagenPublicadaPublicidad img {
-    width: 527px;
-    padding: 10px;
-    border-radius: 10px;
+#imagenPublicadaPublicidad {
+    width: 97%;
+    height: 95%;
+    margin-left: 8px;
+    margin-top: 12px;
+    /* padding: 10px; */
+    border-radius: 15px!important;
 }
 
 .credito,
@@ -2477,15 +2619,20 @@ h5 {
 
 .comprar {
     margin: 10px;
-    font-family: PetFont-Regular;
+    font-family: PetFont-Light;
     font-weight: bold;
     width: 150px;
     height: 40px;
     border-radius: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     margin-right: 5px;
     background: linear-gradient( var(--color1), var(--color2));
     color: #fafafa;
+}
+
+.comprar:hover {
+    background: #a88ac7a4;
 }
 
 #cod {
@@ -2506,13 +2653,13 @@ h5 {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    padding-bottom: 100px;
+    margin-top: 90px;
+    padding-bottom: 10px;
 }
 
 .form2 {
     width: 50%;
-    height: 350px;
+    height: 363;
     /* margin-top: 100px; */
     padding: 20px;
     border-radius: 20px;
@@ -2534,19 +2681,6 @@ h5 {
     margin-top: 10px;
 }
 
-.pagar {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    background-color: #8BDE76;
-    border-radius: 10px;
-    width: 150px;
-    height: 40px;
-}
-
-.form2 #pagar {
-    justify-content: center !important;
-}
-
 .pago {
     margin-top: 10px;
     display: flex;
@@ -2556,8 +2690,9 @@ h5 {
 .metodospago {
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    /* margin: 20px; */
     margin-left: 100px;
+    margin-bottom: 7px;
     /* align-items:center ; */
 }
 
@@ -2574,9 +2709,8 @@ h5 {
     margin: 0;
 }
 
-
-#star:hover{
-    width:30px;
+#star:hover {
+    width: 30px;
     height: 30px;
 }
 
@@ -2617,6 +2751,7 @@ h5 {
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
 }
+
 
 /*************************************Leandro**********************************************/
 

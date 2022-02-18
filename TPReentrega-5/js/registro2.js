@@ -1,4 +1,4 @@
-let regFlujo1 = document.getElementById("reg-flujo-1");
+// let regFlujo1 = document.getElementById("reg-flujo-1");
 let regPag1 = document.getElementById("reg-pag-1");
 let registrarme = document.getElementById("registrarme");
 let usuario = document.getElementById("usuario");
@@ -20,7 +20,7 @@ document.getElementById("btn-registrarme").addEventListener("click", paginaUno);
 
 
 function mostrar(id) {
-    regFlujo1.style.display = "none";
+    // regFlujo1.style.display = "none";
     regPag1.style.display = "none";
     registrarme.style.display = "flex";
     iLoading.style.display = "block";
@@ -98,4 +98,3 @@ function mostrarPaginaUno() {
     registrarme.style.display = "flex";
     iLoading.style.display = "none";
 }
-
