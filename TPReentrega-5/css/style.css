@@ -2168,6 +2168,8 @@ nav {
         height: 92%;
         /* margin-top: 5rem; */
         padding-bottom: 1rem;
+        margin-left: 0;
+        padding-left: 0;
         flex-direction: column;
         /* align-items: center; */
         /* justify-content: center; */
